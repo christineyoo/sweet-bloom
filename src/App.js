@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Footer from './organisms/footer/Footer';
+import Landing from './pages/landing/Landing';
 import NavBar from './organisms/navbar/NavBar';
 
 class App extends Component {
@@ -11,8 +13,9 @@ class App extends Component {
           <NavBar />
         </header>
         <main>
-          this is the main section. this is where other components will go.
-          they'll use divs
+          <Switch>
+            <Route exact path='/' component={Landing} />
+          </Switch>
         </main>
         <Footer />
       </>
