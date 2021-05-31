@@ -5,6 +5,7 @@ import Cart from './pages/cart/Cart';
 import Checkout from './pages/checkout/Checkout';
 import Confirmation from './pages/confirmation/Confirmation';
 import Footer from './organisms/footer/Footer';
+import Group from './pages/group/Group';
 import Item from './pages/item/Item';
 import Landing from './pages/landing/Landing';
 import NavBar from './organisms/navbar/NavBar';
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path='/cart' component={Cart} />
             <Route exact path='/checkout' component={Checkout} />
             <Route exact path='/confirmation' component={Confirmation} />
+            <Route exact path='/group' component={Group} />
             <Route exact path='/item' component={Item} />
             <Route exact path='/shop' component={Shop} />
             <Route exact path='/' component={Landing} />
