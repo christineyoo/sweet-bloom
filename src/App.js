@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Footer from './organisms/footer/Footer';
 import Landing from './pages/landing/Landing';
 import NavBar from './organisms/navbar/NavBar';
+import Shop from './pages/shop/Shop';
 
 class App extends Component {
   state = {};
@@ -14,6 +15,7 @@ class App extends Component {
         </header>
         <main>
           <Switch>
+            <Route exact path='/shop' component={Shop} />
             <Route exact path='/' component={Landing} />
           </Switch>
         </main>
