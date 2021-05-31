@@ -4,7 +4,6 @@ import './Landing.css';
 import stockPhoto from './carnation-carnival-1.jpg';
 
 class Landing extends Component {
-  state = {};
   render() {
     return (
       <div>
