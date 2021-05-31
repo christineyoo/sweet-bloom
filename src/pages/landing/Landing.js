@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Landing.css';
 import stockPhoto from './carnation-carnival-1.jpg';
 
@@ -156,7 +157,9 @@ class Landing extends Component {
             </section>
           </div>
         </article>
-        <button>Shop</button>
+        <Link to='/shop'>
+          <button>Shop</button>
+        </Link>
       </div>
     );
   }
