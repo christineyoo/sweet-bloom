@@ -1,0 +1,21 @@
+article {
+  padding: 10% 0;
+  border: 3px solid orange;
+}
+
+.landing-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.landing-flex-1 {
+  flex: 1;
+  border: 1px solid rgb(194, 39, 39);
+  text-align: center;
+}
+
+.landing-flex-2 {
+  flex: 2;
+  border: 1px solid rgb(194, 39, 39);
+  text-align: center;
+}
