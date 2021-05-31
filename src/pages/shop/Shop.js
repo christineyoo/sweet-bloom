@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Shop.css';
 
 class Shop extends Component {
@@ -6,9 +7,14 @@ class Shop extends Component {
     return (
       <div>
         <h1>All Items</h1>
-        <h2>this is where you can see all the items. Create another component that maps through the items</h2>
+        <h2>
+          this is where you can see all the items. Create another component that
+          maps through the items
+        </h2>
         <div className='shop-flex'>
-          <div className='shop-flex-1'>picture</div>
+          <Link to='/item' className='shop-flex-1'>
+            picture
+          </Link>
           <div className='shop-flex-1'>picture</div>
           <div className='shop-flex-1'>picture</div>
         </div>
