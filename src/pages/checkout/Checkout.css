@@ -1,0 +1,44 @@
+.checkout-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkout-flex-1 {
+  flex: 1;
+  border: 1px solid rgb(194, 39, 39);
+  text-align: center;
+}
+
+.checkout-flex-2 {
+  flex: 2;
+  border: 1px solid rgb(194, 39, 39);
+  text-align: left;
+}
+
+#checkout-step-3-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+#checkout-step-3-flex-2 {
+  flex: 2;
+  border: 1px solid rgb(194, 39, 39);
+  text-align: center;
+}
+
+#checkout-step-3-flex-1 {
+  flex: 1;
+  border: 1px solid rgb(194, 39, 39);
+  text-align: center;
+}
+
+#order-summary-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.order-summary-flex-1 {
+  flex: 1;
+  border: 1px solid green;
+  text-align: left;
+}
