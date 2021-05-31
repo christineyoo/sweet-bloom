@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Item.css';
+import Reviews from '../../organisms/reviews/Reviews';
 import stockPhoto from '../landing/carnation-carnival-1.jpg';
 
 class Item extends Component {
@@ -19,38 +21,47 @@ class Item extends Component {
   };
   render() {
     return (
-      <div className='item-flex'>
-        <div className='item-flex-1'>
-          <img
-            src={stockPhoto}
-            height='500px'
-            width='450px'
-            alt='stock photo'
-          />
-        </div>
+      <>
+        <div className='item-flex'>
+          <div className='item-flex-1'>
+            <img
+              src={stockPhoto}
+              height='500px'
+              width='450px'
+              alt='stock photo'
+            />
+          </div>
 
-        <div className='item-flex-1'>
-          <h1>Item Name</h1>
-          <h2>$50</h2>
-          <label htmlFor='groups'>Quantity</label>
-          <select name='quantity' id='quantity'>
-            {this.renderQuantity()}
-          </select>
-          <h3>Description</h3>
-          <p>
-            Lollipop biscuit pastry. Biscuit marzipan tart cheesecake pudding
-            icing soufflé croissant. Dragée gingerbread tootsie roll soufflé.
-            Icing pie sugar plum. Cake jelly tart chocolate bar toffee chupa
-            chups chocolate. Bonbon bear claw donut soufflé candy canes
-            chocolate cake. Icing halvah sugar plum lemon drops chocolate bar.
-          </p>
-          <h4>Note</h4>
-          <p>
-            In the case where the actual stems are not available, our florists
-            will select the next best option.
-          </p>
+          <div className='item-flex-1'>
+            <h1>Item Name</h1>
+            <h2>$50</h2>
+            <label htmlFor='groups'>Quantity</label>
+            <select name='quantity' id='quantity'>
+              {this.renderQuantity()}
+            </select>
+            <br />
+            <Link to='/cart'>
+              <button>Add to cart</button>
+            </Link>
+            <h3>Description</h3>
+            <p>
+              Lollipop biscuit pastry. Biscuit marzipan tart cheesecake pudding
+              icing soufflé croissant. Dragée gingerbread tootsie roll soufflé.
+              Icing pie sugar plum. Cake jelly tart chocolate bar toffee chupa
+              chups chocolate. Bonbon bear claw donut soufflé candy canes
+              chocolate cake. Icing halvah sugar plum lemon drops chocolate bar.
+            </p>
+            <h4>Note</h4>
+            <p>
+              In the case where the actual stems are not available, our florists
+              will select the next best option.
+            </p>
+          </div>
         </div>
-      </div>
+        <div>
+          <Reviews />
+        </div>
+      </>
     );
   }
 }
