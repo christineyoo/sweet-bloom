@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
+import ApiContext from '../../ApiContext';
 import { Link } from 'react-router-dom';
+import ItemLink from '../../organisms/itemLink/ItemLink';
 import './Shop.css';
 
 class Shop extends Component {
+  static contextType = ApiContext;
+
+  renderItems = () => {
+    const copyItems = this.context.items || [];
+
+    return copyItems.map((item, i) => {
+      return <ItemLink key={i} item_id={item.id} item_url={item.item_url} />;
+    });
+  };
+
   render() {
     return (
       <div>
@@ -16,9 +28,7 @@ class Shop extends Component {
           <Link to='/group'>Desserts</Link>
         </h3>
         <div className='shop-flex'>
-          <Link to='/item' className='shop-flex-1'>
-            picture
-          </Link>
+          <ItemLink />
           <div className='shop-flex-1'>picture</div>
           <div className='shop-flex-1'>picture</div>
         </div>
