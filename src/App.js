@@ -52,7 +52,7 @@ class App extends Component {
         return res.json();
       })
       .then((itemData) => {
-        return this.setState({ posts: itemData });
+        return this.setState({ items: itemData });
       })
       .catch((error) => this.setState({ error }));
   };
