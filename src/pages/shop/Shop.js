@@ -9,6 +9,7 @@ class Shop extends Component {
 
   renderItems = () => {
     const copyItems = this.context.items || [];
+    console.log(copyItems);
 
     return copyItems.map((item, i) => {
       return <ItemLink key={i} item_id={item.id} item_url={item.item_url} />;
@@ -28,7 +29,7 @@ class Shop extends Component {
           <Link to='/group'>Desserts</Link>
         </h3>
         <div className='shop-flex'>
-          <ItemLink />
+          {this.renderItems()}
           <div className='shop-flex-1'>picture</div>
           <div className='shop-flex-1'>picture</div>
         </div>
