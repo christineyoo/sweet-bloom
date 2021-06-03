@@ -45,8 +45,7 @@ class Landing extends Component {
           </div>
         </article>
         <article>
-          <h2>Features</h2>
-          <h3>three cool features</h3>
+          <h2>Benefits and Features</h2>
           <div className='landing-flex'>
             <img
               className='landing-flex-2'
@@ -56,13 +55,13 @@ class Landing extends Component {
               alt='stock photo'
             />
             <div className='landing-flex-1'>
-              <h4>feature 1</h4>
-              <p>sentences about feature 1</p>f
+              <h3>User Authentication and Authorization</h3>
+              <p>Users may log in with the demo login credentials... </p>f
             </div>
           </div>
           <div className='landing-flex'>
             <div className='landing-flex-1'>
-              <h4>feature 2</h4>
+              <h3>feature 2</h3>
               <p>sentences about feature 2</p>
             </div>
             <img
@@ -82,7 +81,7 @@ class Landing extends Component {
               alt='stock photo'
             />
             <div className='landing-flex-1'>
-              <h4>feature 3</h4>
+              <h3>feature 3</h3>
               <p>sentences about feature 3</p>
             </div>
           </div>
