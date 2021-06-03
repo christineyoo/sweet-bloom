@@ -9,53 +9,37 @@ class Landing extends Component {
     return (
       <div>
         <article>
-          <h1>LANDING - Sweet Bloom</h1>
-          <h2>this is some description about sweet bloom</h2>
+          <h1>Sweet Bloom</h1>
+          <h2>Farm fresh flowers and decadent desserts delivered anywhere.</h2>
         </article>
         <article>
           <h2>How it works</h2>
-          <h3>three simple steps</h3>
+          <h3>Three simple steps</h3>
           <div className='landing-flex'>
             <section className='landing-flex-1'>
-              <img
-                src={stockPhoto}
-                height='200px'
-                width='200px'
-                alt='stock photo'
-              />
-              <h4>step 1</h4>
+              <i class='fas fa-mouse-pointer fa-5x'></i>
+              <h4>Shop</h4>
               <p>
-                Candy danish biscuit toffee toffee toffee dragée. Sesame snaps
-                soufflé marzipan cheesecake cookie macaroon gummi bears. Pie
-                marshmallow fruitcake cake macaroon icing.
+                Browse through dozens of options of flower bouquets
+                hand-prepared by our experienced florists and delectable sweets
+                prepared fresh daily by our artisan chefs.
               </p>
             </section>
             <section className='landing-flex-1'>
-              <img
-                src={stockPhoto}
-                height='200px'
-                width='200px'
-                alt='stock photo'
-              />
-              <h4>step 2</h4>
+              <i class='fas fa-truck fa-5x'></i>
+              <h4>Deliver</h4>
               <p>
-                Candy danish biscuit toffee toffee toffee dragée. Sesame snaps
-                soufflé marzipan cheesecake cookie macaroon gummi bears. Pie
-                marshmallow fruitcake cake macaroon icing.
+                Once you've selected and purchased your items, all products are
+                packaged in tempeature-controlled boxes and delivered to the
+                location of your choice.
               </p>
             </section>
             <section className='landing-flex-1'>
-              <img
-                src={stockPhoto}
-                height='200px'
-                width='200px'
-                alt='stock photo'
-              />
-              <h4>step 3</h4>
+              <i class='far fa-smile fa-5x'></i>
+              <h4>Enjoy</h4>
               <p>
-                Candy danish biscuit toffee toffee toffee dragée. Sesame snaps
-                soufflé marzipan cheesecake cookie macaroon gummi bears. Pie
-                marshmallow fruitcake cake macaroon icing.
+                Simply enjoy the delightful experience of our floral
+                arrangements and desserts!
               </p>
             </section>
           </div>
@@ -73,7 +57,7 @@ class Landing extends Component {
             />
             <div className='landing-flex-1'>
               <h4>feature 1</h4>
-              <p>sentences about feature 1</p>
+              <p>sentences about feature 1</p>f
             </div>
           </div>
           <div className='landing-flex'>
