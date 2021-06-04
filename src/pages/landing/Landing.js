@@ -56,13 +56,19 @@ class Landing extends Component {
             />
             <div className='landing-flex-1'>
               <h3>User Authentication and Authorization</h3>
-              <p>Users may log in with the demo login credentials... </p>f
+              <p>
+                Shop with ease knowing that your information and selections are
+                part of a secure experience.
+              </p>
             </div>
           </div>
           <div className='landing-flex'>
             <div className='landing-flex-1'>
-              <h3>feature 2</h3>
-              <p>sentences about feature 2</p>
+              <h3>Reviews</h3>
+              <p>
+                Users may read, create, update, and delete reviews for any one
+                of our products.
+              </p>
             </div>
             <img
               className='landing-flex-2'
@@ -81,14 +87,16 @@ class Landing extends Component {
               alt='stock photo'
             />
             <div className='landing-flex-1'>
-              <h3>feature 3</h3>
-              <p>sentences about feature 3</p>
+              <h3>Easily adjust what's in your cart</h3>
+              <p>
+                Changed your mind about something? Want to go back and check
+                something out? No problem. You can shop on your terms.
+              </p>
             </div>
           </div>
         </article>
         <article>
           <h2>Customer Reviews</h2>
-          <h3>three customer reviews</h3>
           <div className='landing-flex'>
             <section className='landing-flex-1'>
               <img
@@ -97,13 +105,11 @@ class Landing extends Component {
                 width='200px'
                 alt='stock photo'
               />
-              <h4>review 1</h4>
+              <h3>"High quality"</h3>
               <p>
-                Candy danish biscuit toffee toffee toffee dragée. Sesame snaps
-                soufflé marzipan cheesecake cookie macaroon gummi bears. Pie
-                marshmallow fruitcake cake macaroon icing.
+                I ordered from Sweet Bloom for Mother's Day and it was the best
+                online service I've received.
               </p>
-              <br />
               <p>- Danielle from Baton Rouge, LA</p>
             </section>
             <section className='landing-flex-1'>
@@ -113,14 +119,12 @@ class Landing extends Component {
                 width='200px'
                 alt='stock photo'
               />
-              <h4>review 2</h4>
+              <h3>"Happy wife happy life"</h3>
               <p>
-                Candy danish biscuit toffee toffee toffee dragée. Sesame snaps
-                soufflé marzipan cheesecake cookie macaroon gummi bears. Pie
-                marshmallow fruitcake cake macaroon icing.
+                Thank you, Sweet Bloom, for delivering the best flowers and
+                dessert to celebrate our 30th wedding anniversary.
               </p>
-              <br />
-              <p>- Jeremy from Los Angeles, CA</p>
+              <p>- Erik from La Crescenta, CA</p>
             </section>
             <section className='landing-flex-1'>
               <img
@@ -129,13 +133,11 @@ class Landing extends Component {
                 width='200px'
                 alt='stock photo'
               />
-              <h4>review 3</h4>
+              <h3>"Consistent service"</h3>
               <p>
-                Candy danish biscuit toffee toffee toffee dragée. Sesame snaps
-                soufflé marzipan cheesecake cookie macaroon gummi bears. Pie
-                marshmallow fruitcake cake macaroon icing.
+                There is no place that does flowers and desserts like Sweet
+                Bloom! Always delicious, fresh, and beautiful.
               </p>
-              <br />
               <p>- Brianna from Suwanee, GA</p>
             </section>
           </div>

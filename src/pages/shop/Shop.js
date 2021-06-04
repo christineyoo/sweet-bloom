@@ -8,65 +8,14 @@ import './Shop.css';
 class Shop extends Component {
   static contextType = ApiContext;
 
-  componentDidMount() {
-    this.sliceItemsArray();
-  }
-
-  sliceItemsArray = () => {
-    const copyItems = this.context.items || [];
-    console.log('context', copyItems);
-
-    let slicedCopyItems = [];
-    let result = '';
-    for (let i = 1; i <= 8; i++) {
-      console.log('slice', slicedCopyItems);
-      slicedCopyItems.push(copyItems.slice(3 * i - 3, 3 * i));
-
-      result = slicedCopyItems.forEach(() => {
-        <div className='shop-flex'>
-          {slicedCopyItems.map((item, i) => {
-            return (
-              <ItemLink
-                key={i}
-                item_name={item.item_name}
-                item_price={item.item_price}
-                item_url={item.item_url}
-              />
-            );
-          })}
-        </div>;
-      });
-    }
-    return result;
-  };
+  componentDidMount() {}
 
   renderItems = () => {
-    const sampleArray = [
-      {
-        id: 1,
-        item_name: 'Name',
-        item_price: 10,
-        item_url:
-          'https://images.pexels.com/photos/7474138/pexels-photo-7474138.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-      },
-      {
-        id: 1,
-        item_name: 'Name',
-        item_price: 10,
-        item_url:
-          'https://images.pexels.com/photos/7474138/pexels-photo-7474138.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-      },
-      {
-        id: 1,
-        item_name: 'Name',
-        item_price: 10,
-        item_url:
-          'https://images.pexels.com/photos/7474138/pexels-photo-7474138.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-      }
-    ];
+    const copyItems = this.context.items || [];
+
     return (
       <div className='shop-flex'>
-        {sampleArray.map((item, i) => {
+        {copyItems.map((item, i) => {
           return (
             <ItemLink
               key={i}
@@ -99,16 +48,3 @@ class Shop extends Component {
 }
 
 export default Shop;
-
-{
-  /* {() => {
-            [0, 1, 2, 3, 4, 5][i].forEach((item, i) => {
-              <ItemLink
-                key={i}
-                item_name={item.item_name}
-                item_price={item.item_price}
-                item_url={item.item_url}
-              />;
-            });
-          }} */
-}

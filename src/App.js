@@ -52,7 +52,6 @@ class App extends Component {
         return res.json();
       })
       .then((itemData) => {
-        console.log('items fetched');
         return this.setState({ items: itemData });
       })
       .catch((error) => this.setState({ error }));

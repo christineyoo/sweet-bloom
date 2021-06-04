@@ -1,6 +1,7 @@
 .shop-flex {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .shop-flex-1 {
