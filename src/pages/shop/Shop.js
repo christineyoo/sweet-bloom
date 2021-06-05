@@ -34,8 +34,7 @@ class Shop extends Component {
       <div>
         <h1>All Items</h1>
         <h2>
-          this is where you can see all the items. Create another component that
-          maps through the items
+          Browse through our wide collection of floral bouquets and desserts.
         </h2>
         <h3>
           Filter by <Link to='/group'>Flowers</Link> or{' '}

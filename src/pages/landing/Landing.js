@@ -124,7 +124,7 @@ class Landing extends Component {
                 Thank you, Sweet Bloom, for delivering the best flowers and
                 dessert to celebrate our 30th wedding anniversary.
               </p>
-              <p>- Erik from La Crescenta, CA</p>
+              <p>- Erik from Los Angeles, CA</p>
             </section>
             <section className='landing-flex-1'>
               <img
