@@ -1,9 +1,31 @@
 import React, { Component } from 'react';
+import ApiContext from '../../ApiContext';
 import FindGroupName from '../../organisms/findGroupName/FindGroupName';
 import './Group.css';
+import ItemLink from '../../organisms/itemLink/ItemLink';
 
 class Group extends Component {
-  // if group_id=1, then render the flowers. If group_id=2, then render the desserts
+  static contextType = ApiContext;
+
+  filterItems = () => {
+    const copyItems = this.context.items || [];
+    return (
+      <div className='shop-flex'>
+        {copyItems
+          .filter((item) => item.group_id === +this.props.match.params.groupId)
+          .map((item, i) => {
+            return (
+              <ItemLink
+                key={i}
+                item_name={item.item_name}
+                item_price={item.item_price}
+                item_url={item.item_url}
+              />
+            );
+          })}
+      </div>
+    );
+  };
 
   render() {
     return (
@@ -12,6 +34,7 @@ class Group extends Component {
           Viewing all{' '}
           <FindGroupName group_id={this.props.match.params.groupId} />
         </h1>
+        {this.filterItems()}
       </div>
     );
   }
