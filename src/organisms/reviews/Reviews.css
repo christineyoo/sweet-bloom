@@ -1,3 +1,8 @@
+.add-review-flex {
+  display: flex;
+  flex-direction: column;
+}
+
 .review-card {
   border: 1px solid teal;
   padding: 1.25rem;

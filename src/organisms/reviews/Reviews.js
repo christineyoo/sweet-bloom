@@ -17,7 +17,6 @@ class Reviews extends Component {
           open={this.state.isOpen}
           onClose={() => this.setState({ isOpen: false })}
         >
-          <h1>Fancy Modal</h1>
         </Modal>
         <ReviewCard />
         <ReviewCard />
