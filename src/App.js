@@ -76,7 +76,7 @@ class App extends Component {
               <Route exact path='/cart' component={Cart} />
               <Route exact path='/checkout' component={Checkout} />
               <Route exact path='/confirmation' component={Confirmation} />
-              <Route exact path='/group' component={Group} />
+              <Route exact path='/group/:groupId' component={Group} />
               <Route exact path='/item' component={Item} />
               <Route exact path='/shop' component={Shop} />
               <Route exact path='/' component={Landing} />

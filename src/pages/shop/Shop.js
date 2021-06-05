@@ -10,9 +10,21 @@ class Shop extends Component {
 
   componentDidMount() {}
 
+  renderGroups = () => {
+    const copyGroups = this.context.groups || [];
+    const groups = copyGroups.map((group, i) => {
+      return (
+        <Link key={i} to={`/group/${group.id}`}>
+          {group.group_name}&nbsp;
+        </Link>
+      );
+    });
+
+    return groups;
+  };
+
   renderItems = () => {
     const copyItems = this.context.items || [];
-
     return (
       <div className='shop-flex'>
         {copyItems.map((item, i) => {
@@ -36,10 +48,7 @@ class Shop extends Component {
         <h2>
           Browse through our wide collection of floral bouquets and desserts.
         </h2>
-        <h3>
-          Filter by <Link to='/group'>Flowers</Link> or{' '}
-          <Link to='/group'>Desserts</Link>
-        </h3>
+        <h3>Filter by {this.renderGroups()}</h3>
         {this.renderItems()}
       </div>
     );
