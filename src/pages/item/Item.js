@@ -40,7 +40,7 @@ class Item extends Component {
     const currentItem = copyReviews.filter(
       (review) => review.item_id === +this.props.match.params.itemId
     );
-
+    if (currentItem.length === 0) return null;
     return (
       <ReviewCard
         name={currentItem[0].review_name}
