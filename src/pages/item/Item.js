@@ -5,7 +5,6 @@ import ApiContext from '../../ApiContext';
 import './Item.css';
 import Reviews from '../../organisms/reviews/Reviews';
 import ReviewCard from '../../organisms/reviews/ReviewCard';
-import stockPhoto from '../landing/carnation-carnival-1.jpg';
 import PropTypes from 'prop-types';
 
 class Item extends Component {
@@ -41,15 +40,18 @@ class Item extends Component {
       (review) => review.item_id === +this.props.match.params.itemId
     );
     if (currentItem.length === 0) return null;
-    return (
-      <ReviewCard
-        name={currentItem[0].review_name}
-        title={currentItem[0].review_title}
-        content={currentItem[0].review_content}
-        rating={currentItem[0].review_rating}
-        date={currentItem[0].review_date}
-      />
-    );
+    return currentItem.map((item, i) => {
+      return (
+        <ReviewCard
+          key={i}
+          name={item.review_name}
+          title={item.review_title}
+          content={item.review_content}
+          rating={item.review_rating}
+          date={item.review_date}
+        />
+      );
+    });
   };
   render() {
     return (

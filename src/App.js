@@ -77,7 +77,27 @@ class App extends Component {
       .catch((error) => this.setState({ error }));
   };
 
-  addReview = () => {};
+  addReview = (
+    data,
+    reviewName,
+    reviewItemId,
+    reviewTitle,
+    reviewContent,
+    reviewRating,
+    reviewDate
+  ) => {
+    const newReviewObject = {
+      id: data.id,
+      review_name: reviewName,
+      item_id: reviewItemId,
+      review_title: reviewTitle,
+      review_content: reviewContent,
+      review_rating: reviewRating,
+      review_date: reviewDate
+    };
+    this.setState({ posts: [newReviewObject, ...this.state.reviews] });
+    this.fetchReviews();
+  };
 
   deleteReview = () => {};
 
@@ -89,7 +109,10 @@ class App extends Component {
       items: this.state.items,
       reviews: this.state.reviews,
       fetchItems: this.fetchItems,
-      fetchReviews: this.fetchReviews
+      fetchReviews: this.fetchReviews,
+      addReview: this.addReview,
+      deleteReview: this.deleteReview,
+      updateReview: this.updateReview
     };
     return (
       <>
