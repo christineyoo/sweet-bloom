@@ -15,6 +15,8 @@ class ReviewCard extends Component {
           cake. Fruitcake cupcake liquorice sweet roll wafer muffin candy.
           Dessert jujubes biscuit.
         </p>
+        <button>Delete</button>
+        <button>Edit</button>
       </div>
     );
   }

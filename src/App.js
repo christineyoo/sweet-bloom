@@ -36,6 +36,7 @@ class App extends Component {
       .then((groupData) => this.setState({ groups: groupData }))
       .catch((error) => this.setState({ error }));
     this.fetchItems();
+    this.fetchReviews();
   }
 
   fetchItems = () => {
@@ -53,6 +54,25 @@ class App extends Component {
       })
       .then((itemData) => {
         return this.setState({ items: itemData });
+      })
+      .catch((error) => this.setState({ error }));
+  };
+
+  fetchReviews = () => {
+    fetch(`http://localhost:8000/api/reviews`, {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json'
+      }
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(res.status);
+        }
+        return res.json();
+      })
+      .then((reviewData) => {
+        return this.setState({ reviews: reviewData });
       })
       .catch((error) => this.setState({ error }));
   };
