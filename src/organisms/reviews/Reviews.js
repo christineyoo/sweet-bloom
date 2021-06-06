@@ -16,12 +16,7 @@ class Reviews extends Component {
         <AddReview
           open={this.state.isOpen}
           onClose={() => this.setState({ isOpen: false })}
-        >
-        </AddReview>
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
+        ></AddReview>
       </div>
     );
   }

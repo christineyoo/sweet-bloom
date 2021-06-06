@@ -77,23 +77,19 @@ class App extends Component {
       .catch((error) => this.setState({ error }));
   };
 
-  addReview = () => {
+  addReview = () => {};
 
-  }
+  deleteReview = () => {};
 
-  deleteReview = () => {
-
-  }
-
-  updateReview = () => {
-
-  }
+  updateReview = () => {};
 
   render() {
     const contextValue = {
       groups: this.state.groups,
       items: this.state.items,
-      fetchItems: this.fetchItems
+      reviews: this.state.reviews,
+      fetchItems: this.fetchItems,
+      fetchReviews: this.fetchReviews
     };
     return (
       <>
@@ -108,7 +104,7 @@ class App extends Component {
               <Route exact path='/checkout' component={Checkout} />
               <Route exact path='/confirmation' component={Confirmation} />
               <Route exact path='/group/:groupId' component={Group} />
-              <Route exact path='/item' component={Item} />
+              <Route exact path='/item/:itemId' component={Item} />
               <Route exact path='/shop' component={Shop} />
               <Route exact path='/' component={Landing} />
             </Switch>

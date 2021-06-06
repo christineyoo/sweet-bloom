@@ -31,9 +31,11 @@ class Shop extends Component {
           return (
             <ItemLink
               key={i}
+              item_id={item.id}
               item_name={item.item_name}
               item_price={item.item_price}
               item_url={item.item_url}
+              item_description={item.item_description}
             />
           );
         })}

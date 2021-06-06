@@ -2,19 +2,15 @@ import React, { Component } from 'react';
 import './Reviews.css';
 
 class ReviewCard extends Component {
-  state = {};
   render() {
     return (
       <div className='review-card'>
-        <h1>Amazing flowers!</h1>
-        <h1>*****</h1>
-        <p>Jenny 6/4/21</p>
+        <h1>{this.props.title}</h1>
+        <h2>Rating: {this.props.rating}</h2>
         <p>
-          Cupcake wafer cupcake chupa chups carrot cake biscuit cookie. Tart
-          candy canes marshmallow marshmallow powder lollipop biscuit toffee oat
-          cake. Fruitcake cupcake liquorice sweet roll wafer muffin candy.
-          Dessert jujubes biscuit.
+          By {this.props.name} on {this.props.date}
         </p>
+        <p>{this.props.content}</p>
         <button>Delete</button>
         <button>Edit</button>
       </div>
