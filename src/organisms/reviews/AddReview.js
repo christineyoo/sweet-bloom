@@ -138,11 +138,11 @@ class AddReview extends Component {
         {(context) => (
           <div>
             <div className='overlay-style' />
-            <div className='modal-style' onClick={() => console.log('clicked')}>
+            <div className='modal-style'>
               <h1>Leave a Review</h1>
               <form
                 class='add-review-flex'
-                onSubmit={(e) => this.handleSubmit(e, context.addPost)}
+                onSubmit={(e) => this.handleSubmit(e, context.addReview)}
               >
                 <label htmlFor='name'>Name</label>
                 <input
@@ -179,7 +179,7 @@ class AddReview extends Component {
                 </select>
               </form>
               <button onClick={this.props.onClose}>Go back</button>
-              <button>Submit</button>
+              <button type='submit'>Submit</button>
             </div>
           </div>
         )}

@@ -1,18 +1,13 @@
 import React from 'react';
 
 const ApiContext = React.createContext({
-  groups: [
-    // {
-    //   id: 1,
-    //   group_name: 'Flowers'
-    // },
-    // {
-    //   id: 2,
-    //   group_name: 'Desserts'
-    // }
-  ],
+  groups: [],
   items: [],
-  fetchItems: () => {}
+  fetchItems: () => {},
+  fetchReviews: () => {},
+  addReview: () => {},
+  deleteReview: () => {},
+  updateReview: () => {}
 });
 
 export default ApiContext;
