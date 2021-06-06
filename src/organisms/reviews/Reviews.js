@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReviewCard from './ReviewCard';
-import Modal from './Modal';
+import AddReview from './AddReview';
 
 class Reviews extends Component {
   state = {
@@ -11,13 +11,13 @@ class Reviews extends Component {
       <div>
         <h1>Reviews</h1>
         <button onClick={() => this.setState({ isOpen: true })}>
-          Open Modal
+          Add Review
         </button>
-        <Modal
+        <AddReview
           open={this.state.isOpen}
           onClose={() => this.setState({ isOpen: false })}
         >
-        </Modal>
+        </AddReview>
         <ReviewCard />
         <ReviewCard />
         <ReviewCard />

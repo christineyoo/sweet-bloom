@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Modal.css';
+import './AddReview.css';
 
-class Modal extends Component {
+class AddReview extends Component {
   render() {
     if (!this.props.open) return null;
     return (
@@ -33,4 +33,4 @@ class Modal extends Component {
   }
 }
 
-export default Modal;
+export default AddReview;

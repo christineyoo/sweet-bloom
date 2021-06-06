@@ -76,7 +76,18 @@ class App extends Component {
       })
       .catch((error) => this.setState({ error }));
   };
-  // include handler functions to get, create, update, and delete reviews
+
+  addReview = () => {
+
+  }
+
+  deleteReview = () => {
+
+  }
+
+  updateReview = () => {
+
+  }
 
   render() {
     const contextValue = {
