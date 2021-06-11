@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 
 class Item extends Component {
   static propTypes = {
+    history: PropTypes.object,
     match: PropTypes.object
   };
   static contextType = ApiContext;
@@ -83,7 +84,10 @@ class Item extends Component {
               </div>
             </div>
             <div>
-              <Reviews />
+              <Reviews
+                itemId={this.props.match.params.itemId}
+                history={this.props.history}
+              />
               {this.renderReviews()}
             </div>
           </div>

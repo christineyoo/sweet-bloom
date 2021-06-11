@@ -95,7 +95,7 @@ class App extends Component {
       review_rating: reviewRating,
       review_date: reviewDate
     };
-    this.setState({ posts: [newReviewObject, ...this.state.reviews] });
+    this.setState({ reviews: [...this.state.reviews, newReviewObject] });
     this.fetchReviews();
   };
 

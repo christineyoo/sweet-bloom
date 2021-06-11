@@ -4,10 +4,10 @@ import ApiContext from '../../ApiContext.js';
 import PropTypes from 'prop-types';
 
 class AddReview extends Component {
-  static propTypes = {
-    history: PropTypes.object,
-    match: PropTypes.object
-  };
+  // static propTypes = {
+  //   history: PropTypes.object,
+  //   match: PropTypes.object
+  // };
   static contextType = ApiContext;
 
   state = {
@@ -90,9 +90,10 @@ class AddReview extends Component {
 
   handleSubmit = (event, addReviewCb) => {
     event.preventDefault();
+    console.log('handleSubmit fired');
     const { title, content, rating, name } = this.state;
     const reviewName = name.value;
-    const reviewItemId = +this.props.match.params.itemId;
+    const reviewItemId = +this.props.itemId;
     const reviewTitle = title.value;
     const reviewContent = content.value;
     const reviewRating = rating.value;
@@ -118,7 +119,7 @@ class AddReview extends Component {
         return res.json();
       })
       .then((data) => {
-        this.props.history.push(`/${this.props.match.params.itemId}`);
+        this.props.history.push(`/item/${this.props.itemId}`);
         addReviewCb(
           data,
           reviewName,
@@ -177,9 +178,9 @@ class AddReview extends Component {
                   <option value={4}>4</option>
                   <option value={5}>5</option>
                 </select>
+                <button type='submit'>Submit</button>
               </form>
               <button onClick={this.props.onClose}>Go back</button>
-              <button type='submit'>Submit</button>
             </div>
           </div>
         )}

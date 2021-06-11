@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReviewCard from './ReviewCard';
 import AddReview from './AddReview';
 
 class Reviews extends Component {
@@ -16,6 +15,8 @@ class Reviews extends Component {
         <AddReview
           open={this.state.isOpen}
           onClose={() => this.setState({ isOpen: false })}
+          itemId={this.props.itemId}
+          history={this.props.history}
         ></AddReview>
       </div>
     );
