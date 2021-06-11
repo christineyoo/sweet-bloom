@@ -119,6 +119,7 @@ class AddReview extends Component {
         return res.json();
       })
       .then((data) => {
+        this.props.onClose();
         this.props.history.push(`/item/${this.props.itemId}`);
         addReviewCb(
           data,
