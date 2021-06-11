@@ -6,7 +6,7 @@ class ReviewCard extends Component {
     return (
       <div className='review-card'>
         <h1>{this.props.title}</h1>
-        <h2>Rating: {this.props.rating}</h2>
+        <h2>Rating: {this.props.rating} out of 5</h2>
         <p>
           By {this.props.name} on {this.props.date}
         </p>
