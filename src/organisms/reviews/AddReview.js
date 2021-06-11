@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import './AddReview.css';
 import ApiContext from '../../ApiContext.js';
-import PropTypes from 'prop-types';
 
 class AddReview extends Component {
-  // static propTypes = {
-  //   history: PropTypes.object,
-  //   match: PropTypes.object
-  // };
   static contextType = ApiContext;
 
   state = {

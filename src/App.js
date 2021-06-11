@@ -99,7 +99,11 @@ class App extends Component {
     this.fetchReviews();
   };
 
-  deleteReview = () => {};
+  deleteReview = (reviewId) => {
+    const newReviews = this.state.reviews.filter((review) => review.id !== reviewId);
+    this.setState({ reviews: newReviews });
+    this.fetchReviews();
+  };
 
   updateReview = () => {};
 

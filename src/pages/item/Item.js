@@ -45,11 +45,14 @@ class Item extends Component {
       return (
         <ReviewCard
           key={i}
+          reviewId={item.id}
           name={item.review_name}
           title={item.review_title}
           content={item.review_content}
           rating={item.review_rating}
           date={item.review_date}
+          itemId={item.item_id}
+          history={this.props.history}
         />
       );
     });
