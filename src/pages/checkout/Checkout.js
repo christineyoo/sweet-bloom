@@ -5,7 +5,38 @@ import ItemCard from '../../organisms/itemCard/ItemCard';
 import { Link } from 'react-router-dom';
 
 class Checkout extends Component {
-  state = {};
+  state = {
+    shipping: 10
+  };
+
+  renderItemCards = () => {
+    const itemsInCart = this.props.itemsInCart;
+    if (itemsInCart.length === 0) return null;
+    return itemsInCart.map((item, i) => {
+      return (
+        <ItemCard
+          key={i}
+          isOnCheckout
+          name={item.name}
+          price={item.price}
+          quantity={item.quantity}
+        />
+      );
+    });
+  };
+
+  totalPrice = () => {
+    const itemsInCart = this.props.itemsInCart;
+    if (itemsInCart.length === 0) return null;
+    const itemTotals = itemsInCart.map((item) => +item.price * +item.quantity);
+    return itemTotals.reduce((res, curr) => res + curr);
+  };
+
+  updateShipping = (e) => {
+    this.setState({ shipping: e });
+    return this.state.shipping;
+  };
+
   render() {
     return (
       <div>
@@ -38,23 +69,35 @@ class Checkout extends Component {
             <h2>Step 3 - Review Items and Shipping</h2>
             <div id='checkout-step-3-flex'>
               <section id='checkout-step-3-flex-2'>
-                <ItemCard />
-                <ItemCard />
-                <ItemCard />
-                <ItemCard />
+                {this.renderItemCards()}
               </section>
               <section id='checkout-step-3-flex-1'>
                 <h3>Delivery options</h3>
                 <p>Today (2 hrs)</p>
-                <input type='radio' />
+                <input
+                  type='radio'
+                  name='option'
+                  value={10}
+                  onChange={(e) => this.updateShipping(e.target.value)}
+                />
                 <label>$10</label>
 
                 <p>Tomorrow</p>
-                <input type='radio' />
+                <input
+                  type='radio'
+                  name='option'
+                  value={7}
+                  onChange={(e) => this.updateShipping(e.target.value)}
+                />
                 <label>$7</label>
 
                 <p>Custom Date</p>
-                <input type='radio' />
+                <input
+                  type='radio'
+                  name='option'
+                  value={5}
+                  onChange={(e) => this.updateShipping(e.target.value)}
+                />
                 <label>$5</label>
               </section>
             </div>
@@ -63,11 +106,11 @@ class Checkout extends Component {
             <h2>Order Summary</h2>
             <div id='order-summary-flex'>
               <p className='order-summary-flex-1'>Items</p>
-              <p className='order-summary-flex-1'>$200</p>
+              <p className='order-summary-flex-1'>${this.totalPrice()}</p>
             </div>
             <div id='order-summary-flex'>
               <p className='order-summary-flex-1'>Shipping</p>
-              <p className='order-summary-flex-1'>$10</p>
+              <p className='order-summary-flex-1'>${this.state.shipping}</p>
             </div>
             <hr />
             <div id='order-summary-flex'>
