@@ -11,6 +11,7 @@ import Item from './pages/item/Item';
 import Landing from './pages/landing/Landing';
 import NavBar from './organisms/navbar/NavBar';
 import Shop from './pages/shop/Shop';
+import ScrollToTop from './ScrollToTop';
 
 class App extends Component {
   state = {
@@ -58,7 +59,7 @@ class App extends Component {
       .catch((error) => this.setState({ error }))
       .finally(() => {
         // this.setState(isloading false)
-      })
+      });
   };
 
   fetchReviews = () => {
@@ -103,27 +104,31 @@ class App extends Component {
   };
 
   deleteReview = (reviewId) => {
-    const newReviews = this.state.reviews.filter((review) => review.id !== reviewId);
+    const newReviews = this.state.reviews.filter(
+      (review) => review.id !== reviewId
+    );
     this.setState({ reviews: newReviews });
     this.fetchReviews();
   };
 
-  updateReview = (data,
+  updateReview = (
+    data,
     reviewName,
     reviewItemId,
     reviewTitle,
     reviewContent,
     reviewRating,
-    reviewDate) => {
-      // const updatedPostObject = {
-      //   id: data.id,
-      //   name: postName,
-      //   content: postContent,
-      //   group: postGroup,
-      //   author: postAuthor,
-      //   modified: postModified
-      // };
-    };
+    reviewDate
+  ) => {
+    // const updatedPostObject = {
+    //   id: data.id,
+    //   name: postName,
+    //   content: postContent,
+    //   group: postGroup,
+    //   author: postAuthor,
+    //   modified: postModified
+    // };
+  };
 
   render() {
     const contextValue = {
@@ -143,6 +148,7 @@ class App extends Component {
         </header>
         <main>
           <ApiContext.Provider value={contextValue}>
+            <ScrollToTop />
             <Switch>
               <Route exact path='/account' component={Account} />
               <Route exact path='/cart' component={Cart} />
