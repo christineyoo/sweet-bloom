@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Account from './pages/account/Account';
+// import Account from './pages/account/Account';
 import ApiContext from './ApiContext';
 import Cart from './pages/cart/Cart';
 import Checkout from './pages/checkout/Checkout';
@@ -18,6 +18,7 @@ class App extends Component {
     groups: [],
     items: [],
     reviews: [],
+    itemsInCart: [],
     error: null
   };
 
@@ -137,6 +138,10 @@ class App extends Component {
     this.fetchReviews();
   };
 
+  putInCart = (itemObj) => {
+    this.setState({ itemsInCart: [...this.state.itemsInCart, itemObj] });
+  };
+
   render() {
     const contextValue = {
       groups: this.state.groups,
@@ -157,13 +162,34 @@ class App extends Component {
           <ApiContext.Provider value={contextValue}>
             <ScrollToTop />
             <Switch>
-              {/* <Route exact path='/account' component={Account} /> */}
-              <Route exact path='/cart' component={Cart} />
-              <Route exact path='/checkout' component={Checkout} />
+              <Route
+                exact
+                path='/cart'
+                render={(props) => (
+                  <Cart {...props} itemsInCart={this.state.itemsInCart} />
+                )}
+              />
+              <Route
+                exact
+                path='/checkout'
+                render={(props) => (
+                  <Checkout {...props} itemsInCart={this.state.itemsInCart} />
+                )}
+              />
               <Route exact path='/confirmation' component={Confirmation} />
               <Route exact path='/group/:groupId' component={Group} />
-              <Route exact path='/item/:itemId' component={Item} />
+              <Route
+                exact
+                path='/item/:itemId'
+                render={(props) => (
+                  <Item
+                    {...props}
+                    handleUpdate={(itemObj) => this.putInCart(itemObj)}
+                  />
+                )}
+              />
               <Route exact path='/shop' component={Shop} />
+              {/* <Route exact path='/account' component={Account} /> */}
               <Route exact path='/' component={Landing} />
             </Switch>
           </ApiContext.Provider>

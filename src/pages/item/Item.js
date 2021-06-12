@@ -21,9 +21,24 @@ class Item extends Component {
       item_price: 0,
       item_description: ''
     },
+    quantity: 1,
     error: null
   };
 
+  inputQuantity = (q) => {
+    this.setState({
+      quantity: q
+    });
+  };
+
+  formatUpdate = () => {
+    const { item, quantity } = this.state;
+    this.props.handleUpdate({
+      name: item.item_name,
+      price: item.item_price,
+      quantity: quantity
+    });
+  };
   renderQuantity = () => {
     const quantityArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const quantityOptions = quantityArr.map((q, i) => {
@@ -96,12 +111,18 @@ class Item extends Component {
                 <h1>{this.state.item.item_name}</h1>
                 <h2>${this.state.item.item_price}</h2>
                 <label htmlFor='groups'>Quantity&nbsp;</label>
-                <select name='quantity' id='quantity'>
+                <select
+                  name='quantity'
+                  id='quantity'
+                  onChange={(e) => this.inputQuantity(e.target.value)}
+                >
                   {this.renderQuantity()}
                 </select>
                 <br />
                 <Link to='/cart'>
-                  <button>Add to cart</button>
+                  <button onClick={() => this.formatUpdate()}>
+                    Add to cart
+                  </button>
                 </Link>
                 <h3>Description</h3>
                 <p>{this.state.item.item_description}</p>

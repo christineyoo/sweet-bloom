@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './ItemCard.css';
 import stockPhoto from '../../pages/landing/carnation-carnival-1.jpg';
 
@@ -12,11 +11,10 @@ class ItemCard extends Component {
           <img src={stockPhoto} height='100px' width='100px' alt='item' />
         </div>
         <div className='item-card-flex-1'>
-          <Link to='/item'>
-            <p>Product Name</p>
-          </Link>
-          <p>$50</p>
-          <p>Quantity: 1</p>
+          <p>{this.props.name}</p>
+          <p>${this.props.price}</p>
+          <p>Quantity: {this.props.quantity}</p>
+          <button>Remove Item</button>
         </div>
       </div>
     );
