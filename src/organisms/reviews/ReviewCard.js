@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import ApiContext from '../../ApiContext';
+import EditReview from './EditReview';
 import './Reviews.css';
 
 class ReviewCard extends Component {
   static contextType = ApiContext;
+
+  state = {
+    isOpen: false
+  };
 
   deleteReviewRequest = (reviewId, deleteReviewCb) => {
     fetch(`http://localhost:8000/api/reviews/${reviewId}`, {
@@ -29,9 +34,7 @@ class ReviewCard extends Component {
       });
   };
 
-  updateReviewRequest = () => {
-    
-  }
+  updateReviewRequest = () => {};
 
   render() {
     return (
@@ -41,7 +44,7 @@ class ReviewCard extends Component {
             <h1>{this.props.title}</h1>
             <h2>Rating: {this.props.rating} out of 5</h2>
             <p>
-              By {this.props.name} on {this.props.date}
+              By {this.props.name} on {this.props.date.substring(0, 10)}
             </p>
             <p>{this.props.content}</p>
             <button
@@ -54,7 +57,20 @@ class ReviewCard extends Component {
             >
               Delete
             </button>
-            <button>Edit</button>
+            <button onClick={() => this.setState({ isOpen: true })}>
+              Edit
+            </button>
+            <EditReview
+              open={this.state.isOpen}
+              onClose={() => this.setState({ isOpen: false })}
+              review_id={this.props.reviewId}
+              review_name={this.props.name}
+              review_title={this.props.title}
+              review_content={this.props.content}
+              review_rating={this.props.rating}
+              review_date={this.props.date}
+              history={this.props.history}
+            />
           </div>
         )}
       </ApiContext.Consumer>

@@ -5,6 +5,7 @@ class Reviews extends Component {
   state = {
     isOpen: false
   };
+  
   render() {
     return (
       <div>
@@ -17,7 +18,7 @@ class Reviews extends Component {
           onClose={() => this.setState({ isOpen: false })}
           itemId={this.props.itemId}
           history={this.props.history}
-        ></AddReview>
+        />
       </div>
     );
   }

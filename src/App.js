@@ -120,14 +120,21 @@ class App extends Component {
     reviewRating,
     reviewDate
   ) => {
-    // const updatedPostObject = {
-    //   id: data.id,
-    //   name: postName,
-    //   content: postContent,
-    //   group: postGroup,
-    //   author: postAuthor,
-    //   modified: postModified
-    // };
+    const updatedReviewObject = {
+      id: data.id,
+      review_name: reviewName,
+      item_id: reviewItemId,
+      review_title: reviewTitle,
+      review_content: reviewContent,
+      review_rating: reviewRating,
+      review_date: reviewDate
+    };
+    const filteredReviews = this.state.reviews.find(
+      (review) => review.id !== data.id
+    );
+    this.setState({ reviews: filteredReviews });
+    this.setState({ reviews: [...this.state.reviews, updatedReviewObject] });
+    this.fetchReviews();
   };
 
   render() {
