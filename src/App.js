@@ -55,7 +55,10 @@ class App extends Component {
       .then((itemData) => {
         return this.setState({ items: itemData });
       })
-      .catch((error) => this.setState({ error }));
+      .catch((error) => this.setState({ error }))
+      .finally(() => {
+        // this.setState(isloading false)
+      })
   };
 
   fetchReviews = () => {
@@ -105,7 +108,22 @@ class App extends Component {
     this.fetchReviews();
   };
 
-  updateReview = () => {};
+  updateReview = (data,
+    reviewName,
+    reviewItemId,
+    reviewTitle,
+    reviewContent,
+    reviewRating,
+    reviewDate) => {
+      // const updatedPostObject = {
+      //   id: data.id,
+      //   name: postName,
+      //   content: postContent,
+      //   group: postGroup,
+      //   author: postAuthor,
+      //   modified: postModified
+      // };
+    };
 
   render() {
     const contextValue = {

@@ -29,6 +29,10 @@ class ReviewCard extends Component {
       });
   };
 
+  updateReviewRequest = () => {
+    
+  }
+
   render() {
     return (
       <ApiContext.Consumer>

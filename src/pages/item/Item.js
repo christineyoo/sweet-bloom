@@ -14,13 +14,14 @@ class Item extends Component {
   };
   static contextType = ApiContext;
 
-  renderItemDetails = () => {
-    const copyItems = this.context.items || [];
-    const currentItem = copyItems.filter(
-      (item) => item.id === +this.props.match.params.itemId
-    );
-
-    return currentItem[0];
+  state = {
+    item: {
+      item_url: '',
+      item_name: '',
+      item_price: 0,
+      item_description: ''
+    },
+    error: null
   };
 
   renderQuantity = () => {
@@ -57,6 +58,26 @@ class Item extends Component {
       );
     });
   };
+
+  componentDidMount() {
+    fetch(
+      `http://localhost:8000/api/items/${+this.props.match.params.itemId}`,
+      {
+        method: 'GET',
+        headers: {
+          'content-type': 'application/json'
+        }
+      }
+    )
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(res.status);
+        }
+        return res.json();
+      })
+      .then((itemData) => this.setState({ item: itemData }))
+      .catch((error) => this.setState({ error }));
+  }
   render() {
     return (
       <ApiContext.Consumer>
@@ -65,15 +86,15 @@ class Item extends Component {
             <div className='item-flex'>
               <div className='item-flex-1'>
                 <img
-                  src={this.renderItemDetails().item_url}
+                  src={this.state.item.item_url}
                   height='450px'
-                  alt='stock photo'
+                  alt='loading...'
                 />
               </div>
 
               <div className='item-flex-1'>
-                <h1>{this.renderItemDetails().item_name}</h1>
-                <h2>${this.renderItemDetails().item_price}</h2>
+                <h1>{this.state.item.item_name}</h1>
+                <h2>${this.state.item.item_price}</h2>
                 <label htmlFor='groups'>Quantity&nbsp;</label>
                 <select name='quantity' id='quantity'>
                   {this.renderQuantity()}
@@ -83,7 +104,7 @@ class Item extends Component {
                   <button>Add to cart</button>
                 </Link>
                 <h3>Description</h3>
-                <p>{this.renderItemDetails().item_description}</p>
+                <p>{this.state.item.item_description}</p>
               </div>
             </div>
             <div>
