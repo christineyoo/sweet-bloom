@@ -28,7 +28,7 @@ class NavBar extends Component {
         >
           Shop
         </NavLink>
-        <NavLink
+        {/* <NavLink
           className='flex-1'
           to={'/account'}
           activeStyle={{
@@ -38,7 +38,7 @@ class NavBar extends Component {
           }}
         >
           Account
-        </NavLink>
+        </NavLink> */}
         <NavLink
           className='flex-1'
           to={'/cart'}

@@ -157,7 +157,7 @@ class App extends Component {
           <ApiContext.Provider value={contextValue}>
             <ScrollToTop />
             <Switch>
-              <Route exact path='/account' component={Account} />
+              {/* <Route exact path='/account' component={Account} /> */}
               <Route exact path='/cart' component={Cart} />
               <Route exact path='/checkout' component={Checkout} />
               <Route exact path='/confirmation' component={Confirmation} />
