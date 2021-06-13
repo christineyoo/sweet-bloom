@@ -29,12 +29,17 @@ class Checkout extends Component {
     const itemsInCart = this.props.itemsInCart;
     if (itemsInCart.length === 0) return null;
     const itemTotals = itemsInCart.map((item) => +item.price * +item.quantity);
-    return itemTotals.reduce((res, curr) => res + curr);
+    const totalPrice = itemTotals.reduce((res, curr) => res + curr);
+    return totalPrice;
   };
 
   updateShipping = (e) => {
     this.setState({ shipping: e });
     return this.state.shipping;
+  };
+
+  totalBeforeTax = () => {
+    return this.totalPrice + this.state.shipping;
   };
 
   render() {
@@ -114,19 +119,12 @@ class Checkout extends Component {
             </div>
             <hr />
             <div id='order-summary-flex'>
-              <p className='order-summary-flex-1'>Total before tax</p>
-              <p className='order-summary-flex-1'>$210</p>
-            </div>
-            <div id='order-summary-flex'>
-              <p className='order-summary-flex-1'>Tax</p>
-              <p className='order-summary-flex-1'>$21</p>
-            </div>
-            <div id='order-summary-flex'>
               <p className='order-summary-flex-1'>
                 <strong>Order Total</strong>
               </p>
               <p className='order-summary-flex-1'>
-                <strong>$231</strong>
+                <strong>${+this.totalPrice() + 
+                +this.state.shipping}</strong>
               </p>
             </div>
             <Link to={'/confirmation'}>
