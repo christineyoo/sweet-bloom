@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-// import Account from './pages/account/Account';
 import ApiContext from './ApiContext';
 import Cart from './pages/cart/Cart';
 import Checkout from './pages/checkout/Checkout';
@@ -176,7 +175,16 @@ class App extends Component {
                   <Checkout {...props} itemsInCart={this.state.itemsInCart} />
                 )}
               />
-              <Route exact path='/confirmation' component={Confirmation} />
+              <Route
+                exact
+                path='/confirmation'
+                render={(props) => (
+                  <Confirmation
+                    {...props}
+                    itemsInCart={this.state.itemsInCart}
+                  />
+                )}
+              />
               <Route exact path='/group/:groupId' component={Group} />
               <Route
                 exact
@@ -189,7 +197,6 @@ class App extends Component {
                 )}
               />
               <Route exact path='/shop' component={Shop} />
-              {/* <Route exact path='/account' component={Account} /> */}
               <Route exact path='/' component={Landing} />
             </Switch>
           </ApiContext.Provider>
