@@ -46,7 +46,7 @@ class Confirmation extends Component {
             <div id='confirmation-items-flex'>
               <p className='confirmation-items-flex-1'>Order Total</p>
               <p className='confirmation-items-flex-1'>
-                ${+this.totalPrice() + this.props.shipping}
+                ${+this.totalPrice() + +this.props.shipping}
               </p>
             </div>
           </div>

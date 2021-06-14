@@ -82,6 +82,7 @@ class Checkout extends Component {
                   name='option'
                   value={10}
                   onChange={(e) => this.updateShipping(e.target.value)}
+                  checked
                 />
                 <label>$10</label>
 
