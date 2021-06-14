@@ -30,16 +30,14 @@ class Checkout extends Component {
     if (itemsInCart.length === 0) return null;
     const itemTotals = itemsInCart.map((item) => +item.price * +item.quantity);
     const totalPrice = itemTotals.reduce((res, curr) => res + curr);
+    // this.props.handleTotalPrice(totalPrice);
     return totalPrice;
   };
 
   updateShipping = (e) => {
     this.setState({ shipping: e });
+    this.props.handleShipping(e);
     return this.state.shipping;
-  };
-
-  totalBeforeTax = () => {
-    return this.totalPrice + this.state.shipping;
   };
 
   render() {
@@ -123,8 +121,7 @@ class Checkout extends Component {
                 <strong>Order Total</strong>
               </p>
               <p className='order-summary-flex-1'>
-                <strong>${+this.totalPrice() + 
-                +this.state.shipping}</strong>
+                <strong>${+this.totalPrice() + +this.state.shipping}</strong>
               </p>
             </div>
             <Link to={'/confirmation'}>

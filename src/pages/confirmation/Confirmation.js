@@ -3,7 +3,24 @@ import { Link } from 'react-router-dom';
 import './Confirmation.css';
 
 class Confirmation extends Component {
-  state = {};
+  totalPrice = () => {
+    const itemsInCart = this.props.itemsInCart;
+    if (itemsInCart.length === 0) return null;
+    const itemTotals = itemsInCart.map((item) => +item.price * +item.quantity);
+    return itemTotals.reduce((res, curr) => res + curr);
+  };
+
+  renderItemSummary = () => {
+    const itemsInCart = this.props.itemsInCart;
+    return itemsInCart.map((item, i) => {
+      return (
+        <li key={i}>
+          {item.name} ({item.quantity})
+        </li>
+      );
+    });
+  };
+
   render() {
     return (
       <div>
@@ -12,32 +29,33 @@ class Confirmation extends Component {
         <h3>Order Confirmation</h3>
         <p>Order #123-456-789</p>
         <p>Items</p>
-        <ul>
-          <li>Item name (1)</li>
-          <li>Item name (1)</li>
-          <li>Item name (1)</li>
-          <li>Item name (1)</li>
-        </ul>
+        <ul>{this.renderItemSummary()}</ul>
         <div className='confirmation-flex'>
           <div className='confirmation-flex-1'>
             <div id='confirmation-items-flex'>
-              <p className='confirmation-items-flex-1'>Total before tax</p>
-              <p className='confirmation-items-flex-1'>$210</p>
+              <p className='confirmation-items-flex-1'>Total before shipping</p>
+              <p className='confirmation-items-flex-1'>${this.totalPrice()}</p>
             </div>
             <div id='confirmation-items-flex'>
-              <p className='confirmation-items-flex-1'>Tax</p>
-              <p className='confirmation-items-flex-1'>$21</p>
+              <p className='confirmation-items-flex-1'>Shipping</p>
+              <p className='confirmation-items-flex-1'>
+                ${this.props.shipping}
+              </p>
             </div>
             <hr />
             <div id='confirmation-items-flex'>
-              <p className='confirmation-items-flex-1'>Subtotal</p>
-              <p className='confirmation-items-flex-1'>$231</p>
+              <p className='confirmation-items-flex-1'>Order Total</p>
+              <p className='confirmation-items-flex-1'>
+                ${+this.totalPrice() + this.props.shipping}
+              </p>
             </div>
           </div>
           <div className='confirmation-flex-1'>
             <h4>Delivery Details</h4>
             <p>Arriving today</p>
-            <p><strong>Ship to:</strong></p>
+            <p>
+              <strong>Ship to:</strong>
+            </p>
             <p>Darlene H.</p>
             <p>1234 Main Street</p>
             <p>Los Angeles, CA 90006</p>

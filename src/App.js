@@ -18,6 +18,8 @@ class App extends Component {
     items: [],
     reviews: [],
     itemsInCart: [],
+    shipping: 10,
+    totalCost: 0,
     error: null
   };
 
@@ -141,6 +143,14 @@ class App extends Component {
     this.setState({ itemsInCart: [...this.state.itemsInCart, itemObj] });
   };
 
+  shippingCost = (s) => {
+    this.setState({ shipping: s });
+  };
+
+  totalCost = (p) => {
+    this.setState({ totalCost: p });
+  };
+
   render() {
     const contextValue = {
       groups: this.state.groups,
@@ -172,7 +182,12 @@ class App extends Component {
                 exact
                 path='/checkout'
                 render={(props) => (
-                  <Checkout {...props} itemsInCart={this.state.itemsInCart} />
+                  <Checkout
+                    {...props}
+                    itemsInCart={this.state.itemsInCart}
+                    handleShipping={(s) => this.shippingCost(s)}
+                    handleTotalPrice={(p) => this.totalCost(p)}
+                  />
                 )}
               />
               <Route
@@ -182,6 +197,7 @@ class App extends Component {
                   <Confirmation
                     {...props}
                     itemsInCart={this.state.itemsInCart}
+                    shipping={this.state.shipping}
                   />
                 )}
               />
