@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './AddReview.css';
 import ApiContext from '../../ApiContext.js';
 import PropTypes from 'prop-types';
+import ValidationError from '../../validationError/ValidationError';
 
 class EditReview extends Component {
   static propTypes = {
@@ -158,7 +159,10 @@ class EditReview extends Component {
                   value={this.state.name.value}
                   onChange={(e) => this.inputReviewName(e.target.value)}
                   required
-                ></input>
+                />
+                {this.state.name.touched && (
+                  <ValidationError message={this.validateName()} />
+                )}
                 <label htmlFor='title'>Title</label>
                 <input
                   name='title'
@@ -166,7 +170,10 @@ class EditReview extends Component {
                   value={this.state.title.value}
                   onChange={(e) => this.inputReviewTitle(e.target.value)}
                   required
-                ></input>
+                />
+                {this.state.title.touched && (
+                  <ValidationError message={this.validateTitle()} />
+                )}
                 <label htmlFor='content'>Content</label>
                 <textarea
                   name='content'
@@ -176,6 +183,9 @@ class EditReview extends Component {
                   onChange={(e) => this.inputReviewContent(e.target.value)}
                   required
                 ></textarea>
+                {this.state.content.touched && (
+                  <ValidationError message={this.validateContent()} />
+                )}
                 <label htmlFor='rating'>Rating</label>
                 <select
                   name='rating'
