@@ -36,7 +36,8 @@ class Item extends Component {
     this.props.handleUpdate({
       name: item.item_name,
       price: item.item_price,
-      quantity: quantity
+      quantity: quantity,
+      url: item.item_url
     });
   };
 
@@ -94,7 +95,7 @@ class Item extends Component {
       .then((itemData) => this.setState({ item: itemData }))
       .catch((error) => this.setState({ error }));
   }
-  
+
   render() {
     return (
       <ApiContext.Consumer>

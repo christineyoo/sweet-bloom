@@ -6,6 +6,7 @@ import './Cart.css';
 class Cart extends Component {
   renderItemCards = () => {
     const itemsInCart = this.props.itemsInCart;
+    console.log('itemsinCart', itemsInCart);
     if (itemsInCart.length === 0) return null;
     return itemsInCart.map((item, i) => {
       return (
@@ -15,6 +16,7 @@ class Cart extends Component {
           name={item.name}
           price={item.price}
           quantity={item.quantity}
+          url={item.url}
         />
       );
     });
