@@ -50,13 +50,13 @@ class Checkout extends Component {
             <AddressForm />
             <h2>Step 2 - Payment Method</h2>
             <form>
-              <label htmlFor='name'>Name</label>
+              <label htmlFor='name'>Name&nbsp;</label>
               <input id='name' name='name' type='text' required />
               <br />
-              <label htmlFor='card-number'>Card Number</label>
+              <label htmlFor='card-number'>Card Number&nbsp;</label>
               <input id='card-number' name='card-number' type='text' required />
               <br />
-              <label htmlFor='exp-date'>Expiration Date</label>
+              <label htmlFor='exp-date'>Expiration Date&nbsp;</label>
               <input
                 id='exp-date'
                 name='exp-date'
@@ -64,7 +64,7 @@ class Checkout extends Component {
                 placeholder='mm/yy'
                 required
               />
-              <label htmlFor='cvc'>CVC</label>
+              <label htmlFor='cvc'>CVC&nbsp;</label>
               <input id='cvc' name='cvc' type='text' required />
             </form>
             <h3>Billing Address</h3>
