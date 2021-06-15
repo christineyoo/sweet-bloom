@@ -12,7 +12,7 @@ class Landing extends Component {
           <h1>Sweet Bloom</h1>
           <h2>Farm fresh flowers and decadent desserts delivered anywhere.</h2>
         </article>
-        <article>
+        <article id='how-it-works'>
           <h2>How it works</h2>
           <h3>Three simple steps</h3>
           <div className='landing-flex'>
@@ -44,16 +44,18 @@ class Landing extends Component {
             </section>
           </div>
         </article>
-        <article>
+        <article id='benefits'>
           <h2>Benefits and Features</h2>
           <div className='landing-flex'>
-            <img
-              className='landing-flex-2'
-              src={stockPhoto}
-              height='300px'
-              width='260px'
-              alt='stock photo'
-            />
+            <div className='landing-flex-2'>
+              <img
+                src={stockPhoto}
+                height='300px'
+                width='260px'
+                alt='stock photo'
+              />
+            </div>
+
             <div className='landing-flex-1'>
               <h3>User Authentication and Authorization</h3>
               <p>
@@ -70,22 +72,25 @@ class Landing extends Component {
                 of our products.
               </p>
             </div>
-            <img
-              className='landing-flex-2'
-              src={stockPhoto}
-              height='300px'
-              width='260px'
-              alt='stock photo'
-            />
+            <div className='landing-flex-2'>
+              <img
+                src={stockPhoto}
+                height='300px'
+                width='260px'
+                alt='stock photo'
+              />
+            </div>
           </div>
           <div className='landing-flex'>
-            <img
-              className='landing-flex-2'
-              src={stockPhoto}
-              height='300px'
-              width='260px'
-              alt='stock photo'
-            />
+            <div className='landing-flex-2'>
+              <img
+                src={stockPhoto}
+                height='300px'
+                width='260px'
+                alt='stock photo'
+              />
+            </div>
+
             <div className='landing-flex-1'>
               <h3>Easily adjust what's in your cart</h3>
               <p>
@@ -95,7 +100,7 @@ class Landing extends Component {
             </div>
           </div>
         </article>
-        <article>
+        <article id='reviews'>
           <h2>Customer Reviews</h2>
           <div className='landing-flex'>
             <section className='landing-flex-1'>
@@ -103,7 +108,7 @@ class Landing extends Component {
                 src={stockPhoto}
                 height='200px'
                 width='200px'
-                alt='stock photo'
+                alt='loading...'
               />
               <h3>"High quality"</h3>
               <p>
@@ -117,7 +122,7 @@ class Landing extends Component {
                 src={stockPhoto}
                 height='200px'
                 width='200px'
-                alt='stock photo'
+                alt='loading...'
               />
               <h3>"Happy wife happy life"</h3>
               <p>
@@ -131,7 +136,7 @@ class Landing extends Component {
                 src={stockPhoto}
                 height='200px'
                 width='200px'
-                alt='stock photo'
+                alt='loading...'
               />
               <h3>"Consistent service"</h3>
               <p>
@@ -141,10 +146,11 @@ class Landing extends Component {
               <p>- Brianna from Suwanee, GA</p>
             </section>
           </div>
-        </article>
-        <Link to='/shop'>
-          <button>Shop</button>
+          <Link to='/shop'>
+          <button id='landing-button'>Shop</button>
         </Link>
+        </article>
+        
       </div>
     );
   }

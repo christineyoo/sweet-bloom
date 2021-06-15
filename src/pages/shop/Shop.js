@@ -8,8 +8,6 @@ import './Shop.css';
 class Shop extends Component {
   static contextType = ApiContext;
 
-  componentDidMount() {}
-
   renderGroups = () => {
     const copyGroups = this.context.groups || [];
     const groups = copyGroups.map((group, i) => {
@@ -45,7 +43,7 @@ class Shop extends Component {
 
   render() {
     return (
-      <div>
+      <div id='shop'>
         <h1>All Items</h1>
         <h2>
           Browse through our wide collection of floral bouquets and desserts.

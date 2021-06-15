@@ -1,6 +1,5 @@
 article {
-  padding: 10% 5%;
-  border: 3px solid orange;
+  padding: 5rem 10rem;
 }
 
 .landing-flex {
@@ -10,8 +9,11 @@ article {
 
 .landing-flex-1 {
   flex: 1;
-  border: 1px solid rgb(194, 39, 39);
+  background-color: rgba(248, 249, 250, 0.8);
+  border-radius: 1rem;
   text-align: center;
+  padding: 1rem;
+  margin-right: 1rem;
 }
 
 .landing-flex-2 {
@@ -26,4 +28,27 @@ article {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding: 12rem 10rem;
+}
+
+#landing > h1 {
+  font-size: 5rem;
+}
+
+#how-it-works,
+#reviews {
+  background-color: #dee2e6;
+}
+
+#benefits {
+  background-color: #e9ecef;
+}
+
+#landing-button {
+  padding: 1rem;
+  background-color: #e9ecef;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  margin-right: auto;
+  margin-left: auto;
 }

@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import Item from '../../pages/item/Item';
-
+import './ItemLink.css';
 class ItemLink extends Component {
   render() {
     return (

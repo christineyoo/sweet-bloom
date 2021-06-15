@@ -1,10 +1,14 @@
 .shop-flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .shop-flex-1 {
-    flex: 1;
-    border: 1px solid #000;
+  flex: 1;
+  padding: 1rem;
+}
+
+#shop {
+  padding: 5rem 10rem;
 }
