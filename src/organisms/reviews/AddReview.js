@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './AddReview.css';
 import ApiContext from '../../ApiContext.js';
+import ValidationError from '../../validationError/ValidationError';
 
 class AddReview extends Component {
   static contextType = ApiContext;
@@ -147,14 +148,20 @@ class AddReview extends Component {
                   type='text'
                   onChange={(e) => this.inputReviewName(e.target.value)}
                   required
-                ></input>
+                />
+                {this.state.name.touched && (
+                  <ValidationError message={this.validateName()} />
+                )}
                 <label htmlFor='title'>Title</label>
                 <input
                   name='title'
                   type='text'
                   onChange={(e) => this.inputReviewTitle(e.target.value)}
                   required
-                ></input>
+                />
+                {this.state.title.touched && (
+                  <ValidationError message={this.validateTitle()} />
+                )}
                 <label htmlFor='content'>Content</label>
                 <textarea
                   name='content'
@@ -163,6 +170,9 @@ class AddReview extends Component {
                   onChange={(e) => this.inputReviewContent(e.target.value)}
                   required
                 ></textarea>
+                {this.state.content.touched && (
+                  <ValidationError message={this.validateContent()} />
+                )}
                 <label htmlFor='rating'>Rating</label>
                 <select
                   name='rating'
