@@ -30,7 +30,7 @@ class Landing extends Component {
               <h4>Deliver</h4>
               <p>
                 Once you've selected and purchased your items, all products are
-                packaged in tempeature-controlled boxes and delivered to the
+                packaged in temperature-controlled boxes and delivered to the
                 location of your choice.
               </p>
             </section>
