@@ -45,10 +45,13 @@ article {
 }
 
 #landing-button {
-  padding: 1rem;
-  background-color: #e9ecef;
+  padding: 1rem 2rem;
+  background-color: transparent;
   border-radius: 1rem;
-  margin-top: 2rem;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 4rem 50%;
+  text-align: center;
+}
+
+#landing-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }

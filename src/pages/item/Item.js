@@ -39,6 +39,7 @@ class Item extends Component {
       quantity: quantity
     });
   };
+
   renderQuantity = () => {
     const quantityArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const quantityOptions = quantityArr.map((q, i) => {
@@ -93,6 +94,7 @@ class Item extends Component {
       .then((itemData) => this.setState({ item: itemData }))
       .catch((error) => this.setState({ error }));
   }
+  
   render() {
     return (
       <ApiContext.Consumer>

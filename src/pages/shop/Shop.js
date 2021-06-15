@@ -8,17 +8,28 @@ import './Shop.css';
 class Shop extends Component {
   static contextType = ApiContext;
 
-  renderGroups = () => {
-    const copyGroups = this.context.groups || [];
-    const groups = copyGroups.map((group, i) => {
-      return (
-        <Link key={i} to={`/group/${group.id}`}>
-          {group.group_name}&nbsp;
-        </Link>
-      );
+  scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
+  };
 
-    return groups;
+  renderGroups = () => {
+    const groupsArray = [
+      { id: 1, group_name: 'Flowers' },
+      { id: 2, group_name: 'Desserts' }
+    ];
+    return (
+      <div>
+        <Link to={`/group/${groupsArray[0].id}`}>
+          <button>{groupsArray[0].group_name}</button>
+        </Link>
+        <Link to={`/group/${groupsArray[1].id}`}>
+          <button>{groupsArray[1].group_name}</button>
+        </Link>
+      </div>
+    );
   };
 
   renderItems = () => {
@@ -50,6 +61,7 @@ class Shop extends Component {
         </h2>
         <h3>Filter by {this.renderGroups()}</h3>
         {this.renderItems()}
+        <button onClick={() => this.scrollToTop()}>Back to top</button>
       </div>
     );
   }
