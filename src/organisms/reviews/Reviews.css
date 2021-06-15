@@ -5,6 +5,10 @@
 
 .review-card {
   border: 1px solid teal;
-  padding: 1.25rem;
-  margin: 1.25rem 3rem;
+  padding: 2rem;
+  margin: 2rem 15rem;
+}
+
+#reviews-section {
+  padding: 2rem 10rem;
 }

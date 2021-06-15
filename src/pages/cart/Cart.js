@@ -36,7 +36,7 @@ class Cart extends Component {
 
   render() {
     return (
-      <div>
+      <div id='cart'>
         <h1>Shopping cart</h1>
         {this.props.itemsInCart.length === 0 ? (
           <h2>Cart is empty</h2>

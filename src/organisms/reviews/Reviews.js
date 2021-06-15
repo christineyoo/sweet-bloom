@@ -8,7 +8,7 @@ class Reviews extends Component {
   
   render() {
     return (
-      <div>
+      <div id='reviews-section'>
         <h1>Reviews</h1>
         <button onClick={() => this.setState({ isOpen: true })}>
           Add Review

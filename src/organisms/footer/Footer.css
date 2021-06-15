@@ -1,3 +1,6 @@
 footer {
-  border: 1px solid blue;
+  text-align: center;
+  padding: 2rem;
+  background-color: #6c757d;
+  background: url('../../pages/landing/landing-bg.jpg');
 }

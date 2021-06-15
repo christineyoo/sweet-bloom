@@ -11,7 +11,7 @@ class NavBar extends Component {
           to={'/'}
           activeStyle={{
             fontStyle: 'bold',
-            color: '#245149',
+            color: '#b37565',
             fontWeight: '900'
           }}
         >
@@ -22,7 +22,7 @@ class NavBar extends Component {
           to={'/shop'}
           activeStyle={{
             fontStyle: 'bold',
-            color: '#245149',
+            color: '#b37565',
             fontWeight: '900'
           }}
         >
@@ -44,7 +44,7 @@ class NavBar extends Component {
           to={'/cart'}
           activeStyle={{
             fontStyle: 'bold',
-            color: '#245149',
+            color: '#b37565',
             fontWeight: '900'
           }}
         >
