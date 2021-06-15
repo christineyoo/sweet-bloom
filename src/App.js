@@ -60,7 +60,6 @@ class App extends Component {
       })
       .catch((error) => this.setState({ error }))
       .finally(() => {
-        // this.setState(isloading false)
       });
   };
 

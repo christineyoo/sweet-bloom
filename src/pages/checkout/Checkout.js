@@ -20,6 +20,7 @@ class Checkout extends Component {
           name={item.name}
           price={item.price}
           quantity={item.quantity}
+          url={item.url}
         />
       );
     });
