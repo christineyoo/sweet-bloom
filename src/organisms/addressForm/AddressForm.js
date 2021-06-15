@@ -114,7 +114,7 @@ class AddressForm extends Component {
 
   render() {
     return (
-      <form className='address-form-flex'>
+      <form className='form-flex'>
         <label htmlFor='name'>Name</label>
         <input
           id='name'
