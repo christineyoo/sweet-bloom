@@ -11,7 +11,7 @@ class Cart extends Component {
     return itemsInCart.map((item, i) => {
       return (
         <ItemCard
-        handleDeleteItem={this.props.handleDeleteItem}
+          handleDeleteItem={this.props.handleDeleteItem}
           key={i}
           name={item.name}
           price={item.price}
@@ -41,7 +41,7 @@ class Cart extends Component {
       <div id='cart'>
         <h1>Shopping cart</h1>
         {this.props.itemsInCart.length === 0 ? (
-          <h2>Cart is empty</h2>
+          <h2 style={{ 'margin-bottom': '100%' }}>Cart is empty</h2>
         ) : (
           <div className='cart-flex'>
             <section className='cart-flex-2'>{this.renderItemCards()}</section>
