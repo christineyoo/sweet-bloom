@@ -8,7 +8,7 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        <article>
+        <article id='landing'>
           <h1>Sweet Bloom</h1>
           <h2>Farm fresh flowers and decadent desserts delivered anywhere.</h2>
         </article>

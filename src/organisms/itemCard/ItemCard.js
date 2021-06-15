@@ -3,6 +3,10 @@ import './ItemCard.css';
 import stockPhoto from '../../pages/landing/carnation-carnival-1.jpg';
 
 class ItemCard extends Component {
+  removeItem = () => {
+    this.props.handleDeleteItem(this.props.name);
+  };
+
   render() {
     return (
       <div className='item-card-flex'>
@@ -13,7 +17,7 @@ class ItemCard extends Component {
           <p>{this.props.name}</p>
           <p>${this.props.price}</p>
           <p>Quantity: {this.props.quantity}</p>
-          {this.props.isOnCheckout ? null : <button>Remove Item</button>}
+          {this.props.isOnCheckout ? null : <button onClick={() => this.removeItem()}>Remove Item</button>}
         </div>
       </div>
     );

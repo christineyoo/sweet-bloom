@@ -151,6 +151,13 @@ class App extends Component {
     this.setState({ totalCost: p });
   };
 
+  deleteItemFromCart = (itemName) => {
+    const filteredItemsInCart = this.state.itemsInCart.filter(
+      (item) => item.name !== itemName
+    );
+    this.setState({ itemsInCart: filteredItemsInCart });
+  };
+
   render() {
     const contextValue = {
       groups: this.state.groups,
@@ -175,7 +182,13 @@ class App extends Component {
                 exact
                 path='/cart'
                 render={(props) => (
-                  <Cart {...props} itemsInCart={this.state.itemsInCart} />
+                  <Cart
+                    {...props}
+                    itemsInCart={this.state.itemsInCart}
+                    handleDeleteItem={(itemName) =>
+                      this.deleteItemFromCart(itemName)
+                    }
+                  />
                 )}
               />
               <Route

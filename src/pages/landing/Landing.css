@@ -1,5 +1,5 @@
 article {
-  padding: 10% 0;
+  padding: 10% 5%;
   border: 3px solid orange;
 }
 
@@ -18,4 +18,12 @@ article {
   flex: 2;
   border: 1px solid rgb(194, 39, 39);
   text-align: center;
+}
+
+#landing {
+  background: url(./landing-bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

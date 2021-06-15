@@ -10,6 +10,7 @@ class Cart extends Component {
     return itemsInCart.map((item, i) => {
       return (
         <ItemCard
+        handleDeleteItem={this.props.handleDeleteItem}
           key={i}
           name={item.name}
           price={item.price}
