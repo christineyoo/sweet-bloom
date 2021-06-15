@@ -30,7 +30,6 @@ class Checkout extends Component {
     if (itemsInCart.length === 0) return null;
     const itemTotals = itemsInCart.map((item) => +item.price * +item.quantity);
     const totalPrice = itemTotals.reduce((res, curr) => res + curr);
-    // this.props.handleTotalPrice(totalPrice);
     return totalPrice;
   };
 
@@ -42,7 +41,7 @@ class Checkout extends Component {
 
   render() {
     return (
-      <div>
+      <div id='checkout'>
         <h1>Checkout</h1>
         <section className='checkout-flex'>
           <div className='checkout-flex-2'>

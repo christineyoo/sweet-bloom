@@ -23,10 +23,10 @@ class Shop extends Component {
     return (
       <div>
         <Link to={`/group/${groupsArray[0].id}`}>
-          <button>{groupsArray[0].group_name}</button>
+          <button id='shop-button'>{groupsArray[0].group_name}</button>
         </Link>
         <Link to={`/group/${groupsArray[1].id}`}>
-          <button>{groupsArray[1].group_name}</button>
+          <button id='shop-button'>{groupsArray[1].group_name}</button>
         </Link>
       </div>
     );

@@ -1,3 +1,7 @@
+#confirmation {
+  padding: 5rem 10rem;
+}
+
 .confirmation-flex {
   display: flex;
   flex-direction: row;
@@ -6,7 +10,9 @@
 .confirmation-flex-1 {
   flex: 1;
   margin-right: 20px;
+  padding: 2rem;
   border: 1px solid purple;
+  margin-bottom: 1rem;
 }
 
 #confirmation-items-flex {

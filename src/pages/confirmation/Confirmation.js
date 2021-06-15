@@ -23,7 +23,7 @@ class Confirmation extends Component {
 
   render() {
     return (
-      <div>
+      <div id='confirmation'>
         <h1>Thank you for shopping with Sweet Bloom!</h1>
         <h2>Your order details are shown below.</h2>
         <h3>Order Confirmation</h3>
