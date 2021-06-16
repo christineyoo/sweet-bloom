@@ -21,6 +21,19 @@ class Confirmation extends Component {
     });
   };
 
+  renderShipAddDetails = () => {
+    const { name, address, city, state, zipcode } = this.props.shippingData;
+    return (
+      <>
+        <p>{name}</p>
+        <p>{address}</p>
+        <p>
+          {city}, {state}, {zipcode}
+        </p>
+      </>
+    );
+  };
+
   render() {
     return (
       <div id='confirmation'>
@@ -56,9 +69,7 @@ class Confirmation extends Component {
             <p>
               <strong>Ship to:</strong>
             </p>
-            <p>Darlene H.</p>
-            <p>1234 Main Street</p>
-            <p>Los Angeles, CA 90006</p>
+            <p>{this.renderShipAddDetails()}</p>
           </div>
         </div>
         <Link to='/shop'>

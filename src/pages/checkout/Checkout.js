@@ -117,7 +117,7 @@ class Checkout extends Component {
 
   updateShipping = (e) => {
     this.setState({ shipping: e });
-    this.props.handleShipping(e);
+    this.props.handleShippingCost(e);
     return this.state.shipping;
   };
 
@@ -131,7 +131,7 @@ class Checkout extends Component {
         <section className='checkout-flex'>
           <div className='checkout-flex-2'>
             <h2>Step 1 - Shipping Address</h2>
-            <AddressForm />
+            <AddressForm handleShipAddUpdate={this.props.handleShipAddUpdate} />
             <h2>Step 2 - Payment Method</h2>
             <form className='form-flex'>
               <label htmlFor='name'>Name</label>

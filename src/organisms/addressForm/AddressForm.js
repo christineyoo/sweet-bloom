@@ -112,65 +112,83 @@ class AddressForm extends Component {
     }
   };
 
+  formatShipAdd = () => {
+    const { name, address, city, state, zipcode } = this.state;
+    const shippingDataObject = {
+      name: name.value,
+      address: address.value,
+      city: city.value,
+      state: state.value,
+      zipcode: zipcode.value
+    };
+    this.props.handleShipAddUpdate(shippingDataObject);
+  };
+
   render() {
     return (
-      <form className='form-flex'>
-        <label htmlFor='name'>Name</label>
-        <input
-          id='name'
-          name='name'
-          type='text'
-          onChange={(e) => this.inputName(e.target.value)}
-          required
-        />
-        {this.state.name.touched && (
-          <ValidationError message={this.validateName()} />
-        )}
-        <label htmlFor='address'>Address</label>
-        <input
-          id='address'
-          name='address'
-          type='text'
-          onChange={(e) => this.inputAddress(e.target.value)}
-          required
-        />
-        {this.state.address.touched && (
-          <ValidationError message={this.validateAddress()} />
-        )}
-        <label htmlFor='city'>City</label>
-        <input
-          id='city'
-          name='city'
-          type='text'
-          onChange={(e) => this.inputCity(e.target.value)}
-          required
-        />
-        {this.state.city.touched && (
-          <ValidationError message={this.validateCity()} />
-        )}
-        <label htmlFor='state'>State</label>
-        <input
-          id='state'
-          name='state'
-          type='text'
-          onChange={(e) => this.inputState(e.target.value)}
-          required
-        />
-        {this.state.state.touched && (
-          <ValidationError message={this.validateState()} />
-        )}
-        <label htmlFor='zipcode'>Zipcode</label>
-        <input
-          id='zipcode'
-          name='zipcode'
-          type='text'
-          onChange={(e) => this.inputZipcode(e.target.value)}
-          required
-        />
-        {this.state.zipcode.touched && (
-          <ValidationError message={this.validateZipcode()} />
-        )}
-      </form>
+      <>
+        <form className='form-flex'>
+          <label htmlFor='name'>Name</label>
+          <input
+            id='name'
+            name='name'
+            type='text'
+            onChange={(e) => this.inputName(e.target.value)}
+            required
+          />
+          {this.state.name.touched && (
+            <ValidationError message={this.validateName()} />
+          )}
+          <label htmlFor='address'>Address</label>
+          <input
+            id='address'
+            name='address'
+            type='text'
+            onChange={(e) => this.inputAddress(e.target.value)}
+            required
+          />
+          {this.state.address.touched && (
+            <ValidationError message={this.validateAddress()} />
+          )}
+          <label htmlFor='city'>City</label>
+          <input
+            id='city'
+            name='city'
+            type='text'
+            onChange={(e) => this.inputCity(e.target.value)}
+            required
+          />
+          {this.state.city.touched && (
+            <ValidationError message={this.validateCity()} />
+          )}
+          <label htmlFor='state'>State</label>
+          <input
+            id='state'
+            name='state'
+            type='text'
+            onChange={(e) => this.inputState(e.target.value)}
+            required
+          />
+          {this.state.state.touched && (
+            <ValidationError message={this.validateState()} />
+          )}
+          <label htmlFor='zipcode'>Zipcode</label>
+          <input
+            id='zipcode'
+            name='zipcode'
+            type='text'
+            onChange={(e) => this.inputZipcode(e.target.value)}
+            required
+          />
+          {this.state.zipcode.touched && (
+            <ValidationError message={this.validateZipcode()} />
+          )}
+        </form>
+        <label id='verified-address'>
+          <input type='checkbox' onClick={() => this.formatShipAdd()} />I
+          verified that that address above is correct.
+        </label>
+      </>
     );
   }
 }

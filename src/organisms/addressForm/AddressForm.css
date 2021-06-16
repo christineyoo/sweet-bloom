@@ -8,3 +8,8 @@ input {
   display: flex;
   flex-direction: column;
 }
+
+#verified-address {
+  display: flex;
+  flex-direction: row;
+}

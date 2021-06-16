@@ -20,6 +20,7 @@ class App extends Component {
     itemsInCart: [],
     shipping: 10,
     totalCost: 0,
+    shippingData: {},
     error: null
   };
 
@@ -59,8 +60,7 @@ class App extends Component {
         return this.setState({ items: itemData });
       })
       .catch((error) => this.setState({ error }))
-      .finally(() => {
-      });
+      .finally(() => {});
   };
 
   fetchReviews = () => {
@@ -142,6 +142,18 @@ class App extends Component {
     this.setState({ itemsInCart: [...this.state.itemsInCart, itemObj] });
   };
 
+  updateShipAdd = (shippingDataObj) => {
+    this.setState(
+      {
+        shippingData: shippingDataObj
+      },
+      () => {
+        console.log('from App.js', shippingDataObj);
+        console.log('from App.js STATE', this.state);
+      }
+    );
+  };
+
   shippingCost = (s) => {
     this.setState({ shipping: s });
   };
@@ -197,8 +209,11 @@ class App extends Component {
                   <Checkout
                     {...props}
                     itemsInCart={this.state.itemsInCart}
-                    handleShipping={(s) => this.shippingCost(s)}
+                    handleShippingCost={(s) => this.shippingCost(s)}
                     handleTotalPrice={(p) => this.totalCost(p)}
+                    handleShipAddUpdate={(dataObj) =>
+                      this.updateShipAdd(dataObj)
+                    }
                   />
                 )}
               />
@@ -210,6 +225,7 @@ class App extends Component {
                     {...props}
                     itemsInCart={this.state.itemsInCart}
                     shipping={this.state.shipping}
+                    shippingData={this.state.shippingData}
                   />
                 )}
               />
