@@ -2,19 +2,29 @@
   display: flex;
   flex-direction: row;
 }
+
+.cart-column-flex {
+  display: flex;
+  flex-direction: column;
+}
+
 .cart-flex-1 {
   flex: 1;
-  border: 1px solid rgb(194, 39, 39);
   text-align: center;
   padding: 1rem;
 }
 .cart-flex-2 {
   flex: 2;
-  border: 1px solid rgb(194, 39, 39);
   text-align: center;
   padding: 1rem;
 }
 
 #cart {
   padding: 2rem 10rem;
+}
+
+#subtotal {
+  border: 1px solid #333;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
 }

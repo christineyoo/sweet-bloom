@@ -2,7 +2,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Landing.css';
-import stockPhoto from './carnation-carnival-1.jpg';
+import stockPhoto1 from '../../images/stock-photo-1.jpg';
+import stockPhoto2 from '../../images/stock-photo-2.jpg';
+import stockPhoto3 from '../../images/stock-photo-3.jpg';
+
 
 class Landing extends Component {
   render() {
@@ -47,7 +50,7 @@ class Landing extends Component {
           <div className='landing-flex'>
             <div className='landing-flex-2'>
               <img
-                src={stockPhoto}
+                src={stockPhoto1}
                 height='300px'
                 width='260px'
                 alt='stock photo'
@@ -72,7 +75,7 @@ class Landing extends Component {
             </div>
             <div className='landing-flex-2'>
               <img
-                src={stockPhoto}
+                src={stockPhoto1}
                 height='300px'
                 width='260px'
                 alt='stock photo'
@@ -82,7 +85,7 @@ class Landing extends Component {
           <div className='landing-flex'>
             <div className='landing-flex-2'>
               <img
-                src={stockPhoto}
+                src={stockPhoto2}
                 height='300px'
                 width='260px'
                 alt='stock photo'
@@ -102,11 +105,7 @@ class Landing extends Component {
           <h2>Customer Reviews</h2>
           <div className='landing-flex'>
             <section className='landing-flex-1'>
-              <img
-                src={stockPhoto}
-                height='200px'
-                alt='loading...'
-              />
+              <img src={stockPhoto3} height='200px' alt='loading...' />
               <h3>"High quality"</h3>
               <p>
                 I ordered from Sweet Bloom for Mother's Day and it was the best
@@ -115,11 +114,7 @@ class Landing extends Component {
               <p>- Danielle from Baton Rouge, LA</p>
             </section>
             <section className='landing-flex-1'>
-              <img
-                src={stockPhoto}
-                height='200px'
-                alt='loading...'
-              />
+              <img src={stockPhoto2} height='200px' alt='loading...' />
               <h3>"Happy wife happy life"</h3>
               <p>
                 Thank you, Sweet Bloom, for delivering the best flowers and
@@ -128,11 +123,7 @@ class Landing extends Component {
               <p>- Erik from Los Angeles, CA</p>
             </section>
             <section className='landing-flex-1'>
-              <img
-                src={stockPhoto}
-                height='200px'
-                alt='loading...'
-              />
+              <img src={stockPhoto1} height='200px' alt='loading...' />
               <h3>"Consistent service"</h3>
               <p>
                 There is no place that does flowers and desserts like Sweet

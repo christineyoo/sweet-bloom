@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ItemCard from '../../organisms/itemCard/ItemCard';
 import './Cart.css';
+import stockPhoto1 from '../../images/stock-photo-1.jpg';
+import stockPhoto2 from '../../images/stock-photo-2.jpg';
+import stockPhoto3 from '../../images/stock-photo-3.jpg';
 
 class Cart extends Component {
   renderItemCards = () => {
@@ -44,34 +47,47 @@ class Cart extends Component {
           <i>Do not refresh the page.</i>
         </p>
         {this.props.itemsInCart.length === 0 ? (
-          <h2 style={{ 'margin-bottom': '100%' }}>Cart is empty</h2>
+          <div className='cart-column-flex'>
+            <h2>Cart is empty</h2>
+          </div>
         ) : (
           <div className='cart-flex'>
             <section className='cart-flex-2'>{this.renderItemCards()}</section>
-            <section className='cart-flex-1'>
+            <section className='cart-flex-1' id='subtotal'>
               <h1>Subtotal</h1>
               <h2>${this.totalPrice()}</h2>
               <h3>{this.totalQuantity()} items</h3>
               <Link to='/checkout'>
                 <button>Proceed to Checkout</button>
               </Link>
-              <form>
-                <h3>Do you want to add a message?</h3>
-                <textarea
-                  rows='5'
-                  cols='30'
-                  placeholder='Gift message...'
-                ></textarea>
-                <p>
-                  <i>
-                    Add your name to let the recipient know the gift is from you
-                  </i>
-                </p>
-                <button>Submit Message</button>
-              </form>
             </section>
           </div>
         )}
+        <hr />
+        <h3>Explore our shop</h3>
+        <div className='cart-flex'>
+          <section className='cart-flex-1'>
+            <Link to={`/item/6`}>
+              <img src={stockPhoto1} height='300px' alt='loading...' />
+              <h3>Carnation Carnival</h3>
+              <p>$25</p>
+            </Link>
+          </section>
+          <section className='cart-flex-1'>
+            <Link to={`/item/20`}>
+              <img src={stockPhoto2} height='300px' alt='loading...' />
+              <h3>Tulip Town in Pink/Purple</h3>
+              <p>$20</p>
+            </Link>
+          </section>
+          <section className='cart-flex-1'>
+            <Link to={`/item/19`}>
+              <img src={stockPhoto3} height='300px' alt='loading...' />
+              <h3>Sunflowers</h3>
+              <p>$15</p>
+            </Link>
+          </section>
+        </div>
       </div>
     );
   }

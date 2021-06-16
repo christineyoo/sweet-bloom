@@ -4,7 +4,7 @@ import './Footer.css';
 class Footer extends Component {
   render() {
     return (
-      <footer>
+      <footer id={this.props.onCartPage ? 'cart-footer' : null}>
         <p>Copyright &copy; 2021 Christine Yoo</p>
         <a
           href='https://www.linkedin.com/in/christine-yoo-cy/'
