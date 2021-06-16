@@ -20,18 +20,16 @@ class Landing extends Component {
               <i class='fas fa-mouse-pointer fa-5x'></i>
               <h4>Shop</h4>
               <p>
-                Browse through dozens of options of flower bouquets
-                hand-prepared by our experienced florists and delectable sweets
-                prepared fresh daily by our artisan chefs.
+                Browse through dozens of options of flower bouquets and
+                delectable sweets.
               </p>
             </section>
             <section className='landing-flex-1'>
               <i class='fas fa-truck fa-5x'></i>
               <h4>Deliver</h4>
               <p>
-                Once you've selected and purchased your items, all products are
-                packaged in temperature-controlled boxes and delivered to the
-                location of your choice.
+                All our products are delivered in temperature-controlled
+                packaging.
               </p>
             </section>
             <section className='landing-flex-1'>
@@ -66,7 +64,7 @@ class Landing extends Component {
           </div>
           <div className='landing-flex'>
             <div className='landing-flex-1'>
-              <h3>Reviews</h3>
+              <h3>Leave reviews</h3>
               <p>
                 Users may read, create, update, and delete reviews for any one
                 of our products.
@@ -147,10 +145,9 @@ class Landing extends Component {
             </section>
           </div>
           <Link to='/shop'>
-          <button id='landing-button'>Shop</button>
-        </Link>
+            <button id='landing-button'>Shop</button>
+          </Link>
         </article>
-        
       </div>
     );
   }
