@@ -40,6 +40,9 @@ class Cart extends Component {
     return (
       <div id='cart'>
         <h1>Shopping cart</h1>
+        <p>
+          <i>Do not refresh the page.</i>
+        </p>
         {this.props.itemsInCart.length === 0 ? (
           <h2 style={{ 'margin-bottom': '100%' }}>Cart is empty</h2>
         ) : (

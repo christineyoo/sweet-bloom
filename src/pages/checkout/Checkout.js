@@ -125,6 +125,9 @@ class Checkout extends Component {
     return (
       <div id='checkout'>
         <h1>Checkout</h1>
+        <p>
+          <i>Do not refresh the page.</i>
+        </p>
         <section className='checkout-flex'>
           <div className='checkout-flex-2'>
             <h2>Step 1 - Shipping Address</h2>
