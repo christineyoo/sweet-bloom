@@ -105,7 +105,6 @@ class Landing extends Component {
               <img
                 src={stockPhoto}
                 height='200px'
-                width='200px'
                 alt='loading...'
               />
               <h3>"High quality"</h3>
@@ -119,7 +118,6 @@ class Landing extends Component {
               <img
                 src={stockPhoto}
                 height='200px'
-                width='200px'
                 alt='loading...'
               />
               <h3>"Happy wife happy life"</h3>
@@ -133,7 +131,6 @@ class Landing extends Component {
               <img
                 src={stockPhoto}
                 height='200px'
-                width='200px'
                 alt='loading...'
               />
               <h3>"Consistent service"</h3>

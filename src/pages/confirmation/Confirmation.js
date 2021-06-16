@@ -34,6 +34,10 @@ class Confirmation extends Component {
     );
   };
 
+  componentWillUnmount() {
+    this.props.handleClearCart();
+  }
+
   render() {
     return (
       <div id='confirmation'>

@@ -143,15 +143,9 @@ class App extends Component {
   };
 
   updateShipAdd = (shippingDataObj) => {
-    this.setState(
-      {
-        shippingData: shippingDataObj
-      },
-      () => {
-        console.log('from App.js', shippingDataObj);
-        console.log('from App.js STATE', this.state);
-      }
-    );
+    this.setState({
+      shippingData: shippingDataObj
+    });
   };
 
   shippingCost = (s) => {
@@ -160,6 +154,10 @@ class App extends Component {
 
   totalCost = (p) => {
     this.setState({ totalCost: p });
+  };
+
+  clearCart = () => {
+    this.setState({ itemsInCart: [] });
   };
 
   deleteItemFromCart = (itemName) => {
@@ -226,6 +224,7 @@ class App extends Component {
                     itemsInCart={this.state.itemsInCart}
                     shipping={this.state.shipping}
                     shippingData={this.state.shippingData}
+                    handleClearCart={() => this.clearCart()}
                   />
                 )}
               />
