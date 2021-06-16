@@ -29,7 +29,12 @@ class Cart extends Component {
     const itemsInCart = this.props.itemsInCart;
     if (itemsInCart.length === 0) return null;
     const quantityArr = itemsInCart.map((item) => +item.quantity);
-    return quantityArr.reduce((res, curr) => res + curr);
+    const quantityInCart = quantityArr.reduce((res, curr) => res + curr);
+    if (quantityInCart === 1) {
+      return <h3>{quantityInCart} item</h3>;
+    } else {
+      return <h3>{quantityInCart} items</h3>;
+    }
   };
 
   totalPrice = () => {
@@ -56,7 +61,7 @@ class Cart extends Component {
             <section className='cart-flex-1' id='subtotal'>
               <h1>Subtotal</h1>
               <h2>${this.totalPrice()}</h2>
-              <h3>{this.totalQuantity()} items</h3>
+              {this.totalQuantity()}
               <Link to='/checkout'>
                 <button>Proceed to Checkout</button>
               </Link>

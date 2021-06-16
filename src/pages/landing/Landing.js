@@ -6,7 +6,6 @@ import stockPhoto1 from '../../images/stock-photo-1.jpg';
 import stockPhoto2 from '../../images/stock-photo-2.jpg';
 import stockPhoto3 from '../../images/stock-photo-3.jpg';
 
-
 class Landing extends Component {
   render() {
     return (
@@ -58,10 +57,10 @@ class Landing extends Component {
             </div>
 
             <div className='landing-flex-1'>
-              <h3>User Authentication and Authorization</h3>
+              <h3>View product details</h3>
               <p>
-                Shop with ease knowing that your information and selections are
-                part of a secure experience.
+                Get more information about a product through the product details
+                and reviews.
               </p>
             </div>
           </div>

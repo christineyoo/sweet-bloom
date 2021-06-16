@@ -34,6 +34,14 @@ class Confirmation extends Component {
     );
   };
 
+  renderDeliveryDay = () => {
+    if (+this.props.shipping === 10) {
+      return <p>Arriving today</p>;
+    } else {
+      return <p>Arriving tomorrow</p>;
+    }
+  };
+
   componentWillUnmount() {
     this.props.handleClearCart();
   }
@@ -69,7 +77,7 @@ class Confirmation extends Component {
           </div>
           <div className='confirmation-flex-1'>
             <h4>Delivery Details</h4>
-            <p>Arriving today</p>
+            {this.renderDeliveryDay()}
             <p>
               <strong>Ship to:</strong>
             </p>

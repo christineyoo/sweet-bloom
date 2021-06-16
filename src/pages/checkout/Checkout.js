@@ -190,31 +190,22 @@ class Checkout extends Component {
               <section id='checkout-step-3-flex-1'>
                 <h3>Delivery options</h3>
                 <p>Today (2 hrs)</p>
+                <label>$10</label>
                 <input
                   type='radio'
                   name='option'
                   value={10}
                   onChange={(e) => this.updateShipping(e.target.value)}
                 />
-                <label>$10</label>
 
                 <p>Tomorrow</p>
-                <input
-                  type='radio'
-                  name='option'
-                  value={7}
-                  onChange={(e) => this.updateShipping(e.target.value)}
-                />
-                <label>$7</label>
-
-                <p>Custom Date</p>
+                <label>$5</label>
                 <input
                   type='radio'
                   name='option'
                   value={5}
                   onChange={(e) => this.updateShipping(e.target.value)}
                 />
-                <label>$5</label>
               </section>
             </div>
           </div>
