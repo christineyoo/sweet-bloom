@@ -1,8 +1,19 @@
 #not-found {
-  margin: 5rem;
+  margin: 2rem;
 }
 
 #not-found-h1 {
-  font-size: 3rem;
-  margin-bottom: 35rem;
+  font-size: 2rem;
+  margin-bottom: 20rem;
+}
+
+@media all and (min-width:800px) {
+  #not-found {
+    margin: 5rem;
+  }
+
+  #not-found-h1 {
+    font-size: 3rem;
+    margin-bottom: 35rem;
+  }
 }

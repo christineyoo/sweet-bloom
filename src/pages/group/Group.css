@@ -1,9 +1,20 @@
 #group {
-  padding: 5rem 10rem;
+  padding: 2rem;
 }
 
 .shop-flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+@media all and (min-width: 800px) {
+  #group {
+    padding: 5rem 10rem;
+  }
 }
