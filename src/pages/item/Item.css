@@ -1,7 +1,7 @@
 .item-flex {
   display: flex;
-  flex-direction: row;
-  padding: 2rem 10rem;
+  flex-direction: column;
+  padding: 2rem;
 }
 
 .item-flex-1 {
@@ -12,4 +12,16 @@
 
 #quantity {
   margin-bottom: 1rem;
+}
+
+.responsive {
+  width: 50%;
+  height: auto;
+}
+
+@media all and (min-width: 800px) {
+  .item-flex {
+    flex-direction: row;
+    padding: 2rem 10rem;
+  }
 }

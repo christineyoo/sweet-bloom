@@ -78,7 +78,8 @@ class Item extends Component {
 
   componentDidMount() {
     fetch(
-      `${process.env.REACT_APP_HEROKU_URL}/api/items/${+this.props.match.params.itemId}`,
+      `${process.env.REACT_APP_HEROKU_URL}/api/items/${+this.props.match.params
+        .itemId}`,
       {
         method: 'GET',
         headers: {
@@ -105,6 +106,7 @@ class Item extends Component {
               src={this.state.item.item_url}
               height='450px'
               alt='loading...'
+              className='responsive'
             />
           </div>
 

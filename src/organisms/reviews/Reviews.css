@@ -6,10 +6,20 @@
 .review-card {
   border: 1px solid #333333;
   border-radius: 0.5rem;
-  padding: 2rem;
-  margin: 2rem 15rem;
+  padding: 1rem;
+  margin: 2rem;
 }
 
 #reviews-section {
-  padding: 2rem 10rem;
+  padding: 2rem;
+}
+
+@media all and (min-width: 800px) {
+  #reviews-section {
+    padding: 2rem 10rem;
+  }
+
+  .review-card {
+    margin: 2rem 10rem;
+  }
 }
