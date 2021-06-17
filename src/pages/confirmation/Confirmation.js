@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './Confirmation.css';
 
 class Confirmation extends Component {
   totalPrice = () => {
-    const itemsInCart = this.props.itemsInCart;
+    const itemsInCart = this.props.itemsInCart || [];
     if (itemsInCart.length === 0) return null;
     const itemTotals = itemsInCart.map((item) => +item.price * +item.quantity);
     return itemTotals.reduce((res, curr) => res + curr);
   };
 
   renderItemSummary = () => {
-    const itemsInCart = this.props.itemsInCart;
+    const itemsInCart = this.props.itemsInCart || [];
     return itemsInCart.map((item, i) => {
       return (
         <li key={i}>
@@ -22,7 +22,7 @@ class Confirmation extends Component {
   };
 
   renderShipAddDetails = () => {
-    const { name, address, city, state, zipcode } = this.props.shippingData;
+    const { name, address, city, state, zipcode } = this.props.shippingData || [];
     return (
       <>
         <p>{name}</p>
@@ -93,4 +93,4 @@ class Confirmation extends Component {
   }
 }
 
-export default Confirmation;
+export default withRouter(Confirmation);

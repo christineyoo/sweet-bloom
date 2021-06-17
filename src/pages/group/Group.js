@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import ApiContext from '../../ApiContext';
 import FindGroupName from '../../organisms/findGroupName/FindGroupName';
 import './Group.css';
@@ -42,4 +43,4 @@ class Group extends Component {
   }
 }
 
-export default Group;
+export default withRouter(Group);

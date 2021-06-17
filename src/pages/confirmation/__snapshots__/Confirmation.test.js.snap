@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Confirmation UI as expected 1`] = `
+<div
+  id="confirmation"
+>
+  <h1>
+    Thank you for shopping with Sweet Bloom!
+  </h1>
+  <h2>
+    Your order details are shown below.
+  </h2>
+  <h3>
+    Order Confirmation
+  </h3>
+  <p>
+    Order #123-456-789
+  </p>
+  <p>
+    Items
+  </p>
+  <ul />
+  <div
+    className="confirmation-flex"
+  >
+    <div
+      className="confirmation-flex-1"
+    >
+      <div
+        id="confirmation-items-flex"
+      >
+        <p
+          className="confirmation-items-flex-1"
+        >
+          Total before shipping
+        </p>
+        <p
+          className="confirmation-items-flex-1"
+        >
+          $
+        </p>
+      </div>
+      <div
+        id="confirmation-items-flex"
+      >
+        <p
+          className="confirmation-items-flex-1"
+        >
+          Shipping
+        </p>
+        <p
+          className="confirmation-items-flex-1"
+        >
+          $
+        </p>
+      </div>
+      <hr />
+      <div
+        id="confirmation-items-flex"
+      >
+        <p
+          className="confirmation-items-flex-1"
+        >
+          Order Total
+        </p>
+        <p
+          className="confirmation-items-flex-1"
+        >
+          $
+          NaN
+        </p>
+      </div>
+    </div>
+    <div
+      className="confirmation-flex-1"
+    >
+      <h4>
+        Delivery Details
+      </h4>
+      <p>
+        Arriving tomorrow
+      </p>
+      <p>
+        <strong>
+          Ship to:
+        </strong>
+      </p>
+      <p>
+        <p />
+        <p />
+        <p>
+          , 
+          , 
+        </p>
+      </p>
+    </div>
+  </div>
+  <a
+    href="/shop"
+    onClick={[Function]}
+  >
+    <button>
+      Shop more
+    </button>
+  </a>
+</div>
+`;

@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Item UI as expected 1`] = `
+<div>
+  <div
+    className="item-flex"
+  >
+    <div
+      className="item-flex-1"
+    >
+      <img
+        alt="loading..."
+        height="450px"
+        src=""
+      />
+    </div>
+    <div
+      className="item-flex-1"
+    >
+      <h1>
+        
+      </h1>
+      <h2>
+        $
+        0
+      </h2>
+      <label
+        htmlFor="groups"
+      >
+        Quantity 
+      </label>
+      <select
+        id="quantity"
+        name="quantity"
+        onChange={[Function]}
+      >
+        <option
+          value={1}
+        >
+          1
+        </option>
+        <option
+          value={2}
+        >
+          2
+        </option>
+        <option
+          value={3}
+        >
+          3
+        </option>
+        <option
+          value={4}
+        >
+          4
+        </option>
+        <option
+          value={5}
+        >
+          5
+        </option>
+        <option
+          value={6}
+        >
+          6
+        </option>
+        <option
+          value={7}
+        >
+          7
+        </option>
+        <option
+          value={8}
+        >
+          8
+        </option>
+        <option
+          value={9}
+        >
+          9
+        </option>
+        <option
+          value={10}
+        >
+          10
+        </option>
+      </select>
+      <br />
+      <a
+        href="/cart"
+        onClick={[Function]}
+      >
+        <button
+          onClick={[Function]}
+        >
+          Add to cart
+        </button>
+      </a>
+      <h3>
+        Description
+      </h3>
+      <p>
+        
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      id="reviews-section"
+    >
+      <h1>
+        Reviews
+      </h1>
+      <button
+        onClick={[Function]}
+      >
+        Add Review
+      </button>
+    </div>
+  </div>
+</div>
+`;

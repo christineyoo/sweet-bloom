@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import ApiContext from '../../ApiContext';
 import './Item.css';
 import Reviews from '../../organisms/reviews/Reviews';
@@ -139,4 +139,4 @@ class Item extends Component {
   }
 }
 
-export default Item;
+export default withRouter(Item);

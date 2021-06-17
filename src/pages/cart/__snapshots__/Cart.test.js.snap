@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Cart UI as expected 1`] = `
+<div
+  id="cart"
+>
+  <h1>
+    Shopping cart
+  </h1>
+  <p>
+    <i>
+      Do not refresh the page.
+    </i>
+  </p>
+  <div
+    className="cart-column-flex"
+  >
+    <h2>
+      Cart is empty
+    </h2>
+  </div>
+  <hr />
+  <h3>
+    Explore our shop
+  </h3>
+  <div
+    className="cart-flex"
+  >
+    <section
+      className="cart-flex-1"
+    >
+      <a
+        href="/item/6"
+        onClick={[Function]}
+      >
+        <img
+          alt="loading..."
+          height="300px"
+          src="stock-photo-1.jpg"
+        />
+        <h3>
+          Carnation Carnival
+        </h3>
+        <p>
+          $25
+        </p>
+      </a>
+    </section>
+    <section
+      className="cart-flex-1"
+    >
+      <a
+        href="/item/20"
+        onClick={[Function]}
+      >
+        <img
+          alt="loading..."
+          height="300px"
+          src="stock-photo-2.jpg"
+        />
+        <h3>
+          Tulip Town in Pink/Purple
+        </h3>
+        <p>
+          $20
+        </p>
+      </a>
+    </section>
+    <section
+      className="cart-flex-1"
+    >
+      <a
+        href="/item/19"
+        onClick={[Function]}
+      >
+        <img
+          alt="loading..."
+          height="300px"
+          src="stock-photo-3.jpg"
+        />
+        <h3>
+          Sunflowers
+        </h3>
+        <p>
+          $15
+        </p>
+      </a>
+    </section>
+  </div>
+</div>
+`;

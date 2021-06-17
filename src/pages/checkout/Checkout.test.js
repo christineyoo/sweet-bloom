@@ -4,10 +4,13 @@ import renderer from 'react-test-renderer';
 import Checkout from './Checkout';
 
 it('renders Checkout UI as expected', () => {
+  const mockedParams = {
+    itemsInCart: []
+  };
   const tree = renderer
     .create(
       <Router>
-        <Checkout />
+        <Checkout {...mockedParams} />
       </Router>
     )
     .toJSON();

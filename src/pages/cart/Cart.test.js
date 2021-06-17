@@ -4,10 +4,13 @@ import renderer from 'react-test-renderer';
 import Cart from './Cart';
 
 it('renders Cart UI as expected', () => {
+  const mockedParams = {
+    itemsInCart: []
+  };
   const tree = renderer
     .create(
       <Router>
-        <Cart />
+        <Cart {...mockedParams} />
       </Router>
     )
     .toJSON();
