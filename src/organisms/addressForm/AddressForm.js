@@ -131,6 +131,7 @@ class AddressForm extends Component {
         <form className='form-flex'>
           <label htmlFor='name'>Name</label>
           <input
+            className='address-input'
             id='name'
             name='name'
             type='text'
@@ -142,6 +143,7 @@ class AddressForm extends Component {
           )}
           <label htmlFor='address'>Address</label>
           <input
+            className='address-input'
             id='address'
             name='address'
             type='text'
@@ -153,6 +155,7 @@ class AddressForm extends Component {
           )}
           <label htmlFor='city'>City</label>
           <input
+            className='address-input'
             id='city'
             name='city'
             type='text'
@@ -164,6 +167,7 @@ class AddressForm extends Component {
           )}
           <label htmlFor='state'>State</label>
           <input
+            className='address-input'
             id='state'
             name='state'
             type='text'
@@ -175,6 +179,7 @@ class AddressForm extends Component {
           )}
           <label htmlFor='zipcode'>Zipcode</label>
           <input
+            className='address-input'
             id='zipcode'
             name='zipcode'
             type='text'
@@ -186,7 +191,8 @@ class AddressForm extends Component {
           )}
         </form>
         <label id='verified-address'>
-          <input type='checkbox' onClick={() => this.formatShipAdd()} />The address above is correct.
+          <input type='checkbox' onClick={() => this.formatShipAdd()} />
+          The address above is correct.
         </label>
       </>
     );

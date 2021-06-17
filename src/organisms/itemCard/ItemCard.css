@@ -1,9 +1,9 @@
 .item-card-flex {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 1rem;
   border: 1px solid #333;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -14,4 +14,10 @@
 
 img {
   margin-top: 1.5rem;
+}
+
+@media all and (min-width: 800px) {
+  .item-card-flex {
+    flex-direction: row;
+  }
 }

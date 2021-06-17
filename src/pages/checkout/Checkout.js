@@ -134,7 +134,6 @@ class Checkout extends Component {
   };
 
   checkForm = (obj) => {
-    // if (obj) {
     this.setState({
       shippingData: {
         shipName: obj.name,
@@ -144,7 +143,6 @@ class Checkout extends Component {
         shipZipcode: obj.zipcode
       }
     });
-    // }
   };
 
   checkout = () => {
@@ -173,7 +171,7 @@ class Checkout extends Component {
             <form className='form-flex'>
               <label htmlFor='name'>Name</label>
               <input
-                id='name'
+                id='payment-name'
                 name='name'
                 type='text'
                 onChange={(e) => this.inputName(e.target.value)}

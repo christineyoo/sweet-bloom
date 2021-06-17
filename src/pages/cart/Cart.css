@@ -1,12 +1,12 @@
 .cart-flex {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .cart-column-flex {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
 }
 
 .cart-flex-1 {
@@ -21,11 +21,25 @@
 }
 
 #cart {
-  padding: 2rem 10rem;
+  padding: 2rem;
 }
 
 #subtotal {
   border: 1px solid #333;
   border-radius: 1rem;
   margin-bottom: 2rem;
+}
+
+@media all and (min-width: 800px) {
+  .cart-flex {
+    flex-direction: row;
+  }
+
+  .cart-column-flex {
+    margin-bottom: 10rem;
+  }
+
+  #cart {
+    margin: 2rem;
+  }
 }

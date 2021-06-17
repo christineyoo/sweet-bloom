@@ -83,7 +83,7 @@ body {
 
 @media all and (min-width: 800px) {
   article {
-    padding: 5rem 10rem;
+    padding: 5% 10%;
   }
 
   .landing-flex {
