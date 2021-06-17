@@ -11,6 +11,7 @@ import Landing from './pages/landing/Landing';
 import NavBar from './organisms/navbar/NavBar';
 import Shop from './pages/shop/Shop';
 import ScrollToTop from './ScrollToTop';
+import SweetBloomError from './SweetBloomError';
 
 class App extends Component {
   state = {
@@ -186,62 +187,64 @@ class App extends Component {
         <main>
           <ApiContext.Provider value={contextValue}>
             <ScrollToTop />
-            <Switch>
-              <Route
-                exact
-                path='/cart'
-                render={(props) => (
-                  <Cart
-                    {...props}
-                    itemsInCart={this.state.itemsInCart}
-                    handleDeleteItem={(itemName) =>
-                      this.deleteItemFromCart(itemName)
-                    }
-                  />
-                )}
-              />
-              <Route
-                exact
-                path='/checkout'
-                render={(props) => (
-                  <Checkout
-                    {...props}
-                    itemsInCart={this.state.itemsInCart}
-                    handleShippingCost={(s) => this.shippingCost(s)}
-                    handleTotalPrice={(p) => this.totalCost(p)}
-                    handleShipAddUpdate={(dataObj) =>
-                      this.updateShipAdd(dataObj)
-                    }
-                  />
-                )}
-              />
-              <Route
-                exact
-                path='/confirmation'
-                render={(props) => (
-                  <Confirmation
-                    {...props}
-                    itemsInCart={this.state.itemsInCart}
-                    shipping={this.state.shipping}
-                    shippingData={this.state.shippingData}
-                    handleClearCart={() => this.clearCart()}
-                  />
-                )}
-              />
-              <Route exact path='/group/:groupId' component={Group} />
-              <Route
-                exact
-                path='/item/:itemId'
-                render={(props) => (
-                  <Item
-                    {...props}
-                    handleUpdate={(itemObj) => this.putInCart(itemObj)}
-                  />
-                )}
-              />
-              <Route exact path='/shop' component={Shop} />
-              <Route exact path='/' component={Landing} />
-            </Switch>
+            <SweetBloomError>
+              <Switch>
+                <Route
+                  exact
+                  path='/cart'
+                  render={(props) => (
+                    <Cart
+                      {...props}
+                      itemsInCart={this.state.itemsInCart}
+                      handleDeleteItem={(itemName) =>
+                        this.deleteItemFromCart(itemName)
+                      }
+                    />
+                  )}
+                />
+                <Route
+                  exact
+                  path='/checkout'
+                  render={(props) => (
+                    <Checkout
+                      {...props}
+                      itemsInCart={this.state.itemsInCart}
+                      handleShippingCost={(s) => this.shippingCost(s)}
+                      handleTotalPrice={(p) => this.totalCost(p)}
+                      handleShipAddUpdate={(dataObj) =>
+                        this.updateShipAdd(dataObj)
+                      }
+                    />
+                  )}
+                />
+                <Route
+                  exact
+                  path='/confirmation'
+                  render={(props) => (
+                    <Confirmation
+                      {...props}
+                      itemsInCart={this.state.itemsInCart}
+                      shipping={this.state.shipping}
+                      shippingData={this.state.shippingData}
+                      handleClearCart={() => this.clearCart()}
+                    />
+                  )}
+                />
+                <Route exact path='/group/:groupId' component={Group} />
+                <Route
+                  exact
+                  path='/item/:itemId'
+                  render={(props) => (
+                    <Item
+                      {...props}
+                      handleUpdate={(itemObj) => this.putInCart(itemObj)}
+                    />
+                  )}
+                />
+                <Route exact path='/shop' component={Shop} />
+                <Route exact path='/' component={Landing} />
+              </Switch>
+            </SweetBloomError>
           </ApiContext.Provider>
         </main>
         <Footer />
