@@ -11,7 +11,7 @@ class ReviewCard extends Component {
   };
 
   deleteReviewRequest = (reviewId, deleteReviewCb) => {
-    fetch(`http://localhost:8000/api/reviews/${reviewId}`, {
+    fetch(`${process.env.REACT_APP_HEROKU_URL}/api/reviews/${reviewId}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'

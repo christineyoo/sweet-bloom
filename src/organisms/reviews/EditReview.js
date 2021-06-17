@@ -97,7 +97,7 @@ class EditReview extends Component {
     const reviewContent = content.value;
     const reviewRating = rating.value;
     const reviewDate = new Date().toISOString();
-    fetch(`http://localhost:8000/api/reviews/${reviewId}`, {
+    fetch(`${process.env.REACT_APP_HEROKU_URL}/api/reviews/${reviewId}`, {
       method: 'PATCH',
       headers: {
         'content-type': 'application/json'

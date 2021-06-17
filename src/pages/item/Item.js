@@ -78,7 +78,7 @@ class Item extends Component {
 
   componentDidMount() {
     fetch(
-      `http://localhost:8000/api/items/${+this.props.match.params.itemId}`,
+      `${process.env.REACT_APP_HEROKU_URL}/api/items/${+this.props.match.params.itemId}`,
       {
         method: 'GET',
         headers: {

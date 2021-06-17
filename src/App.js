@@ -27,7 +27,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    fetch(`http://localhost:8000/api/groups`, {
+    fetch(`${process.env.REACT_APP_HEROKU_URL}/api/groups`, {
       method: 'GET',
       headers: {
         'content-type': 'application/json'
@@ -46,7 +46,7 @@ class App extends Component {
   }
 
   fetchItems = () => {
-    fetch(`http://localhost:8000/api/items`, {
+    fetch(`${process.env.REACT_APP_HEROKU_URL}/api/items`, {
       method: 'GET',
       headers: {
         'content-type': 'application/json'
@@ -66,7 +66,7 @@ class App extends Component {
   };
 
   fetchReviews = () => {
-    fetch(`http://localhost:8000/api/reviews`, {
+    fetch(`${process.env.REACT_APP_HEROKU_URL}/api/reviews`, {
       method: 'GET',
       headers: {
         'content-type': 'application/json'

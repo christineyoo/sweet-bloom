@@ -93,7 +93,7 @@ class AddReview extends Component {
     const reviewContent = content.value;
     const reviewRating = rating.value;
     const reviewDate = new Date().toISOString();
-    fetch(`http://localhost:8000/api/reviews`, {
+    fetch(`${process.env.REACT_APP_HEROKU_URL}/api/reviews`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
