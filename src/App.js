@@ -9,6 +9,7 @@ import Group from './pages/group/Group';
 import Item from './pages/item/Item';
 import Landing from './pages/landing/Landing';
 import NavBar from './organisms/navbar/NavBar';
+import NotFound from './pages/notFound/NotFound';
 import Shop from './pages/shop/Shop';
 import ScrollToTop from './ScrollToTop';
 import SweetBloomError from './SweetBloomError';
@@ -243,6 +244,7 @@ class App extends Component {
                 />
                 <Route exact path='/shop' component={Shop} />
                 <Route exact path='/' component={Landing} />
+                <Route component={NotFound} />
               </Switch>
             </SweetBloomError>
           </ApiContext.Provider>
