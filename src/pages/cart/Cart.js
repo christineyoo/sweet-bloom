@@ -9,7 +9,6 @@ import stockPhoto3 from '../../images/stock-photo-3.jpg';
 class Cart extends Component {
   renderItemCards = () => {
     const itemsInCart = this.props.itemsInCart;
-    console.log('itemsinCart', itemsInCart);
     if (itemsInCart.length === 0) return null;
     return itemsInCart.map((item, i) => {
       return (

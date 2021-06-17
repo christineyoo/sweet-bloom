@@ -90,7 +90,6 @@ class EditReview extends Component {
 
   handleSubmit = (event, reviewId, updateReviewCb) => {
     event.preventDefault();
-    console.log('handleSubmit fired');
     const { title, content, rating, name } = this.state;
     const reviewName = name.value;
     const reviewItemId = +this.props.itemId;
