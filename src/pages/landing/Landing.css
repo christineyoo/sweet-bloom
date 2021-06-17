@@ -1,10 +1,10 @@
 article {
-  padding: 5rem 10rem;
+  padding: 3rem;
 }
 
 .landing-flex {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .landing-flex-column {
@@ -25,6 +25,7 @@ article {
   text-align: center;
   padding: 4rem 1rem 1rem 1rem;
   margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 .landing-flex-2 {
@@ -37,11 +38,10 @@ article {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding: 12rem 10rem;
 }
 
 #landing > h1 {
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 #how-it-works,
@@ -56,11 +56,46 @@ article {
 #landing-button {
   padding: 1rem 2rem;
   background-color: transparent;
+  border: 1px solid #333333;
   border-radius: 1rem;
-  margin: 4rem 50%;
+  margin-right: 50%;
+  margin-left: 35%;
   text-align: center;
 }
 
 #landing-button:hover {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
+@media all and (min-width: 800px) {
+  article {
+    padding: 5rem 10rem;
+  }
+
+  .landing-flex {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #landing {
+    padding: 12rem 10rem;
+  }
+
+  #landing > h1 {
+    font-size: 5rem;
+  }
 }

@@ -55,19 +55,34 @@ class Landing extends Component {
               Get more information about a product through the product details
               and reviews.
             </p>
-            <img src={productPhoto} width='500px' alt='stock photo' />
+            <img
+              src={productPhoto}
+              width='500px'
+              alt='stock photo'
+              className='responsive'
+            />
             <h3>Leave reviews</h3>
             <p>
               Users may read, create, update, and delete reviews for any one of
               our products.
             </p>
-            <img src={reviewPhoto} width='500px' alt='stock photo' />
+            <img
+              src={reviewPhoto}
+              width='500px'
+              alt='stock photo'
+              className='responsive'
+            />
             <h3>Easily adjust what's in your cart</h3>
             <p>
               Changed your mind about something? Want to go back and check
               something out? No problem. You can shop on your terms.
             </p>
-            <img src={cartPhoto} width='500px' alt='stock photo' />
+            <img
+              src={cartPhoto}
+              width='500px'
+              alt='stock photo'
+              className='responsive'
+            />
           </div>
         </article>
         <article id='reviews'>
