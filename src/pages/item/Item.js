@@ -98,49 +98,43 @@ class Item extends Component {
 
   render() {
     return (
-      <ApiContext.Consumer>
-        {(context) => (
-          <div>
-            <div className='item-flex'>
-              <div className='item-flex-1'>
-                <img
-                  src={this.state.item.item_url}
-                  height='450px'
-                  alt='loading...'
-                />
-              </div>
-
-              <div className='item-flex-1'>
-                <h1>{this.state.item.item_name}</h1>
-                <h2>${this.state.item.item_price}</h2>
-                <label htmlFor='groups'>Quantity&nbsp;</label>
-                <select
-                  name='quantity'
-                  id='quantity'
-                  onChange={(e) => this.inputQuantity(e.target.value)}
-                >
-                  {this.renderQuantity()}
-                </select>
-                <br />
-                <Link to='/cart'>
-                  <button onClick={() => this.formatUpdate()}>
-                    Add to cart
-                  </button>
-                </Link>
-                <h3>Description</h3>
-                <p>{this.state.item.item_description}</p>
-              </div>
-            </div>
-            <div>
-              <Reviews
-                itemId={this.props.match.params.itemId}
-                history={this.props.history}
-              />
-              {this.renderReviews()}
-            </div>
+      <div>
+        <div className='item-flex'>
+          <div className='item-flex-1'>
+            <img
+              src={this.state.item.item_url}
+              height='450px'
+              alt='loading...'
+            />
           </div>
-        )}
-      </ApiContext.Consumer>
+
+          <div className='item-flex-1'>
+            <h1>{this.state.item.item_name}</h1>
+            <h2>${this.state.item.item_price}</h2>
+            <label htmlFor='groups'>Quantity&nbsp;</label>
+            <select
+              name='quantity'
+              id='quantity'
+              onChange={(e) => this.inputQuantity(e.target.value)}
+            >
+              {this.renderQuantity()}
+            </select>
+            <br />
+            <Link to='/cart'>
+              <button onClick={() => this.formatUpdate()}>Add to cart</button>
+            </Link>
+            <h3>Description</h3>
+            <p>{this.state.item.item_description}</p>
+          </div>
+        </div>
+        <div>
+          <Reviews
+            itemId={this.props.match.params.itemId}
+            history={this.props.history}
+          />
+          {this.renderReviews()}
+        </div>
+      </div>
     );
   }
 }

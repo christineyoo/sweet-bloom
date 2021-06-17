@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Shop UI as expected 1`] = `
+<div
+  id="shop"
+>
+  <h1>
+    All Items
+  </h1>
+  <h2>
+    Browse through our wide collection of floral bouquets and desserts.
+  </h2>
+  <h3>
+    Filter by 
+    <div>
+      <a
+        href="/group/1"
+        onClick={[Function]}
+      >
+        <button
+          id="shop-button"
+        >
+          Flowers
+        </button>
+      </a>
+      <a
+        href="/group/2"
+        onClick={[Function]}
+      >
+        <button
+          id="shop-button"
+        >
+          Desserts
+        </button>
+      </a>
+    </div>
+  </h3>
+  <div
+    className="shop-flex"
+  />
+  <button
+    onClick={[Function]}
+  >
+    Back to top
+  </button>
+</div>
+`;
