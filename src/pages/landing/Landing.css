@@ -98,4 +98,8 @@ body {
   #landing > h1 {
     font-size: 5rem;
   }
+
+  #landing-button {
+    margin-left: 42%;
+  }
 }

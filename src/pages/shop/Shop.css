@@ -10,9 +10,20 @@
 }
 
 #shop {
-  padding: 5rem 10rem;
+  padding: 2rem;
 }
 
 #shop-button {
   margin-right: 1rem;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+@media all and (min-width: 800px) {
+  #shop {
+    padding: 5rem 10rem;
+  }
 }
