@@ -174,6 +174,7 @@ class Checkout extends Component {
                 id='payment-name'
                 name='name'
                 type='text'
+                className='input'
                 onChange={(e) => this.inputName(e.target.value)}
                 required
               />
@@ -185,6 +186,7 @@ class Checkout extends Component {
                 id='card-number'
                 name='card-number'
                 type='text'
+                className='input'
                 onChange={(e) => this.inputCardNumber(e.target.value)}
                 required
               />
@@ -197,6 +199,7 @@ class Checkout extends Component {
                 name='exp-date'
                 type='text'
                 placeholder='mm/yy'
+                className='input'
                 onChange={(e) => this.inputExpirationDate(e.target.value)}
                 required
               />
@@ -208,6 +211,7 @@ class Checkout extends Component {
                 id='cvc'
                 name='cvc'
                 type='text'
+                className='input'
                 onChange={(e) => this.inputCvc(e.target.value)}
                 required
               />

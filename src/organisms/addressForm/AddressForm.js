@@ -131,7 +131,7 @@ class AddressForm extends Component {
         <form className='form-flex'>
           <label htmlFor='name'>Name</label>
           <input
-            className='address-input'
+            className='input'
             id='name'
             name='name'
             type='text'
@@ -143,7 +143,7 @@ class AddressForm extends Component {
           )}
           <label htmlFor='address'>Address</label>
           <input
-            className='address-input'
+            className='input'
             id='address'
             name='address'
             type='text'
@@ -155,7 +155,7 @@ class AddressForm extends Component {
           )}
           <label htmlFor='city'>City</label>
           <input
-            className='address-input'
+            className='input'
             id='city'
             name='city'
             type='text'
@@ -167,7 +167,7 @@ class AddressForm extends Component {
           )}
           <label htmlFor='state'>State</label>
           <input
-            className='address-input'
+            className='input'
             id='state'
             name='state'
             type='text'
@@ -179,7 +179,7 @@ class AddressForm extends Component {
           )}
           <label htmlFor='zipcode'>Zipcode</label>
           <input
-            className='address-input'
+            className='input'
             id='zipcode'
             name='zipcode'
             type='text'

@@ -1,10 +1,10 @@
 #confirmation {
-  padding: 5rem 10rem;
+  padding: 2rem;
 }
 
 .confirmation-flex {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .confirmation-flex-1 {
@@ -23,9 +23,19 @@
 
 .confirmation-items-flex-1 {
   flex: 1;
-  text-align: left;
+  text-align: center;
 }
 
 hr {
   margin: 0 1rem;
+}
+
+@media all and (min-width: 800px) {
+  #confirmation {
+    padding: 5% 10%;
+  }
+
+  .confirmation-flex {
+    flex-direction: row;
+  }
 }
