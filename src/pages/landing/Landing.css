@@ -7,6 +7,17 @@ article {
   flex-direction: row;
 }
 
+.landing-flex-column {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.landing-flex-column > img {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .landing-flex-1 {
   flex: 1;
   background-color: rgba(248, 249, 250, 0.8);
@@ -18,8 +29,6 @@ article {
 
 .landing-flex-2 {
   flex: 2;
-  border: 1px solid rgb(194, 39, 39);
-  text-align: center;
 }
 
 #landing {

@@ -5,6 +5,9 @@ import './Landing.css';
 import stockPhoto1 from '../../images/stock-photo-1.jpg';
 import stockPhoto2 from '../../images/stock-photo-2.jpg';
 import stockPhoto3 from '../../images/stock-photo-3.jpg';
+import cartPhoto from '../../images/cart.png';
+import reviewPhoto from '../../images/review.png';
+import productPhoto from '../../images/product.png';
 
 class Landing extends Component {
   render() {
@@ -46,58 +49,25 @@ class Landing extends Component {
         </article>
         <article id='benefits'>
           <h2>Benefits and Features</h2>
-          <div className='landing-flex'>
-            <div className='landing-flex-2'>
-              <img
-                src={stockPhoto1}
-                height='300px'
-                width='260px'
-                alt='stock photo'
-              />
-            </div>
-
-            <div className='landing-flex-1'>
-              <h3>View product details</h3>
-              <p>
-                Get more information about a product through the product details
-                and reviews.
-              </p>
-            </div>
-          </div>
-          <div className='landing-flex'>
-            <div className='landing-flex-1'>
-              <h3>Leave reviews</h3>
-              <p>
-                Users may read, create, update, and delete reviews for any one
-                of our products.
-              </p>
-            </div>
-            <div className='landing-flex-2'>
-              <img
-                src={stockPhoto1}
-                height='300px'
-                width='260px'
-                alt='stock photo'
-              />
-            </div>
-          </div>
-          <div className='landing-flex'>
-            <div className='landing-flex-2'>
-              <img
-                src={stockPhoto2}
-                height='300px'
-                width='260px'
-                alt='stock photo'
-              />
-            </div>
-
-            <div className='landing-flex-1'>
-              <h3>Easily adjust what's in your cart</h3>
-              <p>
-                Changed your mind about something? Want to go back and check
-                something out? No problem. You can shop on your terms.
-              </p>
-            </div>
+          <div className='landing-flex-column'>
+            <h3>View product details</h3>
+            <p>
+              Get more information about a product through the product details
+              and reviews.
+            </p>
+            <img src={productPhoto} width='500px' alt='stock photo' />
+            <h3>Leave reviews</h3>
+            <p>
+              Users may read, create, update, and delete reviews for any one of
+              our products.
+            </p>
+            <img src={reviewPhoto} width='500px' alt='stock photo' />
+            <h3>Easily adjust what's in your cart</h3>
+            <p>
+              Changed your mind about something? Want to go back and check
+              something out? No problem. You can shop on your terms.
+            </p>
+            <img src={cartPhoto} width='500px' alt='stock photo' />
           </div>
         </article>
         <article id='reviews'>
