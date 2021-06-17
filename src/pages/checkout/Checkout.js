@@ -3,9 +3,14 @@ import AddressForm from '../../organisms/addressForm/AddressForm';
 import './Checkout.css';
 import ItemCard from '../../organisms/itemCard/ItemCard';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import ValidationError from '../../validationError/ValidationError';
 
 class Checkout extends Component {
+  static propTypes = {
+    history: PropTypes.object
+  };
+
   state = {
     shipping: 10,
     name: {
@@ -23,6 +28,13 @@ class Checkout extends Component {
     cvc: {
       value: '',
       touched: false
+    },
+    shippingData: {
+      shipName: '',
+      shipAddress: '',
+      shipCity: '',
+      shipState: '',
+      shipZipcode: ''
     }
   };
 
@@ -121,6 +133,28 @@ class Checkout extends Component {
     return this.state.shipping;
   };
 
+  checkForm = (obj) => {
+    // if (obj) {
+    this.setState({
+      shippingData: {
+        shipName: obj.name,
+        shipAddress: obj.address,
+        shipCity: obj.city,
+        shipState: obj.state,
+        shipZipcode: obj.zipcode
+      }
+    });
+    // }
+  };
+
+  checkout = () => {
+    if (this.state.shippingData) {
+      this.props.history.push(`/confirmation`);
+    } else {
+      alert('Complete the form');
+    }
+  };
+
   render() {
     return (
       <div id='checkout'>
@@ -131,7 +165,10 @@ class Checkout extends Component {
         <section className='checkout-flex'>
           <div className='checkout-flex-2'>
             <h2>Step 1 - Shipping Address</h2>
-            <AddressForm handleShipAddUpdate={this.props.handleShipAddUpdate} />
+            <AddressForm
+              handleShipAddUpdate={this.props.handleShipAddUpdate}
+              handleCheckForm={(obj) => this.checkForm(obj)}
+            />
             <h2>Step 2 - Payment Method</h2>
             <form className='form-flex'>
               <label htmlFor='name'>Name</label>
@@ -180,9 +217,7 @@ class Checkout extends Component {
                 <ValidationError message={this.validateCvc()} />
               )}
             </form>
-            <h3>Billing Address</h3>
-            <AddressForm />
-            <h2>Step 3 - Review Items and Shipping</h2>
+            <h2>Step 3 - Review Items</h2>
             <div id='checkout-step-3-flex'>
               <section id='checkout-step-3-flex-2'>
                 {this.renderItemCards()}
@@ -228,9 +263,7 @@ class Checkout extends Component {
                 <strong>${+this.totalPrice() + +this.state.shipping}</strong>
               </p>
             </div>
-            <Link to={'/confirmation'}>
-              <button>Place Order</button>
-            </Link>
+            <button onClick={() => this.checkout()}>Checkout</button>
           </div>
         </section>
       </div>

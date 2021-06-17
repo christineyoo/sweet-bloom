@@ -44,6 +44,7 @@ class Confirmation extends Component {
 
   componentWillUnmount() {
     this.props.handleClearCart();
+    window.location.reload();
   }
 
   render() {

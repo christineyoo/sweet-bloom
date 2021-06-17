@@ -122,6 +122,7 @@ class AddressForm extends Component {
       zipcode: zipcode.value
     };
     this.props.handleShipAddUpdate(shippingDataObject);
+    this.props.handleCheckForm(shippingDataObject);
   };
 
   render() {
