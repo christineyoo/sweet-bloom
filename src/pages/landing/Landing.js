@@ -22,7 +22,7 @@ class Landing extends Component {
           <h3>Three simple steps</h3>
           <div className='landing-flex'>
             <section className='landing-flex-1'>
-              <i class='fas fa-mouse-pointer fa-5x'></i>
+              <i className='fas fa-mouse-pointer fa-5x'></i>
               <h4>Shop</h4>
               <p>
                 Browse through dozens of options of flower bouquets and
@@ -30,7 +30,7 @@ class Landing extends Component {
               </p>
             </section>
             <section className='landing-flex-1'>
-              <i class='fas fa-truck fa-5x'></i>
+              <i className='fas fa-truck fa-5x'></i>
               <h4>Deliver</h4>
               <p>
                 All our products are delivered in temperature-controlled
@@ -38,7 +38,7 @@ class Landing extends Component {
               </p>
             </section>
             <section className='landing-flex-1'>
-              <i class='far fa-smile fa-5x'></i>
+              <i className='far fa-smile fa-5x'></i>
               <h4>Enjoy</h4>
               <p>
                 Simply enjoy the delightful experience of our floral
