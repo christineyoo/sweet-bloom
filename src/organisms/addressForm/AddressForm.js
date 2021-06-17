@@ -186,8 +186,7 @@ class AddressForm extends Component {
           )}
         </form>
         <label id='verified-address'>
-          <input type='checkbox' onClick={() => this.formatShipAdd()} />I
-          verified that that address above is correct.
+          <input type='checkbox' onClick={() => this.formatShipAdd()} />The address above is correct.
         </label>
       </>
     );

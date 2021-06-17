@@ -9,14 +9,14 @@
 
 .checkout-flex-1 {
   flex: 1;
-  border: 1px solid rgb(194, 39, 39);
   text-align: center;
   padding: 2rem;
+  border: 1px solid #333333;
+  border-radius: 1rem;
 }
 
 .checkout-flex-2 {
   flex: 2;
-  border: 1px solid rgb(194, 39, 39);
   text-align: left;
 }
 
@@ -27,14 +27,15 @@
 
 #checkout-step-3-flex-2 {
   flex: 2;
-  border: 1px solid rgb(194, 39, 39);
   text-align: center;
 }
 
 #checkout-step-3-flex-1 {
   flex: 1;
-  border: 1px solid rgb(194, 39, 39);
   text-align: center;
+  border: 1px solid #333333;
+  border-radius: 1rem;
+  margin: 0 1rem;
 }
 
 #order-summary-flex {
