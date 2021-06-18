@@ -23,7 +23,7 @@ article {
   background-color: rgba(248, 249, 250, 0.8);
   border-radius: 1rem;
   text-align: center;
-  padding: 4rem 1rem 1rem 1rem;
+  padding: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
@@ -67,7 +67,7 @@ article {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.responsive {
+.landing-responsive {
   width: 100%;
   height: auto;
 }
@@ -101,5 +101,14 @@ body {
 
   #landing-button {
     margin-left: 42%;
+  }
+
+  .landing-responsive {
+    width: 75%;
+    height: auto;
+  }
+
+  .landing-flex-1 {
+    padding: 4rem 1rem 1rem 1rem;
   }
 }

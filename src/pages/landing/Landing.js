@@ -59,7 +59,7 @@ class Landing extends Component {
               src={productPhoto}
               width='500px'
               alt='stock photo'
-              className='responsive'
+              className='landing-responsive'
             />
             <h3>Leave reviews</h3>
             <p>
@@ -70,7 +70,7 @@ class Landing extends Component {
               src={reviewPhoto}
               width='500px'
               alt='stock photo'
-              className='responsive'
+              className='landing-responsive'
             />
             <h3>Easily adjust what's in your cart</h3>
             <p>
@@ -81,7 +81,7 @@ class Landing extends Component {
               src={cartPhoto}
               width='500px'
               alt='stock photo'
-              className='responsive'
+              className='landing-responsive'
             />
           </div>
         </article>

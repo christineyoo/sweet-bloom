@@ -13,7 +13,8 @@ class ItemLink extends Component {
           src={this.props.item_url}
           width='300px'
           alt='product'
-          className='responsive'
+          className='item-link-responsive'
+          id='item-link-image'
         />
       </Link>
     );

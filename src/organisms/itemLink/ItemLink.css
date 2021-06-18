@@ -2,3 +2,14 @@ a:hover {
   font-weight: 900;
   color: #b37565;
 }
+
+.item-link-responsive {
+  width: 100%;
+  height: auto;
+}
+
+@media all and (min-width: 800px) {
+  #item-link-image {
+    width: 187px;
+  }
+}
