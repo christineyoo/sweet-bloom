@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import AddressForm from '../../organisms/addressForm/AddressForm';
 import './Checkout.css';
 import ItemCard from '../../organisms/itemCard/ItemCard';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ValidationError from '../../validationError/ValidationError';
 
