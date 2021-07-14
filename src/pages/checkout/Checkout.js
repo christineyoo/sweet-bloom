@@ -153,6 +153,8 @@ class Checkout extends Component {
   };
 
   render() {
+    console.log('Checkout shipName', this.state.shippingData);
+
     return (
       <div id='checkout'>
         <h1>Checkout</h1>
@@ -264,7 +266,12 @@ class Checkout extends Component {
                 <strong>${+this.totalPrice() + +this.state.shipping}</strong>
               </p>
             </div>
-            <button onClick={() => this.checkout()}>Checkout</button>
+            <button
+              onClick={() => this.checkout()}
+              disabled={!this.state.shippingData.shipName}
+            >
+              Checkout
+            </button>
           </div>
         </section>
       </div>
