@@ -4,6 +4,7 @@ import ApiContext from './ApiContext';
 import Cart from './pages/cart/Cart';
 import Checkout from './pages/checkout/Checkout';
 import Confirmation from './pages/confirmation/Confirmation';
+import { Container } from 'react-bootstrap';
 import Footer from './organisms/footer/Footer';
 import Group from './pages/group/Group';
 import Item from './pages/item/Item';
@@ -11,6 +12,7 @@ import Landing from './pages/landing/Landing';
 import NavBar from './organisms/navbar/NavBar';
 import NotFound from './pages/notFound/NotFound';
 import Shop from './pages/shop/Shop';
+import Signup from './Signup';
 import ScrollToTop from './ScrollToTop';
 import SweetBloomError from './SweetBloomError';
 
@@ -184,6 +186,11 @@ class App extends Component {
       <>
         <header>
           <NavBar />
+          <Container className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
+            <div className="w-100" style = {{ maxWidth: "400px" }}>
+            <Signup />
+            </div>
+          </Container>
         </header>
         <main>
           <ApiContext.Provider value={contextValue}>
