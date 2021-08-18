@@ -186,11 +186,14 @@ class App extends Component {
       <>
         <header>
           <NavBar />
-          <Container className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
-            <div className="w-100" style = {{ maxWidth: "400px" }}>
-            <Signup />
-            </div>
-          </Container>
+            <Container
+              className='d-flex align-items-center justify-content-center'
+              style={{ minHeight: '100vh' }}
+            >
+              <div className='w-100' style={{ maxWidth: '400px' }}>
+                <Signup />
+              </div>
+            </Container>
         </header>
         <main>
           <ApiContext.Provider value={contextValue}>
