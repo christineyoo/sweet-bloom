@@ -9,6 +9,7 @@ import Footer from './organisms/footer/Footer';
 import Group from './pages/group/Group';
 import Item from './pages/item/Item';
 import Landing from './pages/landing/Landing';
+import Login from './Login';
 import NavBar from './organisms/navbar/NavBar';
 import NotFound from './pages/notFound/NotFound';
 import Shop from './pages/shop/Shop';
