@@ -25,6 +25,7 @@ export function AuthProvider({ children }) {
   const value = {
     currentUser,
     signup
-  };
+  }
+  
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
