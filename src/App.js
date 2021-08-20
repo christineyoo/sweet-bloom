@@ -15,6 +15,7 @@ import Shop from './pages/shop/Shop';
 import Signup from './Signup';
 import ScrollToTop from './ScrollToTop';
 import SweetBloomError from './SweetBloomError';
+import { AuthProvider } from './contexts/AuthContext';
 
 class App extends Component {
   state = {
@@ -186,14 +187,14 @@ class App extends Component {
       <>
         <header>
           <NavBar />
-            <Container
+            <AuthProvider><Container
               className='d-flex align-items-center justify-content-center'
               style={{ minHeight: '100vh' }}
             >
               <div className='w-100' style={{ maxWidth: '400px' }}>
                 <Signup />
               </div>
-            </Container>
+            </Container></AuthProvider>
         </header>
         <main>
           <ApiContext.Provider value={contextValue}>

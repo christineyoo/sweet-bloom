@@ -1,8 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { auth } from '../firebase';
 
-const AuthContext = React.createContext();
+export const AuthContext = React.createContext();
 
+//we have access to the AuthContext through the useAuth() hook
 export function useAuth() {
   return useContext(AuthContext);
 }
@@ -26,6 +27,6 @@ export function AuthProvider({ children }) {
     currentUser,
     signup
   }
-  
+
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
