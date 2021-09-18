@@ -27,4 +27,10 @@ a:hover {
   background: #83364b;
   color: #ffffff;
   text-align: center;
+  font-weight: 900;
+}
+
+#valentine > p, #valentine > Link {
+  display: inline-block;
+  color: #ffffff;
 }
