@@ -4,7 +4,6 @@ import ApiContext from './ApiContext';
 import Cart from './pages/cart/Cart';
 import Checkout from './pages/checkout/Checkout';
 import Confirmation from './pages/confirmation/Confirmation';
-import { Container } from 'react-bootstrap';
 import Footer from './organisms/footer/Footer';
 import Group from './pages/group/Group';
 import Item from './pages/item/Item';
@@ -188,14 +187,14 @@ class App extends Component {
       <>
         <header>
           <NavBar />
-            <AuthProvider><Container
+            {/* <AuthProvider><Container
               className='d-flex align-items-center justify-content-center'
               style={{ minHeight: '100vh' }}
             >
               <div className='w-100' style={{ maxWidth: '400px' }}>
                 <Signup />
               </div>
-            </Container></AuthProvider>
+            </Container></AuthProvider> */}
         </header>
         <main>
           <ApiContext.Provider value={contextValue}>

@@ -10,45 +10,37 @@ class NavBar extends Component {
           className='flex-1'
           to={'/'}
           activeStyle={{
-            fontStyle: 'bold',
-            color: '#b37565',
-            fontWeight: '900'
+            color: '#83364b'
           }}
         >
-          Sweet Bloom
+          Home
         </Link>
         <NavLink
           className='flex-1'
           to={'/shop'}
           activeStyle={{
-            fontStyle: 'bold',
-            color: '#b37565',
-            fontWeight: '900'
+            color: '#83364b'
           }}
         >
           Shop
         </NavLink>
-        {/* <NavLink
-          className='flex-1'
-          to={'/account'}
-          activeStyle={{
-            fontStyle: 'bold',
-            color: '#245149',
-            fontWeight: '900'
-          }}
-        >
-          Account
-        </NavLink> */}
         <NavLink
           className='flex-1'
           to={'/cart'}
           activeStyle={{
-            fontStyle: 'bold',
-            color: '#b37565',
-            fontWeight: '900'
+            color: '#83364b'
           }}
         >
-          Cart
+          About
+        </NavLink>
+        <NavLink
+          className='flex-1'
+          to={'/cart'}
+          activeStyle={{
+            color: '#83364b'
+          }}
+        >
+          Contact
         </NavLink>
       </nav>
     );

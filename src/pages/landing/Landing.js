@@ -5,119 +5,61 @@ import './Landing.css';
 import stockPhoto1 from '../../images/stock-photo-1.jpg';
 import stockPhoto2 from '../../images/stock-photo-2.jpg';
 import stockPhoto3 from '../../images/stock-photo-3.jpg';
-import cartPhoto from '../../images/cart.png';
-import reviewPhoto from '../../images/review.png';
-import productPhoto from '../../images/product.png';
 
 class Landing extends Component {
   render() {
     return (
       <div>
         <article id='landing'>
-          <h1>Sweet Bloom</h1>
-          <h2>Farm fresh flowers and decadent desserts delivered anywhere.</h2>
+          <h1>SWEET BLOOM</h1>
+          <h2>FLOWERS AND DESSERTS</h2>
         </article>
-        <article id='how-it-works'>
-          <h2>How it works</h2>
-          <h3>Three simple steps</h3>
+        <article id='products'>
+          <h1>Fresh, Seasonal, Beautiful</h1>
+          <h2>Order Now and Get Same-Day-Delivery</h2>
           <div className='landing-flex'>
             <section className='landing-flex-1'>
-              <i className='fas fa-mouse-pointer fa-5x'></i>
-              <h4>Shop</h4>
-              <p>
-                Browse through dozens of options of flower bouquets and
-                delectable sweets.
-              </p>
+              <img src={stockPhoto3} height='450px' alt='sunflowers' />
+              <h3
+                style={{
+                  fontSize: '1.15rem',
+                  fontWeight: '900',
+                  marginTop: '1rem'
+                }}
+              >
+                Sunflowers
+              </h3>
+              <p style={{ color: '#83364b', fontWeight: '600' }}>$15</p>
             </section>
             <section className='landing-flex-1'>
-              <i className='fas fa-truck fa-5x'></i>
-              <h4>Deliver</h4>
-              <p>
-                All our products are delivered in temperature-controlled
-                packaging.
-              </p>
+              <img src={stockPhoto2} height='450px' alt='tulips' />
+              <h3
+                style={{
+                  fontSize: '1.15rem',
+                  fontWeight: '900',
+                  marginTop: '1rem'
+                }}
+              >
+                Tulip Town in Pink/Purple
+              </h3>
+              <p style={{ color: '#83364b', fontWeight: '600' }}>$20</p>
             </section>
             <section className='landing-flex-1'>
-              <i className='far fa-smile fa-5x'></i>
-              <h4>Enjoy</h4>
-              <p>
-                Simply enjoy the delightful experience of our floral
-                arrangements and desserts!
-              </p>
-            </section>
-          </div>
-        </article>
-        <article id='benefits'>
-          <h2>Benefits and Features</h2>
-          <div className='landing-flex-column'>
-            <h3>View product details</h3>
-            <p>
-              Get more information about a product through the product details
-              and reviews.
-            </p>
-            <img
-              src={productPhoto}
-              width='500px'
-              alt='stock photo'
-              className='landing-responsive'
-            />
-            <h3>Leave reviews</h3>
-            <p>
-              Users may read, create, update, and delete reviews for any one of
-              our products.
-            </p>
-            <img
-              src={reviewPhoto}
-              width='500px'
-              alt='stock photo'
-              className='landing-responsive'
-            />
-            <h3>Easily adjust what's in your cart</h3>
-            <p>
-              Changed your mind about something? Want to go back and check
-              something out? No problem. You can shop on your terms.
-            </p>
-            <img
-              src={cartPhoto}
-              width='500px'
-              alt='stock photo'
-              className='landing-responsive'
-            />
-          </div>
-        </article>
-        <article id='reviews'>
-          <h2>Customer Reviews</h2>
-          <div className='landing-flex'>
-            <section className='landing-flex-1'>
-              <img src={stockPhoto3} height='200px' alt='loading...' />
-              <h3>"High quality"</h3>
-              <p>
-                I ordered from Sweet Bloom for Mother's Day and it was the best
-                online service I've received.
-              </p>
-              <p>- Danielle from Baton Rouge, LA</p>
-            </section>
-            <section className='landing-flex-1'>
-              <img src={stockPhoto2} height='200px' alt='loading...' />
-              <h3>"Happy wife happy life"</h3>
-              <p>
-                Thank you, Sweet Bloom, for delivering the best flowers and
-                dessert to celebrate our 30th wedding anniversary.
-              </p>
-              <p>- Erik from Los Angeles, CA</p>
-            </section>
-            <section className='landing-flex-1'>
-              <img src={stockPhoto1} height='200px' alt='loading...' />
-              <h3>"Consistent service"</h3>
-              <p>
-                There is no place that does flowers and desserts like Sweet
-                Bloom! Always delicious, fresh, and beautiful.
-              </p>
-              <p>- Brianna from Suwanee, GA</p>
+              <img src={stockPhoto1} height='450px' alt='carnations' />
+              <h3
+                style={{
+                  fontSize: '1.15rem',
+                  fontWeight: '900',
+                  marginTop: '1rem'
+                }}
+              >
+                Carnation Carnival
+              </h3>
+              <p style={{ color: '#83364b', fontWeight: '600' }}>$25</p>
             </section>
           </div>
           <Link to='/shop'>
-            <button id='landing-button'>Shop</button>
+            <button id='landing-button'>Shop All</button>
           </Link>
         </article>
       </div>

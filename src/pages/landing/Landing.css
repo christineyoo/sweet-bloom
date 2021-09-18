@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Caudex&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 article {
   padding: 3rem;
 }
@@ -20,12 +23,12 @@ article {
 
 .landing-flex-1 {
   flex: 1;
-  background-color: rgba(248, 249, 250, 0.8);
-  border-radius: 1rem;
   text-align: center;
   padding: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
+  font-family: 'Caudex', serif;
+  font-size: 1rem;
 }
 
 .landing-flex-2 {
@@ -33,7 +36,7 @@ article {
 }
 
 #landing {
-  background: url(./bg.jpg) no-repeat center center fixed;
+  background: url(./sweet-bloom-cover-dark.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -41,30 +44,47 @@ article {
 }
 
 #landing > h1 {
+  font-family: 'Caudex', serif;
   font-size: 3rem;
+  color: #ffffff;
+  letter-spacing: 10px;
+  text-align: center;
 }
 
-#how-it-works,
-#reviews {
-  background-color: #dee2e6;
+#landing > h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  color: #ffffff;
+  text-align: center;
 }
 
-#benefits {
-  background-color: #e9ecef;
+#products > h1 {
+  font-weight: 900;
+  text-align: center;
+  color: #83364b;
+}
+
+#products > h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  text-align: center;
 }
 
 #landing-button {
   padding: 1rem 2rem;
   background-color: transparent;
-  border: 1px solid #333333;
-  border-radius: 1rem;
-  margin-right: 50%;
-  margin-left: 35%;
+  border: 1px solid #83364b;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #83364b;
+  font-weight: 900;
 }
 
 #landing-button:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #83364b;
 }
 
 .landing-responsive {

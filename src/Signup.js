@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { useAuth, AuthContext } from './contexts/AuthContext';
 
 export default function SignUp() {
@@ -33,7 +32,7 @@ export default function SignUp() {
 
   return (
     <>
-      <Card>
+      {/* <Card>
         <Card.Body>
           <h2 className='text-center mb-4'>Sign Up</h2>
           {error && <Alert variant='danger'>{error}</Alert>}
@@ -55,7 +54,7 @@ export default function SignUp() {
             </Button>
           </Form>
         </Card.Body>
-      </Card>
+      </Card> */}
       <div className='w-100 text-center mt-2'>
         Already have an account? Log in
       </div>

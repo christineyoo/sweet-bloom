@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caudex&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f2ec;
 }
 
 h1 {
-  font-family: 'Lora', serif;
+  font-family: 'Caudex', serif;
   font-size: 2rem;
 }
 

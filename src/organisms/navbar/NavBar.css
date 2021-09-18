@@ -1,6 +1,7 @@
 .flex {
   display: flex;
   flex-direction: row;
+  font-weight: 900;
 }
 
 .flex-1 {
@@ -10,10 +11,14 @@
 
 nav {
   padding: 0.5rem;
-  background-color: #ced4da;
+  background-color: #f4f2ec;
 }
 
 a {
   text-decoration: none;
   color: #333333;
+}
+
+a:hover {
+  text-decoration: none;
 }
