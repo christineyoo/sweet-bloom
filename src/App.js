@@ -10,6 +10,7 @@ import Item from './pages/item/Item';
 import Landing from './pages/landing/Landing';
 import Login from './Login';
 import NavBar from './organisms/navbar/NavBar';
+import AdNavBar from './organisms/navbar/AdNavBar';
 import NotFound from './pages/notFound/NotFound';
 import Shop from './pages/shop/Shop';
 import Signup from './Signup';
@@ -186,6 +187,7 @@ class App extends Component {
     return (
       <>
         <header>
+          <AdNavBar />
           <NavBar />
             {/* <AuthProvider><Container
               className='d-flex align-items-center justify-content-center'

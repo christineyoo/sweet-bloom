@@ -22,3 +22,9 @@ a {
 a:hover {
   text-decoration: none;
 }
+
+#valentine {
+  background: #83364b;
+  color: #ffffff;
+  text-align: center;
+}
