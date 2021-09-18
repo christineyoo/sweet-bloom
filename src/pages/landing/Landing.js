@@ -62,6 +62,13 @@ class Landing extends Component {
             <button id='landing-button'>Shop All</button>
           </Link>
         </article>
+        <article id="ad">
+          <h1>Valentine's Day Sale</h1>
+          <h2>Enjoy an extra 15% off our best sellers</h2>
+          <Link to='/shop'>
+            <button id='ad-button'>Order Now</button>
+          </Link>
+        </article>
       </>
     );
   }

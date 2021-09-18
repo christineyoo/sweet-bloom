@@ -100,6 +100,37 @@ body {
   position: relative;
 }
 
+#ad {
+  background: url(./valentine-ad.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 10rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+#ad > h1 {
+  font-size: 3rem;
+}
+
+#ad-button {
+  padding: 1rem 4rem;
+  background: transparent;
+  border: 1px solid #ffffff;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  font-weight: 900;
+  transition: background 0.5s ease-in-out;
+}
+
+#ad-button:hover {
+  background-color: #ffffff;
+  color: #83364b;
+  cursor: pointer;
+}
+
 @media all and (min-width: 800px) {
   .landing-flex {
     margin-right: auto;

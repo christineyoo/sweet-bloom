@@ -28,6 +28,7 @@ a:hover {
   color: #ffffff;
   text-align: center;
   font-weight: 900;
+  padding: 0;
 }
 
 #valentine > p, #valentine > Link {
