@@ -8,15 +8,14 @@ import Footer from './organisms/footer/Footer';
 import Group from './pages/group/Group';
 import Item from './pages/item/Item';
 import Landing from './pages/landing/Landing';
-import Login from './Login';
 import NavBar from './organisms/navbar/NavBar';
 import AdNavBar from './organisms/navbar/AdNavBar';
 import NotFound from './pages/notFound/NotFound';
 import Shop from './pages/shop/Shop';
-import Signup from './Signup';
+// import Signup from './Signup';
 import ScrollToTop from './ScrollToTop';
 import SweetBloomError from './SweetBloomError';
-import { AuthProvider } from './contexts/AuthContext';
+// import { AuthProvider } from './contexts/AuthContext';
 
 class App extends Component {
   state = {
