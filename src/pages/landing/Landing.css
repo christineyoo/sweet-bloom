@@ -5,6 +5,10 @@ article {
   padding: 3rem;
 }
 
+#products {
+  text-align: center;
+}
+
 .landing-flex {
   display: flex;
   flex-direction: column;
@@ -16,17 +20,8 @@ article {
   text-align: center;
 }
 
-.landing-flex-column > img {
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .landing-flex-1 {
   flex: 1;
-  text-align: center;
-  padding: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
   font-family: 'Caudex', serif;
   font-size: 1rem;
 }
@@ -62,7 +57,7 @@ article {
 
 #products > h1 {
   font-weight: 900;
-  text-align: center;
+  /* text-align: center; */
   color: #83364b;
 }
 
@@ -70,21 +65,25 @@ article {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 900;
-  text-align: center;
+  /* text-align: center; */
 }
 
 #landing-button {
-  padding: 1rem 2rem;
-  background-color: transparent;
+  padding: 1rem 4rem;
+  background: transparent;
   border: 1px solid #83364b;
-  text-align: center;
   font-family: 'Poppins', sans-serif;
   color: #83364b;
   font-weight: 900;
+  /* margin-right: auto;
+  margin-left: auto; */
+  transition: background 0.5s ease-in-out;
 }
 
 #landing-button:hover {
   background-color: #83364b;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .landing-responsive {
@@ -102,8 +101,9 @@ body {
 }
 
 @media all and (min-width: 800px) {
-  article {
-    padding: 5% 10%;
+  .landing-flex {
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .landing-flex {
@@ -117,10 +117,6 @@ body {
 
   #landing > h1 {
     font-size: 5rem;
-  }
-
-  #landing-button {
-    margin-left: 42%;
   }
 
   .landing-responsive {

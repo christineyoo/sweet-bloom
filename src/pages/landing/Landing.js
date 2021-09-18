@@ -9,7 +9,7 @@ import stockPhoto3 from '../../images/stock-photo-3.jpg';
 class Landing extends Component {
   render() {
     return (
-      <div>
+      <>
         <article id='landing'>
           <h1>SWEET BLOOM</h1>
           <h2>FLOWERS AND DESSERTS</h2>
@@ -45,7 +45,7 @@ class Landing extends Component {
               <p style={{ color: '#83364b', fontWeight: '600' }}>$20</p>
             </section>
             <section className='landing-flex-1'>
-              <img src={stockPhoto1} height='450px' alt='carnations' />
+              <img src={stockPhoto1} width= '300px' height='450px' alt='carnations' />
               <h3
                 style={{
                   fontSize: '1.15rem',
@@ -62,7 +62,7 @@ class Landing extends Component {
             <button id='landing-button'>Shop All</button>
           </Link>
         </article>
-      </div>
+      </>
     );
   }
 }
