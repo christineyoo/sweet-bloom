@@ -1,7 +1,8 @@
 .item-flex {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .item-flex-1 {
@@ -10,8 +11,20 @@
   padding-right: 1rem;
 }
 
+.item-flex-1-description {
+  flex: 1;
+  text-align: left;
+}
+
 #quantity {
   margin-bottom: 1rem;
+  padding: 0.25rem;
+  background: transparent;
+  border: 1px solid #83364b;
+  font-family: 'Poppins', sans-serif;
+  color: #83364b;
+  font-weight: 900;
+  transition: background 0.5s ease-in-out;
 }
 
 .responsive {
@@ -19,9 +32,39 @@
   height: auto;
 }
 
+.item-square {
+  width: 500px !important;
+  height: 500px;
+  object-fit: cover;
+}
+
+#item-button {
+  padding: 1rem 4rem;
+  background: transparent;
+  border: 1px solid #83364b;
+  font-family: 'Poppins', sans-serif;
+  color: #83364b;
+  font-weight: 900;
+  transition: background 0.5s ease-in-out;
+}
+
+#item-button:hover {
+  background-color: #83364b;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#item-h3 {
+  font-family: 'Caudex', serif;
+}
+
+.item-p {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
 @media all and (min-width: 800px) {
   .item-flex {
     flex-direction: row;
-    padding: 2rem 10rem;
   }
 }
