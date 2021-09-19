@@ -12,11 +12,29 @@
 
 #reviews-section {
   padding: 2rem;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#review-button {
+  padding: 1rem 4rem;
+  background: transparent;
+  border: 1px solid #83364b;
+  font-family: 'Poppins', sans-serif;
+  color: #83364b;
+  font-weight: 900;
+  transition: background 0.5s ease-in-out;
+}
+
+#review-button:hover {
+  background-color: #83364b;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 @media all and (min-width: 800px) {
   #reviews-section {
-    padding: 2rem 10rem;
+    /* padding: 2rem 10rem; */
   }
 
   .review-card {
