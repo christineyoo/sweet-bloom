@@ -1,11 +1,25 @@
-a:hover {
-  font-weight: 900;
-  color: #b37565;
-}
-
 .item-link-responsive {
   width: 100%;
   height: auto;
+}
+
+.item-link-square {
+  width: 300px !important;
+  height: 300px;
+  object-fit: cover;
+}
+
+#item-link-h1 {
+  font-size: 1rem;
+  text-align: center;
+  color: #000000;
+}
+
+#item-link-h2 {
+  font-size: 1rem;
+  text-align: center;
+  color: #83364b;
+  font-family: 'Caudex', serif;
 }
 
 @media all and (min-width: 800px) {

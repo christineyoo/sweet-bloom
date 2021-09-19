@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import ApiContext from '../../ApiContext';
 import FindGroupName from '../../organisms/findGroupName/FindGroupName';
 import './Group.css';
@@ -34,10 +34,12 @@ class Group extends Component {
     return (
       <div id='group'>
         <h1>
-          Viewing all{' '}
-          <FindGroupName group_id={this.props.match.params.groupId} />
+          Shop <FindGroupName group_id={this.props.match.params.groupId} />
         </h1>
         {this.filterItems()}
+        <Link to='/shop'>
+          <button id='group-button'>Shop All</button>
+        </Link>
       </div>
     );
   }

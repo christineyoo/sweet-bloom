@@ -2,6 +2,11 @@
   padding: 2rem;
 }
 
+#group > h1 {
+  text-align: center;
+  color: #83364b;
+}
+
 .shop-flex {
   display: flex;
   flex-direction: row;
@@ -11,6 +16,23 @@
 .responsive {
   width: 100%;
   height: auto;
+}
+
+#group-button {
+  padding: 1rem 4rem;
+  background: transparent;
+  border: 1px solid #83364b;
+  font-family: 'Poppins', sans-serif;
+  color: #83364b;
+  font-weight: 900;
+  transition: background 0.5s ease-in-out;
+  text-align: center;
+}
+
+#group-button:hover {
+  background-color: #83364b;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 @media all and (min-width: 800px) {

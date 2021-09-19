@@ -31,7 +31,9 @@ a:hover {
   padding: 0;
 }
 
-#valentine > p, #valentine > Link {
+#valentine > p,
+#valentine > Link {
   display: inline-block;
   color: #ffffff;
+  font-size: 0.85rem;
 }

@@ -105,7 +105,7 @@ class Item extends Component {
             <img
               src={this.state.item.item_url}
               height='450px'
-              alt='loading...'
+              alt='item'
               className='responsive'
             />
           </div>

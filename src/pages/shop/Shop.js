@@ -21,7 +21,7 @@ class Shop extends Component {
       { id: 2, group_name: 'Desserts' }
     ];
     return (
-      <div>
+      <div style={{ textAlign: 'center' }}>
         <Link to={`/group/${groupsArray[0].id}`}>
           <button id='shop-button'>{groupsArray[0].group_name}</button>
         </Link>
@@ -55,13 +55,10 @@ class Shop extends Component {
   render() {
     return (
       <div id='shop'>
-        <h1>All Items</h1>
-        <h2>
-          Browse through our wide collection of floral bouquets and desserts.
-        </h2>
-        <h3>Filter by {this.renderGroups()}</h3>
+        <h1>Shop All Items</h1>
+        {this.renderGroups()}
         {this.renderItems()}
-        <button onClick={() => this.scrollToTop()}>Back to top</button>
+        <button id='shop-button' onClick={() => this.scrollToTop()}>Back to top</button>
       </div>
     );
   }

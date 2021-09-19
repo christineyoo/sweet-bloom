@@ -31,16 +31,7 @@ class NavBar extends Component {
             color: '#83364b'
           }}
         >
-          About
-        </NavLink>
-        <NavLink
-          className='flex-1'
-          to={'/cart'}
-          activeStyle={{
-            color: '#83364b'
-          }}
-        >
-          Contact
+          Cart
         </NavLink>
       </nav>
     );

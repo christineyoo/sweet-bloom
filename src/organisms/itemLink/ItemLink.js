@@ -6,16 +6,15 @@ class ItemLink extends Component {
   render() {
     return (
       <Link to={`/item/${this.props.item_id}`} className='shop-flex-1'>
-        <p>
-          {this.props.item_name} ${this.props.item_price}
-        </p>
         <img
           src={this.props.item_url}
           width='300px'
           alt='product'
-          className='item-link-responsive'
+          className='item-link-responsive item-link-square'
           id='item-link-image'
         />
+        <h1 id='item-link-h1'>{this.props.item_name}</h1>
+        <h2 id='item-link-h2'>${this.props.item_price}</h2>
       </Link>
     );
   }

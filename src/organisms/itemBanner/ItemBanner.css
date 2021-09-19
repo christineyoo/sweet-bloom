@@ -1,0 +1,10 @@
+.square {
+  width: 500px !important;
+  height: 500px;
+  object-fit: cover;
+}
+
+#banner-margin {
+    margin: 0 !important;
+    padding: 0 !important;
+}
