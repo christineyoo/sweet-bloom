@@ -48,50 +48,78 @@ class Cart extends Component {
       <div id='cart'>
         <h1>Shopping cart</h1>
         <p>
-          <i>Do not refresh the page.</i>
+          Do not refresh the page.
         </p>
         {this.props.itemsInCart.length === 0 ? (
           <div className='cart-column-flex'>
-            <h2>Cart is empty</h2>
+            <h2>Your cart is currently empty</h2>
           </div>
         ) : (
           <div className='cart-flex'>
-            <section className='cart-flex-2'>{this.renderItemCards()}</section>
+            <section className='cart-flex-2' id='item-summary'>{this.renderItemCards()}</section>
             <section className='cart-flex-1' id='subtotal'>
               <h1>Subtotal</h1>
               <h2>${this.totalPrice()}</h2>
               {this.totalQuantity()}
               <Link to='/checkout'>
-                <button>Proceed to Checkout</button>
+                <button id='to-checkout-button'>Proceed to Checkout</button>
               </Link>
             </section>
           </div>
         )}
         <hr />
-        <h3>Explore our shop</h3>
-        <div className='cart-flex'>
-          <section className='cart-flex-1'>
-            <Link to={`/item/6`}>
-              <img src={stockPhoto1} height='300px' alt='loading...' />
-              <h3>Carnation Carnival</h3>
-              <p>$25</p>
-            </Link>
-          </section>
-          <section className='cart-flex-1'>
-            <Link to={`/item/20`}>
-              <img src={stockPhoto2} height='300px' alt='loading...' />
-              <h3>Tulip Town in Pink/Purple</h3>
-              <p>$20</p>
-            </Link>
-          </section>
-          <section className='cart-flex-1'>
-            <Link to={`/item/19`}>
-              <img src={stockPhoto3} height='300px' alt='loading...' />
-              <h3>Sunflowers</h3>
-              <p>$15</p>
-            </Link>
-          </section>
-        </div>
+        <article id='products'>
+          <h1>Explore Our Shop</h1>
+          <h2>Order Now and Get Same-Day-Delivery</h2>
+          <div className='landing-flex'>
+            <section className='landing-flex-1'>
+              <img src={stockPhoto3} height='350px' alt='sunflowers' />
+              <h3
+                style={{
+                  fontSize: '1.15rem',
+                  fontWeight: '900',
+                  marginTop: '1rem'
+                }}
+              >
+                Sunflowers
+              </h3>
+              <p style={{ color: '#83364b', fontWeight: '600' }}>$15</p>
+            </section>
+            <section className='landing-flex-1'>
+              <img src={stockPhoto2} height='350px' alt='tulips' />
+              <h3
+                style={{
+                  fontSize: '1.15rem',
+                  fontWeight: '900',
+                  marginTop: '1rem'
+                }}
+              >
+                Tulip Town in Pink/Purple
+              </h3>
+              <p style={{ color: '#83364b', fontWeight: '600' }}>$20</p>
+            </section>
+            <section className='landing-flex-1'>
+              <img
+                src={stockPhoto1}
+                height='350px'
+                alt='carnations'
+              />
+              <h3
+                style={{
+                  fontSize: '1.15rem',
+                  fontWeight: '900',
+                  marginTop: '1rem'
+                }}
+              >
+                Carnation Carnival
+              </h3>
+              <p style={{ color: '#83364b', fontWeight: '600' }}>$25</p>
+            </section>
+          </div>
+          <Link to='/shop'>
+            <button id='landing-button'>Shop All</button>
+          </Link>
+        </article>
       </div>
     );
   }

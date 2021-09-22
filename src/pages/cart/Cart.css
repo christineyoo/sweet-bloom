@@ -24,10 +24,38 @@
   padding: 2rem;
 }
 
-#subtotal {
-  border: 1px solid #333;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
+#cart > h1, #cart > h3 {
+  font-weight: 900;
+  text-align: center;
+  color: #83364b;
+}
+
+#cart > p {
+  text-align: center;
+  font-style: oblique;
+}
+
+#subtotal, #item-summary {
+  border-left: 5px solid #83364b;
+  background: #fffdfd;
+  padding: 1rem;
+  margin: 2rem;
+}
+
+#to-checkout-button {
+  padding: 1rem 4rem;
+  background: #83364b;
+  border: 1px solid #83364b;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  font-weight: 900;
+  transition: background 0.5s ease-in-out;
+}
+
+#to-checkout-button:hover {
+  background-color: #652939;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 @media all and (min-width: 800px) {
