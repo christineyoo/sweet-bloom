@@ -41,25 +41,30 @@ class ReviewCard extends Component {
       <ApiContext.Consumer>
         {(context) => (
           <div className='review-card'>
+            <div className='options'>
+              <i
+                class='far fa-trash-alt'
+                onClick={() =>
+                  this.deleteReviewRequest(
+                    this.props.reviewId,
+                    context.deleteReview
+                  )
+                }
+              ></i>
+              &nbsp;
+              &nbsp;
+              <i
+                class='far fa-edit'
+                onClick={() => this.setState({ isOpen: true })}
+              ></i>
+            </div>
             <h1>{this.props.title}</h1>
             <h2>Rating: {this.props.rating} out of 5</h2>
-            <p>
+            <h3>
               By {this.props.name} on {this.props.date.substring(0, 10)}
-            </p>
+            </h3>
             <p>{this.props.content}</p>
-            <button
-              onClick={() =>
-                this.deleteReviewRequest(
-                  this.props.reviewId,
-                  context.deleteReview
-                )
-              }
-            >
-              Delete
-            </button>
-            <button onClick={() => this.setState({ isOpen: true })}>
-              Edit
-            </button>
+
             <EditReview
               open={this.state.isOpen}
               onClose={() => this.setState({ isOpen: false })}
