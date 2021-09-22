@@ -36,6 +36,11 @@
   cursor: pointer;
 }
 
+.far:hover {
+  color: #83364b;
+  transition: color 0.2s ease-in-out;
+}
+
 .options {
   text-align: right;
 }

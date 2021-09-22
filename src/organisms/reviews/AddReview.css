@@ -58,3 +58,8 @@ textarea {
 .fas {
   cursor: pointer;
 }
+
+.fas:hover {
+  color: #83364b;
+  transition: color 0.2s ease-in-out;
+}
