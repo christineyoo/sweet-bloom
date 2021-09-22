@@ -136,6 +136,7 @@ class AddReview extends Component {
           <div>
             <div className='overlay-style' />
             <div className='modal-style'>
+            <i className="fas fa-arrow-left fa-2x" onClick={this.props.onClose}></i>
               <h1>Leave a Review</h1>
               <form
                 class='add-review-flex'
@@ -165,7 +166,6 @@ class AddReview extends Component {
                 <textarea
                   name='content'
                   rows='8'
-                  columns='20'
                   onChange={(e) => this.inputReviewContent(e.target.value)}
                   required
                 ></textarea>
@@ -183,9 +183,10 @@ class AddReview extends Component {
                   <option value={4}>4</option>
                   <option value={5}>5</option>
                 </select>
-                <button type='submit'>Submit</button>
+                &nbsp;
+                <button type='submit' id='submit-button'>Submit</button>
               </form>
-              <button onClick={this.props.onClose}>Go back</button>
+              
             </div>
           </div>
         )}

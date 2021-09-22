@@ -41,9 +41,6 @@
 }
 
 @media all and (min-width: 800px) {
-  #reviews-section {
-    /* padding: 2rem 10rem; */
-  }
 
   .review-card {
     margin-left: 20%;

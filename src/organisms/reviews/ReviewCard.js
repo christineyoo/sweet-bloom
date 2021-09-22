@@ -43,7 +43,7 @@ class ReviewCard extends Component {
           <div className='review-card'>
             <div className='options'>
               <i
-                class='far fa-trash-alt'
+                className='far fa-trash-alt'
                 onClick={() =>
                   this.deleteReviewRequest(
                     this.props.reviewId,
@@ -51,10 +51,9 @@ class ReviewCard extends Component {
                   )
                 }
               ></i>
-              &nbsp;
-              &nbsp;
+              &nbsp; &nbsp;
               <i
-                class='far fa-edit'
+                className='far fa-edit'
                 onClick={() => this.setState({ isOpen: true })}
               ></i>
             </div>

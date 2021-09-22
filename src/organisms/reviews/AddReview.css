@@ -17,3 +17,44 @@
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
+
+label {
+  font-family: 'Caudex', serif;
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 2px solid #83364b;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+textarea {
+  margin: 0;
+  width: 500px;
+  height: 100px;
+}
+
+#submit-button {
+  padding: 1rem 4rem;
+  background: transparent;
+  border: 1px solid #83364b;
+  font-family: 'Poppins', sans-serif;
+  color: #83364b;
+  font-weight: 900;
+  transition: background 0.5s ease-in-out;
+}
+
+#submit-button:hover {
+  background-color: #83364b;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.fas {
+  cursor: pointer;
+}
