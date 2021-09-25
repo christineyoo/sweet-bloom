@@ -7,9 +7,13 @@
 .form-flex {
   display: flex;
   flex-direction: column;
+  margin-left: 20%;
+  margin-right: 20%
 }
 
 #verified-address {
   display: flex;
   flex-direction: row;
+  margin-left: 20%;
+  margin-right: 20%
 }

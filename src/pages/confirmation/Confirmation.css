@@ -11,14 +11,15 @@
   flex: 1;
   margin-right: 20px;
   padding: 2rem;
-  border: 1px solid #333333;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
+  border-left: 5px solid #83364b;
+  background: #fffdfd;
+  margin: 2rem;
 }
 
 #confirmation-items-flex {
   display: flex;
   flex-direction: row;
+  font-weight: bold;
 }
 
 .confirmation-items-flex-1 {
@@ -26,8 +27,49 @@
   text-align: center;
 }
 
+.confirmation-flex-1 > h4 {
+  font-family: 'Caudex', serif;
+  font-size: 1.5rem;
+}
+
+#confirmation-thank-you {
+  background: url(./sb-thank-you.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 8rem;
+  margin-bottom: 2rem;
+}
+
+#confirmation-thank-you > h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 4rem;
+  letter-spacing: 8px;
+}
+
+#confirmation-thank-you > h2 {
+  color: #ffffff;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+#confirmation > h3 {
+  font-family: 'Caudex', serif;
+}
+
+#confirmation > h2 {
+  font-size: 1rem;
+}
+
 hr {
   margin: 0 1rem;
+}
+
+ul {
+  font-weight: bold;
 }
 
 @media all and (min-width: 800px) {

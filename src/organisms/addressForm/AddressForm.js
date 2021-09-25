@@ -141,7 +141,7 @@ class AddressForm extends Component {
           {this.state.name.touched && (
             <ValidationError message={this.validateName()} />
           )}
-          <label htmlFor='address'>Address</label>
+          <label htmlFor='address'>Address</label>{' '}
           <input
             className='input'
             id='address'
@@ -177,7 +177,7 @@ class AddressForm extends Component {
           {this.state.state.touched && (
             <ValidationError message={this.validateState()} />
           )}
-          <label htmlFor='zipcode'>Zipcode</label>
+          <label htmlFor='zipcode'>Zipcode</label>{' '}
           <input
             className='input'
             id='zipcode'

@@ -37,6 +37,22 @@ class Checkout extends Component {
     }
   };
 
+  componentDidUpdate() {
+    const { name, cardNumber, expirationDate, cvc, shippingData } = this.state;
+    const allFieldsCompleted =
+      name.value &&
+      cardNumber.value &&
+      expirationDate.value &&
+      cvc.value &&
+      shippingData.shipName &&
+      shippingData.shipAddress &&
+      shippingData.shipCity &&
+      shippingData.shipState &&
+      shippingData.shipZipcode;
+    console.log('all fields completed', !!allFieldsCompleted);
+    return !!allFieldsCompleted;
+  }
+
   inputName = (name) => {
     this.setState({
       name: {
@@ -153,8 +169,6 @@ class Checkout extends Component {
   };
 
   render() {
-    console.log('Checkout shipName', this.state.shippingData);
-
     return (
       <div id='checkout'>
         <h1>Checkout</h1>
@@ -187,6 +201,7 @@ class Checkout extends Component {
                 id='card-number'
                 name='card-number'
                 type='text'
+                placeholder='xxxx-xxxx-xxxx-xxxx'
                 className='input'
                 onChange={(e) => this.inputCardNumber(e.target.value)}
                 required
@@ -212,6 +227,7 @@ class Checkout extends Component {
                 id='cvc'
                 name='cvc'
                 type='text'
+                placeholder='xxx'
                 className='input'
                 onChange={(e) => this.inputCvc(e.target.value)}
                 required
@@ -228,34 +244,45 @@ class Checkout extends Component {
             </div>
           </div>
           <div className='checkout-flex-1'>
-            <h2>Order Summary</h2>
+            <h1>Order Summary</h1>
             <div id='checkout-step-3-flex-1'>
               <h3>Delivery options</h3>
-              <p className='shipping-option'>Today</p>
-
-              <label>
-                <input
-                  type='radio'
-                  name='option'
-                  value={10}
-                  onChange={(e) => this.updateShipping(e.target.value)}
-                  checked={this.state.shipping == 10 ? true : false}
-                />
-                $10
-              </label>
-              <br />
-              <p className='shipping-option'>Tomorrow</p>
-
-              <label>
-                <input
-                  type='radio'
-                  name='option'
-                  value={5}
-                  onChange={(e) => this.updateShipping(e.target.value)}
-                  checked={this.state.shipping == 5 ? true : false}
-                />
-                $5
-              </label>
+              <table>
+                <tr>
+                  <td>
+                    <p className='shipping-option'>Today</p>
+                  </td>
+                  <td>
+                    <label>
+                      <input
+                        type='radio'
+                        name='option'
+                        value={10}
+                        onChange={(e) => this.updateShipping(e.target.value)}
+                        checked={this.state.shipping == 10 ? true : false}
+                      />
+                      $10
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p className='shipping-option'>Tomorrow</p>
+                  </td>
+                  <td>
+                    <label>
+                      <input
+                        type='radio'
+                        name='option'
+                        value={5}
+                        onChange={(e) => this.updateShipping(e.target.value)}
+                        checked={this.state.shipping == 5 ? true : false}
+                      />
+                      $5
+                    </label>
+                  </td>
+                </tr>
+              </table>
             </div>
 
             <div id='order-summary-flex'>
@@ -278,8 +305,9 @@ class Checkout extends Component {
 
             <button
               onClick={() => this.checkout()}
-              disabled={!this.state.shippingData.shipName}
-              id='to-checkout-button'
+              disabled={!this.componentDidUpdate()}
+              className={!this.componentDidUpdate() ? 'not-allowed' : ''}
+              id='checkout-to-conf-button'
             >
               Checkout
             </button>

@@ -22,7 +22,8 @@ class Confirmation extends Component {
   };
 
   renderShipAddDetails = () => {
-    const { name, address, city, state, zipcode } = this.props.shippingData || [];
+    const { name, address, city, state, zipcode } =
+      this.props.shippingData || [];
     return (
       <>
         <p>{name}</p>
@@ -36,9 +37,9 @@ class Confirmation extends Component {
 
   renderDeliveryDay = () => {
     if (+this.props.shipping === 10) {
-      return <p>Arriving today</p>;
+      return <p>Arriving today to</p>;
     } else {
-      return <p>Arriving tomorrow</p>;
+      return <p>Arriving tomorrow to</p>;
     }
   };
 
@@ -50,14 +51,20 @@ class Confirmation extends Component {
   render() {
     return (
       <div id='confirmation'>
-        <h1>Thank you for shopping with Sweet Bloom!</h1>
-        <h2>Your order details are shown below.</h2>
+        <article id='confirmation-thank-you'>
+          <h1>THANK YOU</h1>
+          <h2>ORDER CONFIRMED</h2>
+        </article>
         <h3>Order Confirmation</h3>
-        <p>Order #123-456-789</p>
-        <p>Items</p>
+        <h2>
+          Order #{Math.floor(Math.random() * 1000)}-
+          {Math.floor(Math.random() * 1000)}-{Math.floor(Math.random() * 1000)}
+        </h2>
+        <h3>Your Purchased Items</h3>
         <ul>{this.renderItemSummary()}</ul>
         <div className='confirmation-flex'>
           <div className='confirmation-flex-1'>
+            <h4>Payment Details</h4>
             <div id='confirmation-items-flex'>
               <p className='confirmation-items-flex-1'>Total before shipping</p>
               <p className='confirmation-items-flex-1'>${this.totalPrice()}</p>
@@ -79,14 +86,11 @@ class Confirmation extends Component {
           <div className='confirmation-flex-1'>
             <h4>Delivery Details</h4>
             {this.renderDeliveryDay()}
-            <p>
-              <strong>Ship to:</strong>
-            </p>
-            <p>{this.renderShipAddDetails()}</p>
+            {this.renderShipAddDetails()}
           </div>
         </div>
         <Link to='/shop'>
-          <button>Shop more</button>
+          <button id='landing-button'>Shop more</button>
         </Link>
       </div>
     );

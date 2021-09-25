@@ -10,14 +10,16 @@ class ItemCard extends Component {
     return (
       <div className='item-card-flex'>
         <div className='item-card-flex-1'>
-          <img src={this.props.url} height='175px' alt='item' />
+          <img src={this.props.url} className='thumbnail-item-link-square' alt='item' />
         </div>
         <div className='item-card-flex-1'>
-          <p>{this.props.name}</p>
-          <p>${this.props.price}</p>
-          <p>Quantity: {this.props.quantity}</p>
+          <h1>{this.props.name}</h1>
+          <h2>${this.props.price}</h2>
+          <h2>Quantity: {this.props.quantity}</h2>
           {this.props.isOnCheckout ? null : (
-            <button onClick={() => this.removeItem()} id ='remove-button'>Remove Item</button>
+            <button onClick={() => this.removeItem()} id='remove-button'>
+              Remove Item
+            </button>
           )}
         </div>
       </div>

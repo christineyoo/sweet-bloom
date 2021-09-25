@@ -16,9 +16,24 @@
   margin: 2rem;
 }
 
+#checkout > h1,
+#checkout > h3 {
+  font-weight: 900;
+  text-align: center;
+  color: #83364b;
+}
+
+#checkout > p {
+  text-align: center;
+  font-style: oblique;
+}
+
 .checkout-flex-2 {
   flex: 2;
-  text-align: left;
+}
+
+.checkout-flex-2 > h2 {
+  text-align: center;
 }
 
 #checkout-step-3-flex {
@@ -36,6 +51,16 @@
   text-align: left;
 }
 
+#checkout-to-conf-button {
+  padding: 1rem 4rem;
+  background: #83364b;
+  border: 1px solid #83364b;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  font-weight: 900;
+  transition: background 0.5s ease-in-out;
+}
+
 #order-summary-flex {
   display: flex;
   flex-direction: row;
@@ -46,12 +71,25 @@
   text-align: left;
 }
 
+label {
+  font-size: 0.8rem;
+}
+
 .input {
   padding: 0.5rem;
+  background: transparent;
 }
 
 .shipping-option {
   display: inline;
+}
+
+.not-allowed {
+  cursor: not-allowed 
+}
+
+p {
+  font-weight: bold;
 }
 
 @media all and (min-width: 800px) {

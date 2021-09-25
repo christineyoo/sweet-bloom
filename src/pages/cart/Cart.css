@@ -35,7 +35,7 @@
   font-style: oblique;
 }
 
-#subtotal, #item-summary {
+#subtotal {
   border-left: 5px solid #83364b;
   background: #fffdfd;
   padding: 1rem;
