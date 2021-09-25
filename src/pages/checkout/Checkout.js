@@ -225,30 +225,39 @@ class Checkout extends Component {
               <section id='checkout-step-3-flex-2'>
                 {this.renderItemCards()}
               </section>
-              <section id='checkout-step-3-flex-1'>
-                <h3>Delivery options</h3>
-                <p>Today (2 hrs)</p>
-                <label>$10</label>
+            </div>
+          </div>
+          <div className='checkout-flex-1'>
+            <h2>Order Summary</h2>
+            <div id='checkout-step-3-flex-1'>
+              <h3>Delivery options</h3>
+              <p className='shipping-option'>Today</p>
+
+              <label>
                 <input
                   type='radio'
                   name='option'
                   value={10}
                   onChange={(e) => this.updateShipping(e.target.value)}
+                  checked={this.state.shipping == 10 ? true : false}
                 />
+                $10
+              </label>
+              <br />
+              <p className='shipping-option'>Tomorrow</p>
 
-                <p>Tomorrow</p>
-                <label>$5</label>
+              <label>
                 <input
                   type='radio'
                   name='option'
                   value={5}
                   onChange={(e) => this.updateShipping(e.target.value)}
+                  checked={this.state.shipping == 5 ? true : false}
                 />
-              </section>
+                $5
+              </label>
             </div>
-          </div>
-          <div className='checkout-flex-1'>
-            <h2>Order Summary</h2>
+
             <div id='order-summary-flex'>
               <p className='order-summary-flex-1'>Items</p>
               <p className='order-summary-flex-1'>${this.totalPrice()}</p>
@@ -266,9 +275,11 @@ class Checkout extends Component {
                 <strong>${+this.totalPrice() + +this.state.shipping}</strong>
               </p>
             </div>
+
             <button
               onClick={() => this.checkout()}
               disabled={!this.state.shippingData.shipName}
+              id='to-checkout-button'
             >
               Checkout
             </button>
