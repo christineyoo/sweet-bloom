@@ -49,7 +49,6 @@ class Checkout extends Component {
       shippingData.shipCity &&
       shippingData.shipState &&
       shippingData.shipZipcode;
-    console.log('all fields completed', !!allFieldsCompleted);
     return !!allFieldsCompleted;
   }
 
