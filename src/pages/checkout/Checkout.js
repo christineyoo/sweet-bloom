@@ -259,7 +259,7 @@ class Checkout extends Component {
                         name='option'
                         value={10}
                         onChange={(e) => this.updateShipping(e.target.value)}
-                        checked={this.state.shipping == 10 ? true : false}
+                        checked={+this.state.shipping === 10 ? true : false}
                       />
                       $10
                     </label>
@@ -276,7 +276,7 @@ class Checkout extends Component {
                         name='option'
                         value={5}
                         onChange={(e) => this.updateShipping(e.target.value)}
-                        checked={this.state.shipping == 5 ? true : false}
+                        checked={+this.state.shipping === 5 ? true : false}
                       />
                       $5
                     </label>
