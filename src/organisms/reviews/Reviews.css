@@ -10,10 +10,16 @@
   margin: 2rem;
 }
 
+.review-card > h1 {
+  font-size: 1.5rem;
+}
+
+.review-card > h2, h3 {
+  font-size: 1rem;
+}
+
 #reviews-section {
   padding: 2rem;
-  margin-left: 20%;
-  margin-right: 20%;
 }
 
 #review-button {
@@ -46,9 +52,21 @@
 }
 
 @media all and (min-width: 800px) {
-
   .review-card {
     margin-left: 20%;
     margin-right: 20%;
+  }
+
+  #reviews-section {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .review-card > h1 {
+    font-size: 2rem;
+  }
+
+  .review-card > h2 {
+    font-size: 1.25rem;
   }
 }

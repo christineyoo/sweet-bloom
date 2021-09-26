@@ -112,7 +112,9 @@ class Item extends Component {
           <div className='item-flex-1-description'>
             <h1>{this.state.item.item_name}</h1>
             <h2>${this.state.item.item_price}</h2>
-            <label htmlFor='groups' className='item-p'>Quantity&nbsp;</label>
+            <label htmlFor='groups' className='item-p'>
+              Quantity&nbsp;
+            </label>
             <select
               name='quantity'
               id='quantity'
@@ -122,7 +124,9 @@ class Item extends Component {
             </select>
             <br />
             <Link to='/cart'>
-              <button id="item-button" onClick={() => this.formatUpdate()}>Add to cart</button>
+              <button id='item-button' onClick={() => this.formatUpdate()}>
+                Add to cart
+              </button>
             </Link>
             <h3 id='item-h3'>Product Info</h3>
             <p class='item-p'>{this.state.item.item_description}</p>
