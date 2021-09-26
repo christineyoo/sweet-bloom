@@ -8,7 +8,6 @@ class ItemLink extends Component {
       <Link to={`/item/${this.props.item_id}`} className='shop-flex-1'>
         <img
           src={this.props.item_url}
-          width='300px'
           alt='product'
           className='item-link-responsive item-link-square'
           id='item-link-image'

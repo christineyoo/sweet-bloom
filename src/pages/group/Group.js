@@ -32,7 +32,7 @@ class Group extends Component {
 
   render() {
     return (
-      <div id='group'>
+      <div id='group' style={{ textAlign: 'center' }}>
         <h1>
           Shop <FindGroupName group_id={this.props.match.params.groupId} />
         </h1>

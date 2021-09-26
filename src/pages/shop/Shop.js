@@ -54,11 +54,13 @@ class Shop extends Component {
 
   render() {
     return (
-      <div id='shop'>
+      <div id='shop' style={{ textAlign: 'center' }}>
         <h1>Shop All Items</h1>
         {this.renderGroups()}
         {this.renderItems()}
-        <button id='shop-button' onClick={() => this.scrollToTop()}>Back to top</button>
+        <button id='shop-button' onClick={() => this.scrollToTop()}>
+          Back to top
+        </button>
       </div>
     );
   }
