@@ -47,16 +47,16 @@ class Cart extends Component {
     return (
       <div id='cart'>
         <h1>Shopping cart</h1>
-        <p>
-          Do not refresh the page.
-        </p>
+        <p>Do not refresh the page</p>
         {this.props.itemsInCart.length === 0 ? (
           <div className='cart-column-flex'>
             <h2>Your cart is currently empty</h2>
           </div>
         ) : (
           <div className='cart-flex'>
-            <section className='cart-flex-2' id='item-summary'>{this.renderItemCards()}</section>
+            <section className='cart-flex-2' id='item-summary'>
+              {this.renderItemCards()}
+            </section>
             <section className='cart-flex-1' id='subtotal'>
               <h1>Subtotal</h1>
               <h2>${this.totalPrice()}</h2>
@@ -73,7 +73,7 @@ class Cart extends Component {
           <h2>Order Now and Get Same-Day-Delivery</h2>
           <div className='landing-flex'>
             <section className='landing-flex-1'>
-              <img src={stockPhoto3} height='350px' alt='sunflowers' />
+              <img src={stockPhoto3} alt='sunflowers' />
               <h3
                 style={{
                   fontSize: '1.15rem',
@@ -86,7 +86,7 @@ class Cart extends Component {
               <p style={{ color: '#83364b', fontWeight: '600' }}>$15</p>
             </section>
             <section className='landing-flex-1'>
-              <img src={stockPhoto2} height='350px' alt='tulips' />
+              <img src={stockPhoto2} alt='tulips' />
               <h3
                 style={{
                   fontSize: '1.15rem',
@@ -99,11 +99,7 @@ class Cart extends Component {
               <p style={{ color: '#83364b', fontWeight: '600' }}>$20</p>
             </section>
             <section className='landing-flex-1'>
-              <img
-                src={stockPhoto1}
-                height='350px'
-                alt='carnations'
-              />
+              <img src={stockPhoto1} alt='carnations' />
               <h3
                 style={{
                   fontSize: '1.15rem',

@@ -9,22 +9,24 @@
   margin-bottom: 2rem;
 }
 
+.cart-column-flex > h2 {
+  text-align: center;
+}
+
 .cart-flex-1 {
   flex: 1;
   text-align: center;
   padding: 1rem;
 }
+
 .cart-flex-2 {
   flex: 2;
   text-align: center;
   padding: 1rem;
 }
 
-#cart {
-  padding: 2rem;
-}
-
-#cart > h1, #cart > h3 {
+#cart > h1,
+#cart > h3 {
   font-weight: 900;
   text-align: center;
   color: #83364b;
@@ -58,6 +60,10 @@
   cursor: pointer;
 }
 
+.landing-flex-1 > img {
+  height: 300px;
+}
+
 @media all and (min-width: 800px) {
   .cart-flex {
     flex-direction: row;
@@ -68,6 +74,10 @@
   }
 
   #cart {
-    padding: 5% 10%;
+    padding: 2rem;
+  }
+
+  .landing-flex-1 > img {
+    height: 450px;
   }
 }
