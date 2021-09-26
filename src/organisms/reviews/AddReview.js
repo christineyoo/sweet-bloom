@@ -136,56 +136,56 @@ class AddReview extends Component {
           <div>
             <div className='overlay-style' />
             <div className='modal-style'>
-            <i className="fas fa-arrow-left fa-2x" onClick={this.props.onClose}></i>
-              <h1>Leave a Review</h1>
-              <form
-                class='add-review-flex'
-                onSubmit={(e) => this.handleSubmit(e, context.addReview)}
-              >
-                <label htmlFor='name'>Name</label>
-                <input
-                  name='name'
-                  type='text'
-                  onChange={(e) => this.inputReviewName(e.target.value)}
-                  required
-                />
-                {this.state.name.touched && (
-                  <ValidationError message={this.validateName()} />
-                )}
-                <label htmlFor='title'>Title</label>
-                <input
-                  name='title'
-                  type='text'
-                  onChange={(e) => this.inputReviewTitle(e.target.value)}
-                  required
-                />
-                {this.state.title.touched && (
-                  <ValidationError message={this.validateTitle()} />
-                )}
-                <label htmlFor='content'>Content</label>
-                <textarea
-                  name='content'
-                  rows='8'
-                  onChange={(e) => this.inputReviewContent(e.target.value)}
-                  required
-                ></textarea>
-                {this.state.content.touched && (
-                  <ValidationError message={this.validateContent()} />
-                )}
-                <label htmlFor='rating'>Rating</label>
-                <select
-                  name='rating'
-                  onChange={(e) => this.inputReviewRating(e.target.value)}
+              <i className="fas fa-arrow-left fa-2x" onClick={this.props.onClose}></i>
+                <h1>Leave a Review</h1>
+                <form
+                  class='add-review-flex'
+                  onSubmit={(e) => this.handleSubmit(e, context.addReview)}
                 >
-                  <option value={1}>1</option>
-                  <option value={2}>2</option>
-                  <option value={3}>3</option>
-                  <option value={4}>4</option>
-                  <option value={5}>5</option>
-                </select>
-                &nbsp;
-                <button type='submit' id='submit-button'>Submit</button>
-              </form>
+                  <label htmlFor='name'>Name</label>
+                  <input
+                    name='name'
+                    type='text'
+                    onChange={(e) => this.inputReviewName(e.target.value)}
+                    required
+                  />
+                  {this.state.name.touched && (
+                    <ValidationError message={this.validateName()} />
+                  )}
+                  <label htmlFor='title'>Title</label>
+                  <input
+                    name='title'
+                    type='text'
+                    onChange={(e) => this.inputReviewTitle(e.target.value)}
+                    required
+                  />
+                  {this.state.title.touched && (
+                    <ValidationError message={this.validateTitle()} />
+                  )}
+                  <label htmlFor='content'>Content</label>
+                  <textarea
+                    name='content'
+                    rows='8'
+                    onChange={(e) => this.inputReviewContent(e.target.value)}
+                    required
+                  ></textarea>
+                  {this.state.content.touched && (
+                    <ValidationError message={this.validateContent()} />
+                  )}
+                  <label htmlFor='rating'>Rating</label>
+                  <select
+                    name='rating'
+                    onChange={(e) => this.inputReviewRating(e.target.value)}
+                  >
+                    <option value={1}>1</option>
+                    <option value={2}>2</option>
+                    <option value={3}>3</option>
+                    <option value={4}>4</option>
+                    <option value={5}>5</option>
+                  </select>
+                  &nbsp;
+                  <button type='submit' id='submit-button'>Submit</button>
+                </form>
               
             </div>
           </div>

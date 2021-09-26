@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  padding: 50px;
+  padding: 40px;
   z-index: 1000;
 }
 
@@ -34,8 +34,7 @@ select {
 }
 
 textarea {
-  margin: 0;
-  width: 500px;
+  width: 200px;
   height: 100px;
 }
 
@@ -62,4 +61,10 @@ textarea {
 .fas:hover {
   color: #83364b;
   transition: color 0.2s ease-in-out;
+}
+
+@media all and (min-width: 800px) {
+  textarea {
+    width: 500px;
+  }
 }
