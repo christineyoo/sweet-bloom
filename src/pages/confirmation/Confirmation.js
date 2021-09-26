@@ -54,8 +54,10 @@ class Confirmation extends Component {
         <article id='confirmation-thank-you'>
           <h1>THANK YOU</h1>
           <h2>ORDER CONFIRMED</h2>
+          <h2>THIS IS NOT A REAL BUSINESS</h2>
         </article>
         <h3>Order Confirmation</h3>
+
         <h2>
           Order #{Math.floor(Math.random() * 1000)}-
           {Math.floor(Math.random() * 1000)}-{Math.floor(Math.random() * 1000)}
@@ -89,9 +91,11 @@ class Confirmation extends Component {
             {this.renderShipAddDetails()}
           </div>
         </div>
-        <Link to='/shop'>
-          <button id='landing-button'>Shop more</button>
-        </Link>
+        <div id='landing-button-container'>
+          <Link to='/shop'>
+            <button id='landing-button'>Shop more</button>
+          </Link>
+        </div>
       </div>
     );
   }

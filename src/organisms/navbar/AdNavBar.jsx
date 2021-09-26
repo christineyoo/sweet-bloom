@@ -17,6 +17,9 @@ const AdNavBar = () => {
       >
         Shop Now
       </Link>
+      &nbsp;
+      <i className='fa fa-heart-o'></i>&nbsp;
+      <p>This is not a real business</p>
     </nav>
   );
 };
