@@ -26,6 +26,10 @@ article {
   font-size: 1rem;
 }
 
+.landing-flex-1 > img {
+  height: 300px;
+}
+
 .landing-flex-2 {
   flex: 2;
 }
@@ -104,9 +108,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding: 10rem;
+  padding: 3rem;
   text-align: center;
   color: #ffffff;
 }
@@ -129,6 +131,10 @@ body {
   background-color: #ffffff;
   color: #83364b;
   cursor: pointer;
+}
+
+#carnations {
+  width: 200px;
 }
 
 @media all and (min-width: 800px) {
@@ -157,5 +163,17 @@ body {
 
   .landing-flex-1 {
     padding: 4rem 1rem 1rem 1rem;
+  }
+
+  .landing-flex-1 > img {
+    height: 450px;
+  }
+
+  #carnations {
+    width: 300px;
+  }
+
+  #ad {
+    padding: 10rem;
   }
 }

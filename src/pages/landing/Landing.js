@@ -20,7 +20,7 @@ class Landing extends Component {
           <h2>Order Now and Get Same-Day-Delivery</h2>
           <div className='landing-flex'>
             <section className='landing-flex-1'>
-              <img src={stockPhoto3} height='450px' alt='sunflowers' />
+              <img src={stockPhoto3} alt='sunflowers' />
               <h3
                 style={{
                   fontSize: '1.15rem',
@@ -33,7 +33,7 @@ class Landing extends Component {
               <p style={{ color: '#83364b', fontWeight: '600' }}>$15</p>
             </section>
             <section className='landing-flex-1'>
-              <img src={stockPhoto2} height='450px' alt='tulips' />
+              <img src={stockPhoto2} alt='tulips' />
               <h3
                 style={{
                   fontSize: '1.15rem',
@@ -48,9 +48,8 @@ class Landing extends Component {
             <section className='landing-flex-1'>
               <img
                 src={stockPhoto1}
-                width='300px'
-                height='450px'
                 alt='carnations'
+                id='carnations'
               />
               <h3
                 style={{
