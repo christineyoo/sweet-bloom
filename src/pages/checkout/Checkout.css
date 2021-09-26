@@ -95,6 +95,8 @@ p {
 
   .checkout-flex {
     flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .checkout-flex-1 {

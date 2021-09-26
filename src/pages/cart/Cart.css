@@ -67,6 +67,8 @@
 @media all and (min-width: 800px) {
   .cart-flex {
     flex-direction: row;
+    margin-left: 15%;
+    margin-right: 15%;
   }
 
   .cart-column-flex {
