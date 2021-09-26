@@ -9,7 +9,7 @@ class NavBar extends Component {
         <Link
           className='flex-1'
           to={'/'}
-          activeStyle={{
+          activestyle={{
             color: '#83364b'
           }}
         >
@@ -18,7 +18,7 @@ class NavBar extends Component {
         <NavLink
           className='flex-1'
           to={'/shop'}
-          activeStyle={{
+          activestyle={{
             color: '#83364b'
           }}
         >
@@ -27,7 +27,7 @@ class NavBar extends Component {
         <NavLink
           className='flex-1'
           to={'/cart'}
-          activeStyle={{
+          activestyle={{
             color: '#83364b'
           }}
         >

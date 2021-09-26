@@ -129,7 +129,7 @@ class Item extends Component {
               </button>
             </Link>
             <h3 id='item-h3'>Product Info</h3>
-            <p class='item-p'>{this.state.item.item_description}</p>
+            <p className='item-p'>{this.state.item.item_description}</p>
           </div>
         </div>
         <div>

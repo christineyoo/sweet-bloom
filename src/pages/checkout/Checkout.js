@@ -247,40 +247,42 @@ class Checkout extends Component {
             <div id='checkout-step-3-flex-1'>
               <h3>Delivery options</h3>
               <table>
-                <tr>
-                  <td>
-                    <p className='shipping-option'>Today</p>
-                  </td>
-                  <td>
-                    <label>
-                      <input
-                        type='radio'
-                        name='option'
-                        value={10}
-                        onChange={(e) => this.updateShipping(e.target.value)}
-                        checked={+this.state.shipping === 10 ? true : false}
-                      />
-                      $10
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <p className='shipping-option'>Tomorrow</p>
-                  </td>
-                  <td>
-                    <label>
-                      <input
-                        type='radio'
-                        name='option'
-                        value={5}
-                        onChange={(e) => this.updateShipping(e.target.value)}
-                        checked={+this.state.shipping === 5 ? true : false}
-                      />
-                      $5
-                    </label>
-                  </td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p className='shipping-option'>Today</p>
+                    </td>
+                    <td>
+                      <label>
+                        <input
+                          type='radio'
+                          name='option'
+                          value={10}
+                          onChange={(e) => this.updateShipping(e.target.value)}
+                          checked={+this.state.shipping === 10 ? true : false}
+                        />
+                        $10
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p className='shipping-option'>Tomorrow</p>
+                    </td>
+                    <td>
+                      <label>
+                        <input
+                          type='radio'
+                          name='option'
+                          value={5}
+                          onChange={(e) => this.updateShipping(e.target.value)}
+                          checked={+this.state.shipping === 5 ? true : false}
+                        />
+                        $5
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
 

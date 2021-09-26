@@ -146,7 +146,7 @@ class EditReview extends Component {
               ></i>
               <h1>Edit Review</h1>
               <form
-                class='add-review-flex'
+                className='add-review-flex'
                 onSubmit={(e) =>
                   this.handleSubmit(
                     e,

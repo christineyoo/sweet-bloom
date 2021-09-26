@@ -139,7 +139,7 @@ class AddReview extends Component {
               <i className="fas fa-arrow-left fa-2x" onClick={this.props.onClose}></i>
                 <h1>Leave a Review</h1>
                 <form
-                  class='add-review-flex'
+                  className='add-review-flex'
                   onSubmit={(e) => this.handleSubmit(e, context.addReview)}
                 >
                   <label htmlFor='name'>Name</label>
