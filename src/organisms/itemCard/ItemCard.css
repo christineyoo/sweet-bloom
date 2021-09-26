@@ -4,7 +4,6 @@
   padding: 1rem;
   border-left: 5px solid #83364b;
   background: #fffdfd;
-  margin: 2rem;
 }
 
 .item-card-flex-1 {
@@ -49,5 +48,6 @@ img {
 @media all and (min-width: 800px) {
   .item-card-flex {
     flex-direction: row;
+    margin: 2rem;
   }
 }
