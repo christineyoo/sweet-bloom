@@ -25,12 +25,13 @@ class Landing extends Component {
                   style={{
                     fontSize: '1.15rem',
                     fontWeight: '900',
-                    marginTop: '1rem'
+                    marginTop: '1rem',
+                    textAlign: 'center'
                   }}
                 >
                   Sunflowers
                 </h3>
-                <p style={{ color: '#83364b', fontWeight: '600' }}>$15</p>
+                <p style={{ color: '#83364b', fontWeight: '600', textAlign: 'center' }}>$15</p>
               </section>
             </Link>
             <Link to={`/item/20`}>
